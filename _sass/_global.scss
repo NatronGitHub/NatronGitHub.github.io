@@ -54,6 +54,10 @@ body {
 
 .herosection {
   width: 100vw;
+  min-height: 90vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
 }
@@ -67,4 +71,59 @@ body {
   padding: 0px 20px 0 20px;
   max-width: 1340px;
   width: 100%;
+}
+
+.herosection-container {
+  padding: 0px 20px 0 20px;
+  max-width: 1340px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+}
+
+// Typography
+
+.center-text {
+  text-align: center;
+}
+
+.h1 {
+  font-size: 72px;
+  font-variation-settings: 'wght' 900;
+  color: var(--white);
+}
+
+.hero-subheader {
+  font-size: 30px;
+  font-variation-settings: 'wght' 500;
+}
+
+.h2 {
+  font-size: 42px;
+  font-variation-settings: 'wght' 700;
+  background: linear-gradient(90deg, var(--purple), var(--pink));
+  color: transparent;
+  background-clip: text;
+}
+
+.h3 {
+  font-size: 30px;
+  font-variation-settings: 'wght' 700;
+}
+
+.h4 {
+  font-size: 20px;
+  font-variation-settings: 'wght' 700;
+}
+
+.p-body {
+  font-size: 20px;
+  font-variation-settings: 'wght' 500;
+}
+
+.p-small {
+  font-size: 16px;
+  font-variation-settings: 'wght' 500;
 }

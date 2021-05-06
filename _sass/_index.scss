@@ -1,15 +1,15 @@
 .index-features {
   margin-top: 5rem;
-  
+
   ul {
     list-style: none;
-    margin: 0 0 2rem 0;
+    margin: 0 0 20px 0;
     padding: 0;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 0.5rem;
-    grid-row-gap: 0.5rem;
+    grid-column-gap: 80px;
+    grid-row-gap: 40px;
   }
 
   @media only screen and (max-width: 640px) {
@@ -25,7 +25,7 @@
   }
 
   img {
-    width: 6rem;
+    height: 60px
   }
 
   .index-features-title {
@@ -35,11 +35,14 @@
 
   h4 {
     display: inline;
-    font-size: 1.2rem;
   }
 
   p {
     max-width: 15rem;
   }
+
+}
+
+.index-aboutnodes {
 
 }
