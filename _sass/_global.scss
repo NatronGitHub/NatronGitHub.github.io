@@ -1,0 +1,70 @@
+// Apply a natural box layout model to all elements, but allowing components to change
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+// Page content wrapper, applies to everything below the nav and above the footer!
+
+.wrapper {
+  min-height: 80vh;
+  width: 100%;
+  background: var(--offblack);
+  color: var(--offwhite);
+}
+
+// Colors
+:root
+{
+  --pink: #ff5868;
+  --purple: #7848ff;
+  --offwhite: #fbfcfc;
+  --grey: #d9d9e0;
+  --white: #ffffff;
+  --offblack: #08090a;
+}
+
+// P3 Colors (when supported)
+@supports (color: color(display-p3 1 1 1 / 1)) {
+  :root
+    {
+      --pink: color(display-p3 1.00 0.40 0.45 / 1);
+      --purple: color(display-p3 0.44 0.29 1 / 1);
+      --offwhite: color(display-p3 0.985 0.988 0.988 / 1);
+      --grey: color(display-p3 0.85 0.85 0.87 / 1);
+      --white: color(display-p3 1 1 1 / 1);
+      --offblack: color(display-p3 0.032 0.035 0.038 / 1);
+    }
+}
+
+// Gradient
+
+.background-gradient {
+  background: linear-gradient(90deg, var(--purple), var(--pink));
+}
+
+// Layout & Standard Elements
+
+.herosection {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.stdsection {
+  display: flex;
+  justify-content: center;
+}
+
+.section-container {
+  padding: 0px 20px 0 20px;
+  max-width: 1340px;
+  width: 100%;
+}

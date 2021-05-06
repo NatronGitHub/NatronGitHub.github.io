@@ -1,0 +1,45 @@
+.index-features {
+  margin-top: 5rem;
+  
+  ul {
+    list-style: none;
+    margin: 0 0 2rem 0;
+    padding: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0.5rem;
+  }
+
+  @media only screen and (max-width: 640px) {
+    ul {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  li {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  img {
+    width: 6rem;
+  }
+
+  .index-features-title {
+    padding-top: 0.5rem;
+    margin-bottom: -0.8rem;
+  }
+
+  h4 {
+    display: inline;
+    font-size: 1.2rem;
+  }
+
+  p {
+    max-width: 15rem;
+  }
+
+}
