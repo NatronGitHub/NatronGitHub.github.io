@@ -87,6 +87,8 @@ body {
 
 .center-text {
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .h1 {
@@ -106,6 +108,8 @@ body {
   background: linear-gradient(90deg, var(--purple), var(--pink));
   color: transparent;
   background-clip: text;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .h3 {

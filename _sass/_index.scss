@@ -14,7 +14,7 @@
 
   @media only screen and (max-width: 640px) {
     ul {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 
@@ -44,5 +44,24 @@
 }
 
 .index-aboutnodes {
+  display: flex;
+}
 
+.index-aboutnodes-imagecontainer {
+  max-width: 750px;
+  width: 200%;
+  flex-grow: 2;
+  flex-shrink: 1;
+  margin-right: 10px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.index-aboutnodes-textcontainer {
+  max-width: 530px;
+  margin-left: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
