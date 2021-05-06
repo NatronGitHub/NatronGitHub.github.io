@@ -1,4 +1,9 @@
+# Jekyll
 _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+vendor/
+
+# macOS
+.DS_Store
