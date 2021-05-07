@@ -9,7 +9,7 @@
 }
 
 .nav-container {
-  padding: 0px 20px 0 20px;
+  padding: 0 20px;
   max-width: 1340px;
   width: 100%;
   display: flex;
@@ -23,11 +23,13 @@
   justify-content: flex-start;
   align-items: center;
   align-content: center;
+}
 
-  img {
-    height: 32px;
-    vertical-align: bottom;
-  }
+.nav-logo {
+  height: 32px;
+  vertical-align: bottom;
+  fill: red !important;
+  pointer-events: none;
 }
 
 .nav-menulist {
@@ -35,7 +37,7 @@
   padding: 0;
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   align-content: center;
   flex-grow: 1;
