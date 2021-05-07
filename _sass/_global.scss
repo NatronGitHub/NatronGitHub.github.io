@@ -13,8 +13,10 @@ body {
 
 // Global settings
 
+@import url('https://rsms.me/inter/inter.css');
+
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter var', sans-serif;
   font-feature-settings: "frac", "cv03", "cv04", "cv09";
 }
 
@@ -118,13 +120,13 @@ body {
 .h1 {
   margin-top: 0;
   font-size: 72px;
-  font-variation-settings: 'wght' 900;
+  font-variation-settings: 'wght' 700;
   color: var(--white);
 }
 
 .hero-subheader {
   font-size: 30px;
-  font-variation-settings: 'wght' 500;
+  font-variation-settings: 'wght' 550;
 }
 
 .h2 {
@@ -149,11 +151,11 @@ body {
 }
 
 .p-body {
-  font-size: 20px;
-  font-variation-settings: 'wght' 500;
+  font-size: 18px;
+  font-variation-settings: 'wght' 450;
 }
 
 .p-small {
   font-size: 16px;
-  font-variation-settings: 'wght' 500;
+  font-variation-settings: 'wght' 450;
 }
