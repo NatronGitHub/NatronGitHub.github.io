@@ -26,6 +26,8 @@ Example:
 
 `index-featurecards-cardbody`
 
+Globally styled containers don't need to be mentioned in these names.
+
 ### Indenting & Code Styling
 
 Keep indenting clean and follow the existing standards of the files.
@@ -45,6 +47,6 @@ SVGs can only have their colours set with variables if they exist in the DOM.  T
 Websites are tricky, licensing is mixed.
 
 - Our website _code_ is licensed under the GPL V2
-- Our website _content_ is licensed under 
+- Our website _content_ is licensed under something to be determined!
 - [Inter](https://github.com/rsms/inter) is distributed under the [SIL Open Font License](https://github.com/rsms/inter/blob/master/LICENSE.txt).
 - [BoxIcons](https://github.com/atisawd/boxicons) is licensed under [CC4.0](https://creativecommons.org/licenses/by/4.0/).
