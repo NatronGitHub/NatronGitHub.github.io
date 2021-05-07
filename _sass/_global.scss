@@ -1,4 +1,5 @@
 // Apply a natural box layout model to all elements, but allowing components to change
+
 html {
   box-sizing: border-box;
 }
@@ -8,7 +9,13 @@ html {
 body {
   margin: 0;
   padding: 0;
+}
+
+// Global settings
+
+body {
   font-family: 'Inter', sans-serif;
+  font-feature-settings: "frac", "cv03", "cv04", "cv09";
 }
 
 // Page content wrapper, applies to everything below the nav and above the footer!
@@ -21,6 +28,7 @@ body {
 }
 
 // Colors
+
 :root
 {
   --pink: #ff5868;
@@ -32,6 +40,7 @@ body {
 }
 
 // P3 Colors (when supported)
+
 @supports (color: color(display-p3 1 1 1 / 1)) {
   :root
     {
@@ -44,10 +53,14 @@ body {
     }
 }
 
-// Gradient
+// Gradients, shadows, and other applicable styles
 
 .background-gradient {
   background: linear-gradient(90deg, var(--purple), var(--pink));
+}
+
+.large-dropshadow-text {
+  text-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2), 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 // Layout & Standard Elements
@@ -62,6 +75,27 @@ body {
   justify-content: center;
 }
 
+.herosection::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 100vw;
+  height: 90vh;
+  background: linear-gradient(var(--offblack) 10%, rgba(0,0,0,0.2) 65%, var(--offblack));
+}
+
+.herosection-container {
+  padding: 0px 20px 0 20px;
+  max-width: 1340px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
 .stdsection {
   display: flex;
   justify-content: center;
@@ -73,16 +107,6 @@ body {
   width: 100%;
 }
 
-.herosection-container {
-  padding: 0px 20px 0 20px;
-  max-width: 1340px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-content: center;
-  align-items: center;
-}
-
 // Typography
 
 .center-text {
@@ -92,6 +116,7 @@ body {
 }
 
 .h1 {
+  margin-top: 0;
   font-size: 72px;
   font-variation-settings: 'wght' 900;
   color: var(--white);
@@ -103,6 +128,7 @@ body {
 }
 
 .h2 {
+  margin-top: 0;
   font-size: 42px;
   font-variation-settings: 'wght' 700;
   background: linear-gradient(90deg, var(--purple), var(--pink));
