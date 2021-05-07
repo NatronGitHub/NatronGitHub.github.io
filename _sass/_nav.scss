@@ -26,10 +26,13 @@
 }
 
 .nav-logo {
-  height: 32px;
-  vertical-align: bottom;
-  fill: red !important;
-  pointer-events: none;
+  fill: var(--grey);
+  transition-duration: $hovertransition;
+}
+
+.nav-logo:hover {
+  fill: var(--white);
+  transition-duration: $hovertransition;
 }
 
 .nav-menulist {
@@ -48,6 +51,12 @@
     color: var(--grey);
     font-variation-settings: 'wght' 600;
     vertical-align: bottom;
+    transition-duration: $hovertransition;
+  }
+
+  a:hover {
+    color: var(--white);
+    transition-duration: $hovertransition;
   }
 }
 
@@ -67,5 +76,11 @@
   a {
     text-decoration: none;
     color: var(--grey);
+    transition-duration: $hovertransition;
+  }
+
+  a:hover {
+    color: var(--white);
+    transition-duration: $hovertransition;
   }
 }
