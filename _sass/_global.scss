@@ -124,12 +124,13 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
   text-decoration: none;
   font-size: 1rem;
   font-variation-settings: 'wght' 600;
-  color: var(--white);
+  color: var(--offwhite);
   letter-spacing: 0.05rem;
   transition-duration: $hovertransition;
 }
 
 .button:hover {
+  color: var(--white);
   transition-duration: $hovertransition;
   transform: scale(105%);
   text-shadow: 0 0 40px var(--pink), 0 0 60px var(--pink), 0 0 70px var(--pink), 0 0 80px var(--pink);
