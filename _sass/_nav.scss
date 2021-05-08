@@ -2,7 +2,7 @@
   background-color: var(--offblack);
   display: flex;
   justify-content: center;
-  height: 72px;
+  height: 4.5rem;
   width: 100%;
   position: fixed;
   z-index: 100;
@@ -37,7 +37,7 @@
 
 .nav-menulist {
   margin: 0;
-  padding: 0;
+  padding: 0 1rem 0 1rem;
   list-style: none;
   display: flex;
   justify-content: space-evenly;
@@ -47,7 +47,9 @@
 
   a {
     text-decoration: none;
-    font-size: 15px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 1rem;
     color: var(--grey);
     font-variation-settings: 'wght' 600;
     vertical-align: bottom;
@@ -69,7 +71,7 @@
   align-content: center;
 
   i {
-    font-size: 24px;
+    font-size: 1.5rem;
     vertical-align: bottom;
   }
 
