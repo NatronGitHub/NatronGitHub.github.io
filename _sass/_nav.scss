@@ -62,6 +62,7 @@
 
   a:hover {
     color: var(--white);
+    font-variation-settings: 'wght' 700;
     transition-duration: $hovertransition;
   }
 

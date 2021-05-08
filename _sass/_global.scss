@@ -12,9 +12,6 @@ body {
 }
 
 // Global settings
-
-@import url('https://rsms.me/inter/inter.css');
-
 body {
   font-family: 'Inter var', sans-serif;
   font-feature-settings: "frac", "cv03", "cv04", "cv09";
@@ -68,7 +65,36 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
   text-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2), 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-// Layout & Standard Elements
+.large-dropshadow {
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2), 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button {
+  display: inline-block;
+  background: $brandgradient;
+  border: none;
+  border-radius: 50rem;
+  max-width: 20rem;
+  min-width: 15rem;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-variation-settings: 'wght' 600;
+  color: var(--offwhite);
+  letter-spacing: 0.05rem;
+  transition-duration: $hovertransition;
+}
+
+.button:hover {
+  font-variation-settings: 'wght' 700;
+  color: var(--white);
+  transition-duration: $hovertransition;
+  transform: scale(105%);
+  text-shadow: 0 0 40px var(--pink), 0 0 60px var(--pink), 0 0 70px var(--pink), 0 0 80px var(--pink);
+}
+
+// Standard layout elements
 
 .herosection {
   width: 100%;
@@ -110,30 +136,6 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
   padding: 0px 20px 0 20px;
   max-width: 1340px;
   width: 100%;
-}
-
-.button {
-  display: inline-block;
-  background: $brandgradient;
-  border: none;
-  border-radius: 50rem;
-  max-width: 20rem;
-  min-width: 15rem;
-  padding: 1rem;
-  text-align: center;
-  text-decoration: none;
-  font-size: 1rem;
-  font-variation-settings: 'wght' 600;
-  color: var(--offwhite);
-  letter-spacing: 0.05rem;
-  transition-duration: $hovertransition;
-}
-
-.button:hover {
-  color: var(--white);
-  transition-duration: $hovertransition;
-  transform: scale(105%);
-  text-shadow: 0 0 40px var(--pink), 0 0 60px var(--pink), 0 0 70px var(--pink), 0 0 80px var(--pink);
 }
 
 // Typography
