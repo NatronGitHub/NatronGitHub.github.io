@@ -45,10 +45,14 @@
   align-content: center;
   flex-grow: 1;
 
+  li {
+    display: inline;
+    position: relative;
+  }
+
   a {
     text-decoration: none;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    text-align: center;
     font-size: 1rem;
     color: var(--grey);
     font-variation-settings: 'wght' 600;
@@ -64,10 +68,9 @@
   a:before {
     content: "";
     position: absolute;
-    height: 0.125rem;
+    height: 0.15rem;
     width: 100%;
-    bottom: -0.7rem;
-    border-radius: 0.3rem;
+    bottom: -0.5rem;
     background: linear-gradient(90deg, var(--purple) 0%, var(--pink) 100%);
     transition: width 0.5s ease;
     // These properties hide the lines

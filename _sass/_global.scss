@@ -132,7 +132,7 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
 .button:hover {
   transition-duration: $hovertransition;
   transform: scale(105%);
-  text-shadow: 0 0 1px var(--white), 0 0 2px var(--white), 0 0 40px var(--pink), 0 0 60px var(--pink), 0 0 70px var(--pink), 0 0 80px var(--pink);
+  text-shadow: 0 0 40px var(--pink), 0 0 60px var(--pink), 0 0 70px var(--pink), 0 0 80px var(--pink);
 }
 
 // Typography
