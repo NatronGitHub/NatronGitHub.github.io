@@ -1,3 +1,10 @@
+// For hero section settings see _global.scss
+
+.index-features-titlecontainer {
+  margin-top: 5rem;
+  background-color: red;
+}
+
 .index-features {
   margin-top: 5rem;
 
@@ -20,8 +27,6 @@
 
   li {
     padding: 40px;
-    display: flex;
-    justify-content: flex-start;
   }
 
   img {
@@ -44,6 +49,7 @@
 }
 
 .index-aboutnodes {
+  margin-top: 10rem;
   display: flex;
 }
 

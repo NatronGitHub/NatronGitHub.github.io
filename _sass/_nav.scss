@@ -60,6 +60,29 @@
     color: var(--white);
     transition-duration: $hovertransition;
   }
+
+  a:before {
+    content: "";
+    position: absolute;
+    height: 0.125rem;
+    width: 100%;
+    bottom: -0.7rem;
+    border-radius: 0.3rem;
+    background: linear-gradient(90deg, var(--purple) 0%, var(--pink) 100%);
+    transition: width 0.5s ease;
+    // These properties hide the lines
+    visibility: hidden;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: all $hovertransition ease-in-out 0s;
+  }
+
+  a:hover:before {
+    // These properties un-hide the lines
+    visibility: visible;
+    transform-origin: left center;
+    transform: scaleX(1);
+  }
 }
 
 .nav-sociallinks {

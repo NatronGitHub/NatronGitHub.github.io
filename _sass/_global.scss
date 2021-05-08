@@ -112,6 +112,29 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
   width: 100%;
 }
 
+.button {
+  display: inline-block;
+  background: $brandgradient;
+  border: none;
+  border-radius: 50rem;
+  max-width: 20rem;
+  min-width: 15rem;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-variation-settings: 'wght' 600;
+  color: var(--white);
+  letter-spacing: 0.05rem;
+  transition-duration: $hovertransition;
+}
+
+.button:hover {
+  transition-duration: $hovertransition;
+  transform: scale(105%);
+  text-shadow: 0 0 1px var(--white), 0 0 2px var(--white), 0 0 40px var(--pink), 0 0 60px var(--pink), 0 0 70px var(--pink), 0 0 80px var(--pink);
+}
+
 // Typography
 
 //Apply this class to specific text that you want to break in specific places when the page is resized
@@ -126,16 +149,19 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
 }
 
 .h1 {
-  margin-top: 0;
   font-size: max(min(4.5vw, 4.8rem), 3.4rem);
   font-variation-settings: 'wght' 700;
   color: var(--white);
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 .hero-subheader {
   // font-size: 1.875rem;
   font-size: max(min(2vw, 1.875rem), 1.5rem);
   font-variation-settings: 'wght' 550;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
 }
 
 .h2 {
