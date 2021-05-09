@@ -1,5 +1,6 @@
 // For hero section settings see _global.scss
 
+// Feature cards section
 .index-features-titlecontainer {
   margin-top: 5rem;
 }
@@ -9,7 +10,7 @@
 
   ul {
     list-style: none;
-    margin: 0 0 20px 0;
+    margin: 0 0 20px;
     padding: 0;
     width: 100%;
     display: grid;
@@ -18,46 +19,74 @@
     grid-row-gap: 40px;
   }
 
-  @media only screen and (max-width: 640px) {
-    ul {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
-
   li {
     padding: 40px;
   }
 
-  img {
-    height: 60px
+  div {
+    text-align: left;
   }
 
-  .index-features-title {
-    padding-top: 0.5rem;
-    margin-bottom: -0.8rem;
+  img {
+    height: 60px;
+    margin-bottom: 1rem;
   }
 
   h4 {
-    display: inline;
+    color: var(--offwhite);
   }
 
   p {
     max-width: 15rem;
+    color: var(--offwhite);
   }
 
+  @include mq($from: mobile, $until: tablet) {
+    ul {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    li {
+      padding: 20px;
+    }
+
+    div {
+      text-align: center;
+    }
+
+    p {
+      max-width: 100%;
+    }
+
+  @include mq($from: tablet, $until: desktop) {
+    ul {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    div {
+        text-align: left;
+      }
+    }
 }
 
+// About nodes section
+
 .index-aboutnodes {
-  margin-top: 10rem;
+  margin-top: 5rem;
   display: flex;
 }
 
 .index-aboutnodes-imagecontainer {
   max-width: 750px;
-  width: 200%;
+  width: 100%;
   flex-grow: 2;
   flex-shrink: 1;
   margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
 
   img {
     width: 100%;
@@ -69,4 +98,85 @@
   margin-left: 10px;
   flex-grow: 1;
   flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.index-aboutnodes-buttoncontainer {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+@include mq($from: mobile, $until: desktop) {
+  .index-aboutnodes {
+    flex-direction: column;
+  }
+
+  .index-aboutnodes-textcontainer {
+    margin-top: 4rem;
+  }
+}
+
+// Downloads section
+
+.index-downloads-titlecontainer {
+  margin-top: 8rem;
+
+  .p-small {
+    color: var(--grey)
+  }
+}
+
+.index-downloads-oscontainer {
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 40px;
+}
+
+.index-downloads-os {
+  display: grid;
+  grid-template-rows: 5.8rem 5.8rem 1fr;
+
+  .p-small {
+    margin-bottom: 1.2rem;
+  }
+
+  i {
+    position: relative;
+    font-size: 3rem;
+    top: 0.6rem;
+    margin-right: 0.5rem;
+  }
+
+  h3 {
+    white-space: nowrap;
+  }
+
+  p.p-small {
+    color: var(--grey)
+  }
+
+  a {
+    display: block;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-bottom: 1rem;
+  }
+}
+
+@include mq($from: mobile, $until: desktop) {
+  .index-downloads-oscontainer {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-column-gap: 40px;
+  }
+}
+
+// Community section

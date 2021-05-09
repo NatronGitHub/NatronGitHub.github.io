@@ -1,5 +1,5 @@
 .nav {
-  background-color: var(--offblack);
+  background-color: var(--desatpruple);
   display: flex;
   justify-content: center;
   height: 4.5rem;
@@ -17,6 +17,8 @@
 }
 
 .nav-logocontainer {
+  position: relative;
+  top: 2px;
   width: 100%;
   max-width: 200px;
   display: flex;
@@ -27,11 +29,13 @@
 
 .nav-logo {
   fill: var(--grey);
+  color: var(--grey);
   transition-duration: $hovertransition;
 }
 
 .nav-logo:hover {
   fill: var(--white);
+  color: var(--white);
   transition-duration: $hovertransition;
 }
 

@@ -38,7 +38,7 @@ Jekyll is a static site generator and relative file URLs don't really work unles
 
 ### SVGs & Colours In General
 
-All colours are referenced as both P3 and an sRGB fallback.  Variables can be found and set in `_sass/_global.scss`.
+All colour variables are referenced as both P3 and an sRGB fallback.  Variables can be found and set in `_sass/_global.scss`.
 
 SVGs can only have their colours set with variables if they exist in the DOM.  This matters most for SVGs set to our brand colours & 100% white.  If the SVG is not using these colours _it doesn't have to be embedded!_  Otherwise, it should be.
 
@@ -48,5 +48,6 @@ Websites are tricky, licensing is mixed.
 
 - Our website _code_ is licensed under the GPL V2
 - Our website _content_ is licensed under something to be determined!
-- [Inter](https://github.com/rsms/inter) is distributed under the [SIL Open Font License](https://github.com/rsms/inter/blob/master/LICENSE.txt).
+- [Inter](https://github.com/rsms/inter) is licensed under the [SIL Open Font License](https://github.com/rsms/inter/blob/master/LICENSE.txt).
 - [BoxIcons](https://github.com/atisawd/boxicons) is licensed under [CC4.0](https://creativecommons.org/licenses/by/4.0/).
+- [Sass MQ](https://github.com/sass-mq/sass-mq) is licensed under the [MIT License](https://github.com/sass-mq/sass-mq/blob/master/LICENSE.md).
