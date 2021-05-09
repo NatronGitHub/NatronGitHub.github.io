@@ -23,10 +23,6 @@
     padding: 40px;
   }
 
-  div {
-    text-align: left;
-  }
-
   img {
     height: 60px;
     margin-bottom: 1rem;
@@ -51,10 +47,6 @@
       padding: 20px;
     }
 
-    div {
-      text-align: center;
-    }
-
     p {
       max-width: 100%;
     }
@@ -63,11 +55,17 @@
     ul {
         grid-template-columns: repeat(2, 1fr);
       }
-
-    div {
-        text-align: left;
-      }
     }
+}
+
+.index-featurecard {
+  text-align: left;
+}
+
+@include mq($from: mobile, $until: tablet) {
+  .index-featurecard  {
+    text-align: center;
+  }
 }
 
 // About nodes section
