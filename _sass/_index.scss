@@ -72,15 +72,13 @@
 
 .index-aboutnodes {
   margin-top: 5rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: 58fr 42fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
 }
 
 .index-aboutnodes-imagecontainer {
-  max-width: 750px;
-  width: 100%;
-  flex-grow: 2;
-  flex-shrink: 1;
-  margin-right: 10px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -92,29 +90,28 @@
 }
 
 .index-aboutnodes-textcontainer {
-  max-width: 530px;
-  margin-left: 10px;
-  flex-grow: 1;
-  flex-shrink: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.index-aboutnodes-buttoncontainer {
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
-}
-
 @include mq($from: mobile, $until: desktop) {
   .index-aboutnodes {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+
+    h2 {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
-  .index-aboutnodes-textcontainer {
+  .index-aboutnodes-textcontainer, .index-aboutnodes-imagecontainer {
     margin-top: 4rem;
+    margin-left: 5vw;
+    margin-right: 5vw;
   }
+
 }
 
 // Downloads section
@@ -128,7 +125,7 @@
 }
 
 .index-downloads-oscontainer {
-  margin-top: 2rem;
+  margin-top: 4rem;
   margin-left: auto;
   margin-right: auto;
   width: 80%;
@@ -136,11 +133,12 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 40px;
+  text-align: center;
 }
 
 .index-downloads-os {
   display: grid;
-  grid-template-rows: 5.8rem 5.8rem 1fr;
+  grid-template-rows: 4rem 5.8rem 1fr;
 
   .p-small {
     margin-bottom: 1.2rem;
@@ -154,11 +152,15 @@
   }
 
   h3 {
+    margin-bottom: 0;
     white-space: nowrap;
   }
 
   p.p-small {
-    color: var(--grey)
+    color: var(--grey);
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   a {
@@ -166,14 +168,20 @@
     width: -moz-fit-content;
     width: fit-content;
     margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 @include mq($from: mobile, $until: desktop) {
   .index-downloads-oscontainer {
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
     grid-template-columns: 1fr;
-    grid-column-gap: 40px;
+    grid-row-gap: 4rem;
+  }
+
+  .index-downloads-os {
+    grid-template-rows: auto;
   }
 }
 

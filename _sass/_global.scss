@@ -196,6 +196,7 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
 .h3 {
   font-size: 1.875rem;
   font-variation-settings: 'wght' 700;
+  margin-top: 0;
 }
 
 .h4 {
@@ -233,6 +234,6 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
 
 .intext-link-glow:hover {
   transition-duration: 0.1s;
-  color: #8cbff9;
+  color: #acd1fb;
   text-shadow: 0 0 50px var(--linkblue), 0 0 60px var(--linkblue), 0 0 70px var(--linkblue)
 }
