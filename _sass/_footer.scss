@@ -15,12 +15,6 @@ footer {
   align-items: center;
 }
 
-@include mq($from: mobile, $until: tablet) {
-  .footer-logocontainer {
-    justify-content: center;
-  }
-}
-
 .footer-logo {
   max-width: 15rem;
 }
@@ -39,24 +33,44 @@ footer {
 }
 
 @include mq($from: mobile, $until: tablet) {
+  .footer-logocontainer {
+    justify-content: center;
+  }
+
   .footer-linkscontainer {
     grid-template-columns: 1fr;
-    grid-auto-rows: auto;
+    grid-template-rows: 1fr 1fr;
     grid-row-gap: 2rem;
     text-align: center;
   }
 }
 
-.footer-navcontainer {
-  // background: red;
-}
-
-.footer-tutorialcontainer {
-  // background: blue;
-}
-
 .footer-communitycontainer {
-  background: green;
+  color: var(--grey);
+
+  a {
+    text-decoration: none;
+    color: var(--grey);
+    font-size: 1.8rem;
+    transition-duration: $hovertransition;
+    margin-right: 2rem;
+  }
+
+  a:hover {
+    color: var(--white);
+    transition-duration: $hovertransition;
+  }
+}
+
+@include mq($from: mobile, $until: tablet) {
+  .footer-communitycontainer {
+    margin-top: -4rem;
+
+    a{
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
 }
 
 .footer-links-list {
