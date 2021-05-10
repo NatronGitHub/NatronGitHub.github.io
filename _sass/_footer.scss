@@ -1,0 +1,84 @@
+footer {
+  background: var(--offblack);
+}
+
+.footer-rule {
+  margin-top: 8rem;
+  height: 0.25rem;
+  background: $brandgradient;
+}
+
+.footer-logocontainer {
+  padding-top: 4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+@include mq($from: mobile, $until: tablet) {
+  .footer-logocontainer {
+    justify-content: center;
+  }
+}
+
+.footer-logo {
+  max-width: 15rem;
+}
+
+.footer-linkscontainer {
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+  display: grid;
+  gap: 0 1.25rem;
+  grid-template-columns: 1fr 1fr 2fr;
+
+  h4 {
+    color: var(--white);
+    margin-bottom: 1.5rem;
+  }
+}
+
+@include mq($from: mobile, $until: tablet) {
+  .footer-linkscontainer {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-row-gap: 2rem;
+    text-align: center;
+  }
+}
+
+.footer-navcontainer {
+  // background: red;
+}
+
+.footer-tutorialcontainer {
+  // background: blue;
+}
+
+.footer-communitycontainer {
+  background: green;
+}
+
+.footer-links-list {
+  padding-left: 0;
+
+  li {
+    list-style: none;
+    margin-bottom: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--grey);
+    font-variation-settings: 'wght' 500;
+    vertical-align: bottom;
+    transition-duration: $hovertransition;
+  }
+
+  a:hover {
+    color: var(--white);
+    font-variation-settings: 'wght' 700;
+    transition-duration: $hovertransition;
+  }
+}
