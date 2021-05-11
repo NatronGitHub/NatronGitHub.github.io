@@ -99,6 +99,13 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
   color: var(--offwhite);
   letter-spacing: 0.05rem;
   transition-duration: $hovertransition;
+
+  i {
+    margin-right: 0.5em;
+    position: relative;
+    vertical-align: middle;
+    top: -0.05em;
+  }
 }
 
 .button:hover {
