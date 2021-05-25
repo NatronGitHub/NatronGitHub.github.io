@@ -113,7 +113,8 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
   color: var(--white);
   transition-duration: $hovertransition;
   transform: scale(105%);
-  text-shadow: 0 0 40px var(--pink), 0 0 60px var(--pink), 0 0 70px var(--pink), 0 0 70px var(--pink), 0 0 80px var(--pink);
+  // text-shadow: 0 0 40px var(--pink), 0 0 60px var(--pink), 0 0 70px var(--pink), 0 0 70px var(--pink), 0 0 80px var(--pink);
+  box-shadow: 0 0 10px var(--white), 0 0 40px -10px var(--pink), 0 0 50px -10px var(--purple);
 }
 
 // Standard layout elements
