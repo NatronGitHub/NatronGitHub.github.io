@@ -222,7 +222,7 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
 .p-small {
   font-size: 1rem;
   font-variation-settings: 'wght' 450;
-  line-height: 1.3rem;
+  line-height: 1.4rem;
 }
 
 .intext-link {
@@ -243,5 +243,5 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
 .intext-link-glow:hover {
   transition-duration: 0.1s;
   color: #acd1fb;
-  text-shadow: 0 0 50px var(--linkblue), 0 0 60px var(--linkblue), 0 0 70px var(--linkblue)
+  text-shadow: 0 0 20px var(--linkblue), 0 0 50px var(--linkblue), 0 0 70px var(--linkblue);
 }

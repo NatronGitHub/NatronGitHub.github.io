@@ -55,6 +55,9 @@
     ul {
         grid-template-columns: repeat(2, 1fr);
       }
+    p {
+        max-width: 100%;
+      }
     }
 }
 
@@ -97,6 +100,7 @@
 
 @include mq($from: mobile, $until: desktop) {
   .index-aboutnodes {
+    margin-top: 0;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
 
@@ -189,4 +193,76 @@
 
 .index-community-titlecontainer {
   margin-top: 8rem;
+}
+
+.index-community-cardgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+@include mq($from: mobile, $until: desktop) {
+  .index-community-cardgrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  .index-card {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+.index-community-cardcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.index-card {
+  margin: 3.5rem;
+  display: block;
+  text-decoration: none;
+  color: var(--offwhite);
+  border-radius: 1.5rem;
+  display: flex;
+  height: 10rem;
+  max-width: 28rem;
+  background: $brandgradient;
+  transition-duration: $hovertransition;
+}
+
+.index-card:hover {
+  transition-duration: $hovertransition;
+  transform: scale(102%);
+  color: var(--white);
+}
+
+.index-card-icon {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.index-card-text {
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
