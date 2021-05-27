@@ -1,32 +1,40 @@
----
-layout: default
-title: Features
----
-<section class="herosection" style="background-image: url({{base}}/img/feature-images/feature-hero.png); min-height: 35rem;">
-  <div class="herosection-container">
-    <div>
-      <h1 class="h1 large-dropshadow-text">Natronʼs Features</h1>
-      <p class="hero-subheader large-dropshadow-text"><span class="word-wrap-section">Whether you’re an experienced compositor <span class="word-wrap-section">or a beginner artist, </span></span><span class="word-wrap-section">Natron provides an arsenal of <span class="word-wrap-section">tools at your disposal.</span></span></p>
+<html lang="{{ site.lang | default: "en-US" }}">
+  {% include baseurl.html %}
+  {% include head.html %}
+  <body>
+    {% include nav.html %}
+    <div class="wrapper">
+      <section class="herosection" style="background-image: url({{base}}/img/feature-images/feature-hero.png); min-height: 35rem;">
+        <div class="herosection-container">
+          <div>
+            <h1 class="h1 large-dropshadow-text">Natronʼs Features</h1>
+            <h1>{{base}}</h1>
+            <h1>{{ page.url }}</h1>
+            <p class="hero-subheader large-dropshadow-text"><span class="word-wrap-section">Whether you’re an experienced compositor <span class="word-wrap-section">or a beginner artist, </span></span><span class="word-wrap-section">Natron provides an arsenal of <span class="word-wrap-section">tools at your disposal.</span></span></p>
+          </div>
+        </div>
+      </section>
+      <nav class="stdsection">
+        <div class="section-container">
+          <ul>
+            {% for file in site.collections.features %}
+            <li>
+              <a href="{{ page.url }}">{{ page.title }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </nav>
+      <article class="stdsection">
+        <div class="section-container">
+          <div class="features-headercontainer">
+            <h2 class="h2 center-text">{{ page.title }}</h2>
+            <p class="p-body center-text"> {{ page.excerpt }}</p>
+          </div>
+          {{content}}
+        </div>
+      </article>
     </div>
-  </div>
-</section>
-<nav class="stdsection">
-  <div class="section-container">
-    <ul>
-      {% for file in site.collections.features %}
-      <li>
-        <a href="{{ page.url }}">{{ page.title }}</a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-</nav>
-<article class="stdsection">
-  <div class="section-container">
-    <div class="features-headercontainer">
-      <h2 class="h2 center-text">{{ page.title }}</h2>
-      <p class="p-body center-text"> {{ page.excerpt }}</p>
-    </div>
-    {{content}}
-  </div>
-</article>
+    {% include footer.html %}
+  </body>
+</html>
