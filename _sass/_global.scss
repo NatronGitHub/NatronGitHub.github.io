@@ -65,7 +65,7 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
     {
       --pink: color(display-p3 1.00 0.40 0.45 / 1);
       --purple: color(display-p3 0.44 0.29 1 / 1);
-      --linkblue: color(display-p3 0.346 0.577 0.925/ 1)
+      --linkblue: color(display-p3 0.346 0.577 0.925/ 1);
       --offwhite: color(display-p3 0.985 0.988 0.988 / 1);
       --grey: color(display-p3 0.85 0.85 0.87 / 1);
       --white: color(display-p3 1 1 1 / 1);
@@ -120,6 +120,7 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
 // Standard layout elements
 
 .herosection {
+  padding-top: 1rem;
   width: 100%;
   min-height: 50rem;
   background-position: center;
@@ -134,7 +135,7 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
   position: absolute;
   z-index: 0;
   width: 100%;
-  min-height: 50rem;
+  min-height: inherit;
   background: linear-gradient(var(--desatpruple) 10%, rgba(0,0,0,0.2) 65%, var(--offblack));
 }
 
@@ -159,6 +160,16 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
   padding: 0px 20px 0 20px;
   max-width: 1340px;
   width: 100%;
+}
+
+.textpage-section-container {
+  padding: 0px 20px 0 20px;
+  max-width: 860px;
+  width: 100%;
+}
+
+.bodycontent-pushdown {
+  padding-top: 8rem;
 }
 
 // Typography

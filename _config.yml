@@ -1,13 +1,11 @@
 title: "Natron"
 description: Open Source Compositing Software For VFX and Motion Graphics
-# baseurl: "/NatronGitHub.github.io" #For preview purposes on wilkinson.graphics/NatronGitHub.github.io ONLY.  Remove once website is live.
-
 # Build settings
 sass:
   style: compressed
 markdown: kramdown
 kramdown:
-  auto_ids: "false"
+  auto_ids: "true"
   input: GFM
   syntax_highlighter_opts:
     default_lang: python
@@ -17,6 +15,11 @@ kramdown:
     block:
       line_numbers: true
       start_line: 1
+collections_dir: _collections
+collections:
+  features:
+    output: true
+    permalink: /features/:path/
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
