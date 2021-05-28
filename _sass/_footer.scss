@@ -15,8 +15,16 @@ footer {
   align-items: center;
 }
 
+.footer-logo-link {
+  display: block;
+  height: inherit;
+  max-width: 15rem;
+  width: 100%;
+}
+
 .footer-logo {
   max-width: 15rem;
+  pointer-events: none;
 }
 
 .footer-linkscontainer {
