@@ -1,11 +1,72 @@
-.features-headercontainer {
+.features-linkscontainer {
+  padding: 0;
   margin-bottom: 8rem;
+  margin-top: 4rem;
+  width: 100%;
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  li {
+  }
+
+  a {
+    color: var(--grey);
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--grey);
+    font-variation-settings: 'wght' 600;
+  }
+
+  a:hover, a.features-navhovered {
+    color: var(--white);
+    font-variation-settings: 'wght' 700;
+    transition-duration: $hovertransition;
+  }
+
+  a:before {
+    display: block;
+    content: "";
+    position: relative;
+    height: 0.25rem;
+    width: 100%;
+    top: 2.2rem;
+    background: $brandgradient;
+    transition: width 0.5s ease;
+    // These properties hide the lines
+    visibility: hidden;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: all $hovertransition ease-in-out 0s;
+  }
+
+  a:hover:before {
+    // These properties un-hide the lines
+    visibility: visible;
+    transform-origin: left center;
+    transform: scaleX(1);
+  }
+
+  // Show a line under the current page
+  a.features-navhovered:before {
+    display: block;
+    content: "";
+    position: relative;
+    height: 0.25rem;
+    width: 100%;
+    top: 2.2rem;
+    background: $brandgradient;
+    visibility: visible;
+    transform: scaleX(1);
+  }
 }
 
 .features-featurecontainer {
   margin-bottom: 8rem;
   width: 100%;
   display: flex;
+  justify-content: space-between;
 }
 
 .features-imagecontainer {
@@ -35,6 +96,18 @@
 
   .features-featurecontainer {
     flex-direction: row-reverse;
+  }
+}
+
+@include mq($from: mobile, $until: tablet) {
+  .features-linkscontainer {
+    flex-direction: column;
+    margin-bottom: 4rem;
+    margin-top: 1rem;
+
+    li {
+      margin-bottom: 2rem;
+    }
   }
 }
 

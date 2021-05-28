@@ -14,21 +14,27 @@
       </section>
       <nav class="stdsection">
         <div class="section-container">
-          <ul>
-            {% for file in site.collections.features %}
+          <ul class="features-linkscontainer">
+            <!-- Generate a list of everything in the features collection -->
+            {% for features in site.features %}
+            <!-- Check if the page is current, if so assign these styles -->
+            {% if page.url == features.url %}
             <li>
-              <a href="{{ page.url }}">{{ page.title }}</a>
+              <a href="{{ base }}{{ features.url }}" class="features-navhovered" style="color:var(--white); font-variation-settings: 'wght' 700; visibility: visible;">{{ features.title }}</a>
             </li>
+            {% endif %}
+            <!-- For all other pages assign these styles -->
+            {% if page.url != features.url %}
+            <li>
+              <a href="{{ base }}{{ features.url }}">{{ features.title }}</a>
+            </li>
+            {% endif %}
             {% endfor %}
           </ul>
         </div>
       </nav>
       <article class="stdsection">
         <div class="section-container">
-          <div class="features-headercontainer">
-            <h2 class="h2 center-text">{{ page.title }}</h2>
-            <p class="p-body center-text"> {{ page.excerpt }}</p>
-          </div>
           {{content}}
         </div>
       </article>
