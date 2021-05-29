@@ -19,12 +19,12 @@
 .nav-logocontainer {
   position: relative;
   top: 2px;
-  width: 100%;
   max-width: 200px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   align-content: center;
+  flex-grow: 2;
 }
 
 .nav-logo {
@@ -48,7 +48,7 @@
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
-  flex-grow: 1;
+  flex-grow: 5;
 
   li {
     display: inline;
@@ -95,12 +95,12 @@
 }
 
 .nav-sociallinks {
-  width: 100%;
   max-width: 310px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   align-content: center;
+  flex-grow: 1;
 
   i {
     font-size: 1.5rem;
