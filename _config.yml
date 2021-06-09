@@ -1,5 +1,9 @@
 title: "Natron"
 description: Open Source Compositing Software For VFX and Motion Graphics
+twitter: https://twitter.com/natronvfx
+discord: https://discord.gg/cpMj5p3Fv5
+forum: https://discuss.pixls.us/c/software/natron
+github: https://github.com/NatronGitHub/Natron
 # Build settings
 sass:
   style: compressed
