@@ -1,4 +1,5 @@
-# NatronGitHub.github.io
+# Natron Redesigned Website
+
 Natron's New Website!
 
 ## Development
