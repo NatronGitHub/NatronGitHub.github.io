@@ -1,0 +1,96 @@
+/* Styles are for [root]/news/index.html */
+
+time {
+    font-size: 0.925rem;
+}
+
+.newshero {
+    padding-top: 1rem;
+    width: 100%;
+    min-height: 40rem;
+    /* Consider changing min-height to 50rem
+    as that is the default for other pages */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.newshero::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    min-height: inherit;
+    background: linear-gradient(var(--desatpruple) 10%, rgba(0, 0, 0, 0.2) 65%, var(--offblack));
+}
+
+.newshero-container,
+.newsarticles-container {
+    padding: 0px 20px 0 20px;
+    max-width: 1340px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.newshero-container img {
+    max-width: 50%;
+}
+
+.newshero-container-text {
+    max-width: 40%;
+}
+
+img {
+    /* Newsitem picture shadow */
+    filter: drop-shadow(0px 16px 24px rgba(8, 9, 10, 0.06)), drop-shadow(0px 2px 6px rgba(8, 9, 10, 0.04)), drop-shadow(0px 0px 1px rgba(8, 9, 10, 0.04));
+    border-radius: 0.5rem;
+}
+
+/* Section for all other articles */
+.newsarticles {
+    padding-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Flexbox cards container */
+.newsarticles-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Flexbox cards */
+.newsarticles-card {
+    display: flex;
+    /* Don't grow, do shrink, max-width = 24% */
+    flex: 0 1 28%;
+    flex-direction: column;
+    height: auto;
+    /* margin-x-2 */
+    margin-left: 2rem;
+    margin-right: 2rem;
+    /* Add space to bottom to further separate rows */
+    margin-bottom: 8rem;
+
+    >img {
+        max-width: 100%;
+        height: auto;
+        /* Add spacing between image and description */
+        margin-bottom: 3rem;
+    }
+}
+
+/* Description in flexbox cards */
+.newsarticles-card-description {
+    >h3 {
+        margin-top: 0.7rem;
+    }
+}

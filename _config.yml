@@ -27,3 +27,4 @@ collections:
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
+permalink: /404.html

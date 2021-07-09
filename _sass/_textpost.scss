@@ -1,5 +1,10 @@
 .textpost {
-  h1 {
-    margin-top: 0;
-  }
+    h1 {
+        margin-top: 0;
+    }
+}
+
+.nav-fade-gradient {
+    background: linear-gradient(var(--desatpruple) 10%, rgba(0, 0, 0, 0.2) 65%, var(--offblack));
+    padding: 0rem 3rem;
 }

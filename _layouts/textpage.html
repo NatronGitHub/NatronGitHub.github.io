@@ -2,17 +2,20 @@
 <html lang="{{ site.lang | default: "en-US" }}">
 {% include baseurl.html %}
 {% include head.html %}
+
 <body>
-  {% include nav.html %}
-  <div class="wrapper">
-    <div class="stdsection">
-      <div class="textpage-section-container bodycontent-pushdown">
-        <div class="textpost">
-          {{ content }}
+    {% include nav.html %}
+    <div class="wrapper">
+        <div class="stdsection">
+            <div class="textpage-section-container bodycontent-pushdown">
+                <div class="nav-fade-gradient"></div>
+                <div class="textpost">
+                    {{ content }}
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  {% include footer.html %}
+    {% include footer.html %}
 </body>
+
 </html>

@@ -1,259 +1,282 @@
 // Apply a natural box layout model to all elements, but allowing components to change
 
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
+
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 // Global settings
 
 body {
-  font-family: 'Inter var', sans-serif;
-  font-feature-settings: "frac", "cv03", "cv04", "cv09";
-  // It's bad to set this in pixels becuase that overrides users who change their default sizing, font-size is instead set to a relative percentage of all browser's default size of 16px
-  font-size: 100%;
+    font-family: 'Inter var', sans-serif;
+    font-feature-settings: "frac", "cv03", "cv04", "cv09";
+    // It's bad to set this in pixels becuase that overrides users who change their default sizing, font-size is instead set to a relative percentage of all browser's default size of 16px
+    font-size: 100%;
 }
 
 // _mq.scss media query settings
 
 @import 'mq';
 
-$mq-breakpoints: (
-    mobile:  320px,
-    tablet:  740px,
-    desktop: 980px
-);
+$mq-breakpoints: (mobile: 320px,
+    tablet: 740px,
+    desktop: 980px);
 
 // Page content wrapper, applies to everything below the nav and above the footer!
 
 .wrapper {
-  min-height: 80vh;
-  width: 100%;
-  background: var(--offblack);
-  color: var(--offwhite);
+    min-height: 80vh;
+    width: 100%;
+    background: var(--offblack);
+    color: var(--offwhite);
 }
 
 // Assorted SASS Variables
 
 $hovertransition: 0.2s;
 $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
-
 // sRGB Colors
 
-:root
-{
-  --pink: #ff5868;
-  --purple: #7848ff;
-  --linkblue: #4295f3;
-  --offwhite: #fbfcfc;
-  --grey: #d9d9e0;
-  --white: #ffffff;
-  --offblack: #08090a;
-  --desatpruple: #1a1422;
+:root {
+    --pink: #ff5868;
+    --purple: #7848ff;
+    --linkblue: #4295f3;
+    --offwhite: #fbfcfc;
+    --grey: #d9d9e0;
+    --white: #ffffff;
+    --offblack: #08090a;
+    --desatpruple: #1a1422;
 }
 
 // P3 Colors (when supported)
 
 @supports (color: color(display-p3 1 1 1 / 1)) {
-  :root
-    {
-      --pink: color(display-p3 1.00 0.40 0.45 / 1);
-      --purple: color(display-p3 0.44 0.29 1 / 1);
-      --linkblue: color(display-p3 0.346 0.577 0.925/ 1);
-      --offwhite: color(display-p3 0.985 0.988 0.988 / 1);
-      --grey: color(display-p3 0.85 0.85 0.87 / 1);
-      --white: color(display-p3 1 1 1 / 1);
-      --offblack: color(display-p3 0.032 0.035 0.038 / 1);
-      --desatpruple: color(display-p3 0.098 0.079 0.129/ 1)
+    :root {
+        --pink: color(display-p3 1.00 0.40 0.45 / 1);
+        --purple: color(display-p3 0.44 0.29 1 / 1);
+        --linkblue: color(display-p3 0.346 0.577 0.925/ 1);
+        --offwhite: color(display-p3 0.985 0.988 0.988 / 1);
+        --grey: color(display-p3 0.85 0.85 0.87 / 1);
+        --white: color(display-p3 1 1 1 / 1);
+        --offblack: color(display-p3 0.032 0.035 0.038 / 1);
+        --desatpruple: color(display-p3 0.098 0.079 0.129/ 1);
     }
 }
 
 // Styles you can apply individually with classes
+// (AKA utility classes)
 
 .large-dropshadow-text {
-  text-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2), 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2), 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .large-dropshadow {
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2), 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2), 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    font-variation-settings: 'wght'500;
+    /* font-medium */
 }
 
 .button {
-  display: inline-block;
-  background: $brandgradient;
-  border: none;
-  border-radius: 50rem;
-  max-width: 20rem;
-  min-width: 15rem;
-  padding: 1rem;
-  text-align: center;
-  text-decoration: none;
-  font-size: 1rem;
-  font-variation-settings: 'wght' 600;
-  color: var(--offwhite);
-  letter-spacing: 0.05rem;
-  transition-duration: $hovertransition;
+    display: inline-block;
+    background: $brandgradient;
+    border: none;
+    border-radius: 50rem;
+    max-width: 20rem;
+    min-width: 15rem;
+    padding: 1.125rem 2.375rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.925rem;
+    font-variation-settings: 'wght'600;
+    color: var(--offwhite);
+    letter-spacing: 0.05rem;
+    transition-duration: $hovertransition;
 
-  i {
-    margin-right: 0.5em;
-    position: relative;
-    vertical-align: middle;
-    top: -0.05em;
-  }
+    i {
+        margin-right: 0.5em;
+        position: relative;
+        vertical-align: middle;
+        top: -0.05em;
+    }
 }
 
 .button:hover {
-  font-variation-settings: 'wght' 700;
-  color: var(--white);
-  transition-duration: $hovertransition;
-  transform: scale(105%);
-  // text-shadow: 0 0 40px var(--pink), 0 0 60px var(--pink), 0 0 70px var(--pink), 0 0 70px var(--pink), 0 0 80px var(--pink);
-  box-shadow: 0 0 10px var(--white), 0 0 40px -10px var(--pink), 0 0 50px -10px var(--purple);
+    font-variation-settings: 'wght'700;
+    color: var(--white);
+    transition-duration: $hovertransition;
+    transform: scale(105%);
+    // text-shadow: 0 0 40px var(--pink), 0 0 60px var(--pink), 0 0 70px var(--pink), 0 0 70px var(--pink), 0 0 80px var(--pink);
+    box-shadow: 0 0 10px var(--white), 0 0 40px -10px var(--pink), 0 0 50px -10px var(--purple);
 }
 
 // Standard layout elements
 
 .herosection {
-  padding-top: 1rem;
-  width: 100%;
-  min-height: 50rem;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
+    padding-top: 1rem;
+    width: 100%;
+    min-height: 50rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
 }
 
 .herosection::before {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  width: 100%;
-  min-height: inherit;
-  background: linear-gradient(var(--desatpruple) 10%, rgba(0,0,0,0.2) 65%, var(--offblack));
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    min-height: inherit;
+    background: linear-gradient(var(--desatpruple) 10%, rgba(0, 0, 0, 0.2) 65%, var(--offblack));
 }
 
 .herosection-container {
-  padding: 0px 20px 0 20px;
-  max-width: 1340px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 1;
+    padding: 0px 20px 0 20px;
+    max-width: 1340px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .stdsection {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .section-container {
-  padding: 0px 20px 0 20px;
-  max-width: 1340px;
-  width: 100%;
+    padding: 0px 20px 0 20px;
+    max-width: 1340px;
+    width: 100%;
 }
 
 .textpage-section-container {
-  padding: 0px 20px 0 20px;
-  max-width: 860px;
-  width: 100%;
+    padding: 0px 20px 0 20px;
+    max-width: 860px;
+    width: 100%;
 }
 
 .bodycontent-pushdown {
-  padding-top: 8rem;
+    padding-top: 8rem;
 }
 
 // Typography
 
 //Apply this class to specific text that you want to break in specific places when the page is resized
 .word-wrap-section {
-  display: inline-block;
+    display: inline-block;
 }
 
 .center-text {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .h1 {
-  font-size: max(min(4.5vw, 4.4rem), 3.4rem);
-  font-variation-settings: 'wght' 700;
-  color: var(--white);
-  margin-top: 0;
-  margin-bottom: 1rem;
+    font-size: max(min(4.5vw, 4.4rem), 3.4rem);
+    font-variation-settings: 'wght'700;
+    color: var(--white);
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
 .hero-subheader {
-  font-size: max(min(2vw, 1.7rem), 1.5rem);
-  font-variation-settings: 'wght' 550;
-  margin-top: 0;
-  margin-bottom: 2.5rem;
+    font-size: max(min(2vw, 1.7rem), 1.5rem);
+    font-variation-settings: 'wght'550;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
 }
 
 .h2 {
-  margin-top: 0;
-  font-size: 2.625rem;
-  font-variation-settings: 'wght' 700;
-  background: $brandgradient;
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  width: -moz-fit-content;
-  width: fit-content;
+    margin-top: 0;
+    font-size: 2.625rem;
+    font-variation-settings: 'wght'700;
+    background: $brandgradient;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.h2-nonwhite {
+    margin-top: 0;
+    font-size: 2.625rem;
+    font-variation-settings: 'wght'700;
+    background: var(--offwhite);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    width: -moz-fit-content;
+    width: fit-content;
 }
 
 .h3 {
-  font-size: 1.875rem;
-  font-variation-settings: 'wght' 700;
-  margin-top: 0;
+    font-size: 1.875rem;
+    font-variation-settings: 'wght'700;
+    margin-top: 0;
 }
 
 .h4 {
-  font-size: 1.25rem;
-  font-variation-settings: 'wght' 700;
-  margin-top: 0;
-  margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-variation-settings: 'wght'700;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+p {
+    line-height: 1.5;
 }
 
 .p-body {
-  font-size: 1.125rem;
-  font-variation-settings: 'wght' 450;
-  line-height: 1.5rem;
+    font-size: 1.125rem;
+    font-variation-settings: 'wght'450;
+    line-height: 1.5rem;
 }
 
 .p-small {
-  font-size: 1rem;
-  font-variation-settings: 'wght' 450;
-  line-height: 1.4rem;
+    font-size: 1rem;
+    font-variation-settings: 'wght'450;
+    line-height: 1.4rem;
 }
 
 .intext-link {
-  color: var(--linkblue);
-  text-decoration: underline;
-  text-decoration-thickness: 0.125rem;
-  text-underline-offset: 0.3rem;
-  transition-duration: $hovertransition;
+    color: var(--linkblue);
+    text-decoration: underline;
+    text-decoration-thickness: 0.125rem;
+    text-underline-offset: 0.3rem;
+    transition-duration: $hovertransition;
 
-  i {
-    text-decoration: none;
-    font-size: 150%;
-    position: relative;
-    vertical-align: middle;
-  }
+    i {
+        text-decoration: none;
+        font-size: 150%;
+        position: relative;
+        vertical-align: middle;
+    }
 }
 
 .intext-link-glow:hover {
-  transition-duration: 0.1s;
-  color: #acd1fb;
-  text-shadow: 0 0 20px var(--linkblue), 0 0 50px var(--linkblue), 0 0 70px var(--linkblue);
+    transition-duration: 0.1s;
+    color: #acd1fb;
+    text-shadow: 0 0 20px var(--linkblue), 0 0 50px var(--linkblue), 0 0 70px var(--linkblue);
 }
