@@ -95,7 +95,11 @@
 .index-aboutnodes-textcontainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+
+  p {
+    line-height: 150%;
+  }
 }
 
 @include mq($from: mobile, $until: desktop) {
