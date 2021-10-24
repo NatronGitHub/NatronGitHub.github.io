@@ -56,6 +56,8 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
     --white: #ffffff;
     --offblack: #08090a;
     --desatpruple: #1a1422;
+    --textwhite: #ECEFF4;
+
 }
 
 // P3 Colors (when supported)
@@ -84,13 +86,6 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2), 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.text-uppercase {
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-    font-variation-settings: 'wght'500;
-    /* font-medium */
-}
-
 .button {
     display: inline-block;
     background: $brandgradient;
@@ -104,7 +99,7 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
     font-size: 0.925rem;
     font-variation-settings: 'wght'600;
     color: var(--offwhite);
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.03rem;
     transition-duration: $hovertransition;
 
     i {
@@ -140,10 +135,10 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
 .herosection::before {
     content: "";
     position: absolute;
-    z-index: 0;
     width: 100%;
     min-height: inherit;
-    background: linear-gradient(var(--desatpruple) 10%, rgba(0, 0, 0, 0.2) 65%, var(--offblack));
+    background-image: linear-gradient(var(--desatpruple) 10%, rgba(0, 0, 0, 0.2) 50%, var(--offblack) 100%), url("https://picsum.photos/1920/1080");
+    background-size: cover;
 }
 
 .herosection-container {
@@ -162,6 +157,13 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
     display: flex;
     justify-content: center;
 }
+
+/*
+.gradient-top {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), var(--offblack));
+    padding-top: 50rem;
+    bottom: 50rem;
+} */
 
 .section-container {
     padding: 0px 20px 0 20px;
@@ -251,7 +253,7 @@ p {
 .p-body {
     font-size: 1.125rem;
     font-variation-settings: 'wght'450;
-    line-height: 1.5rem;
+    line-height: 150%;
 }
 
 .p-small {
@@ -279,4 +281,26 @@ p {
     transition-duration: 0.1s;
     color: #acd1fb;
     text-shadow: 0 0 20px var(--linkblue), 0 0 50px var(--linkblue), 0 0 70px var(--linkblue);
+}
+
+// For 404.html
+
+.errorpage {
+    max-width: 80%;
+
+    h1 {
+        position: relative;
+        width: fit-content;
+    }
+
+    h1::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 10%;
+        left: 0;
+        bottom: -0.7rem;
+        border-radius: 0.3rem;
+        background: linear-gradient(90deg, #7848FF 0%, #FC4355 100%);
+    }
 }
