@@ -13,27 +13,15 @@ We're open to any contributions! To contribute, make sure you have a decent gras
 * HTML/CSS and SCSS
 * Some prior experience with Jekyll
 
-Follow these steps to quickly get started:
+Note that if you're a beginner programmer and this is your first time working on an open-source project, we advise you to read [the detailed development guide](DEVELOP.md). The process described below assumes a pre-existing knowledge of version control systems and Jekyll in general. If that's ok with you, follow these steps to quickly get started:
 
 ### Getting Dependencies
 
-Firstly, make sure you have `git` installed. If you are using macOS or GNU/Linux, you likely already have it installed; Windows users can download and run the installer from [its official download page](https://git-scm.com/download/). Check that you have `git` correctly installed by running this on Mac/Linux:
-
-```bash
-if type git &> /dev/null; then echo Git installed!; else echo Git not installed.; fi
-```
-
-Or this on Windows:
-
-```powershell
-where git; if %errorlevel% neq 0 echo git is not installed.
-```
-
-This website also requires Jekyll, a static site generator we use to generate markup from templates. Installing Jekyll should be quick and easy:
+Make sure you have `git` already installed. This website also requires Jekyll, a static site generator we use to generate markup from templates. Installing Jekyll should be quick and easy:
 
 * Step 1: Install `rbenv` via `brew install rbenv` on Macs, `sudo apt install rbenv` on Debian Linux distros, `yay -S rbenv` on Arch-based distros, or compiling manually from its sources at <https://github.com/rbenv/rbenv>
 * Step 2: Run `rbenv init` and open a new terminal
-* Step 3: Run the command `rbenv install 2.6.3 && rbenv global 2.6.3`
+* Step 3: Run the command `rbenv install 2.7.3 && rbenv global 2.7.3`
 * Step 4: Now, open a new terminal again, and run `gem install bundler && bundler install bundler` - this gives you access to the `bundle` command which (confusingly) is what installs Jekyll!
 
 ## Building With Jekyll
@@ -44,9 +32,10 @@ Now, get the sources of the website:
 git clone https://github.com/Shrinks99/NatronGitHub.github.io && cd NatronGitHub.github.io
 ```
 
-Build with Jekyll in two steps:
+Build with Jekyll in three steps:
 
 * `bundle install` to install all the dependencies
+* `bundle exec jekyll build` to build the site
 * `bundle exec jekyll serve` to start Jekyll at <http://localhost:4000>
 
 Navigate to <http://localhost:4000> in the browser and get going!

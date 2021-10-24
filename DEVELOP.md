@@ -4,6 +4,26 @@ Natron's website uses Jekyll, a static site generator. It usually saves us a lot
 
 If you run into any issues, look at the FAQ and common build problems section at the bottom of this guide.
 
+## Prerequisites for all operating systems
+
+Make sure you have `git` installed. If you are using macOS or GNU/Linux, you likely already have it installed; Windows users can download and run the installer from [its official download page](https://git-scm.com/download/). Check that you have `git` correctly installed by running this on Mac/Linux:
+
+```bash
+if type git &> /dev/null; then echo Git installed!; else echo Git not installed.; fi
+```
+
+Or this on Windows:
+
+```powershell
+where git; if %errorlevel% neq 0 echo git is not installed.
+```
+
+Now, head to correct instructions for your operating system:
+
+- [GNU/Linux](#gnu/linux-instructions)
+- [Windows](#windows-instructions)
+- [macOS](#macos-instructions)
+
 ## GNU/Linux Instructions
 
 First, you want to install `rbenv` simply because many packaged versions of ruby (which is the programming language Jekyll is written in) have lots of other things "dragged in" - we don't want that. We also highly recommend that any already-installed versions of ruby or Jekyll be removed. Check if you have one with the command `command -v /usr/bin/ruby` - if it returns a result, then you have a system ruby installation. This guide presumes that you've already uninstalled any system ruby installation before starting the guide.
