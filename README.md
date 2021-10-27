@@ -19,14 +19,14 @@ Note that if you're a beginner programmer and this is your first time working on
 
 Make sure you have `git` already installed. This website also requires Jekyll, a static site generator we use to generate markup from templates. Installing Jekyll should be quick and easy:
 
-* Step 1: Install `rbenv` via `brew install rbenv` on Macs, `sudo apt install rbenv` on Debian Linux distros, `yay -S rbenv` on Arch-based distros, or compiling manually from its sources at <https://github.com/rbenv/rbenv>
+* Step 1: Install `rbenv` via `brew install rbenv` on macOS with [Homebrew](https://brew.sh/) installed, `sudo apt install rbenv` on Debian Linux distros, `yay -S rbenv` on Arch-based distros, or compiling manually from its sources at <https://github.com/rbenv/rbenv>
 * Step 2: Run `rbenv init` and open a new terminal
 * Step 3: Run the command `rbenv install 2.7.3 && rbenv global 2.7.3`
 * Step 4: Now, open a new terminal again, and run `gem install bundler && bundler install bundler` - this gives you access to the `bundle` command which (confusingly) is what installs Jekyll!
 
 ## Building With Jekyll
 
-Now, get the sources of the website:
+Navigate to your directory of choice with `cd /path/of/choice`, then run this command to download the repo:
 
 ```bash
 git clone https://github.com/Shrinks99/NatronGitHub.github.io && cd NatronGitHub.github.io
@@ -36,7 +36,7 @@ Build with Jekyll in three steps:
 
 * `bundle install` to install all the dependencies
 * `bundle exec jekyll build` to build the site
-* `bundle exec jekyll serve` to start Jekyll at <http://localhost:4000>
+* `bundle exec jekyll serve --incremental` to start Jekyll at <http://localhost:4000>
 
 Navigate to <http://localhost:4000> in the browser and get going!
 
@@ -73,7 +73,7 @@ SVGs can only have their colours set with variables if they exist in the DOM.  T
 Websites are tricky, licensing is mixed.
 
 - Our website _code_ is licensed under the [GPL V2](https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html)
-- Our website _content_ is licensed under something to be determined!
+- Our website _content_ is licensed under a [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license
 - [Inter](https://github.com/rsms/inter) (our primary font) is licensed under the [SIL Open Font License](https://github.com/rsms/inter/blob/master/LICENSE.txt).
 - [BoxIcons](https://github.com/atisawd/boxicons) is licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 - [Sass MQ](https://github.com/sass-mq/sass-mq) is licensed under the [MIT License](https://github.com/sass-mq/sass-mq/blob/master/LICENSE.md).
