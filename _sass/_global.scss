@@ -43,12 +43,13 @@ $mq-breakpoints: (
 
 $hovertransition: 0.2s;
 $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
-$hoverglow: 0 0 5px var(--white), 0 0 10px var(--white), 0 0 40px -10px var(--pink), 0 0 50px -10px var(--purple);
+$hoverglow: var(--hoverglow);
 
 // sRGB Colors
 
 :root
 {
+  --hoverglow: 0 0 5px var(--white), 0 0 10px var(--white), 0 0 40px -10px var(--pink), 0 0 50px -10px var(--purple);
   --pink: #ff5868;
   --purple: #7848ff;
   --linkblue: #4295f3;
@@ -56,7 +57,7 @@ $hoverglow: 0 0 5px var(--white), 0 0 10px var(--white), 0 0 40px -10px var(--pi
   --grey: #d9d9e0;
   --white: #ffffff;
   --offblack: #08090a;
-  --desatpruple: #201830;
+  --desatpruple: #1e1830;
   --textwhite: #ECEFF4;
 }
 
