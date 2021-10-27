@@ -1,9 +1,5 @@
 /* Styles are for news page */
 
-time {
-    font-size: 0.925rem;
-}
-
 .newshero {
     padding-top: 1rem;
     width: 100%;
@@ -88,5 +84,9 @@ time {
 .newsarticles-card-description {
     >h3 {
         margin-top: 0.7rem;
+    }
+
+    time {
+        font-size: 0.925rem;
     }
 }
