@@ -1,65 +1,61 @@
 /* Styles are for news page */
-
 .newshero::before {
-    content: "";
-    position: absolute;
-    z-index: 0;
-    width: 100%;
-    min-height: inherit;
-    background: linear-gradient(var(--desatpruple) 10%, rgba(0, 0, 0, 0.2) 65%, var(--offblack));
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  min-height: inherit;
+  background: linear-gradient(var(--desatpruple) 10%, rgba(0, 0, 0, 0.2) 65%, var(--offblack));
 }
 
 .newshero {
-    padding-top: 4rem;
-    width: 100%;
-    min-height: 36rem;
-    /* Consider changing min-height to 50rem
+  padding-top: 4rem;
+  width: 100%;
+  min-height: 36rem;
+  /* Consider changing min-height to 50rem
     as that is the default for other pages */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
 }
-
 @include mq($from: mobile, $until: desktop) {
   .newshero-container {
     flex-direction: column !important;
   }
 }
 
-.newshero-container,
-.newsarticles-container {
-    padding: 0px 20px 0 20px;
-    max-width: 1340px;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1;
+.newsarticles-container,
+.newshero-container {
+  padding: 0 20px;
+  max-width: 1340px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .newshero-container img {
-    max-width: 45rem;
-    width: 100%;
-    border-radius: 0.5rem;
-    margin-top: 2rem;
+  max-width: 45rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
 }
 
 .newshero-container-text {
   padding: 2vw;
 }
-
 /* Section for all other articles */
 .newsarticles {
-    padding-top: 1rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  padding-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-
 /* Flexbox cards container */
 .newsarticles-container {
   width: 100%;
@@ -70,33 +66,53 @@
   align-items: start;
 }
 
-/* Flexbox cards */
-.newsarticles-card {
-    display: flex;
-    /* Don't grow, do shrink, max-width = 24% */
-    flex: 0 1 28%;
-    flex-direction: column;
-    height: auto;
-    /* Add space to bottom to further separate rows */
-    margin-bottom: 8rem;
-
-    >img {
-        max-width: 100%;
-        height: auto;
-        /* Add spacing between image and description */
-        margin-bottom: 3rem;
-        border-radius: 0.5rem;
-    }
+.newsarticles-card-link {
+  text-decoration: none;
+  transition-duration: $hovertransition;
+  border-radius: 0.5rem;
+  background-color: var(--desatpruple);
 }
 
+.newsarticles-card-link:hover {
+  box-shadow: $hoverglow;
+  transition-duration: $hovertransition;
+}
+
+/* Flexbox cards */
+.newsarticles-card {
+  display: flex;
+  /* Don't grow, do shrink, max-width = 24% */
+  flex: 0 1 28%;
+  flex-direction: column;
+  height: 100%;
+  /* Add space to bottom to further separate rows */
+  margin-bottom: 8rem;
+
+  > img {
+    max-width: 100%;
+    height: auto;
+    /* Add spacing between image and description */
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  img:hover {
+  }
+}
 /* Description in flexbox cards */
 .newsarticles-card-description {
-    >h3 {
-        margin-top: 0.7rem;
-    }
+  padding: 0 0.5rem 0 0.5rem;
+  color: var(--textwhite);
+  > h3 {
+    margin-top: 0.7rem;
+  }
 
-    time {
-        font-size: 0.925rem;
-        color: var(--grey);
-    }
+  time {
+    font-size: 0.925rem;
+    color: var(--grey);
+    font-variant-numeric: tabular-nums;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-variation-settings: 'wght' 500;
+  }
 }

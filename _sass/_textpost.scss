@@ -3,12 +3,13 @@
 /* linear-gradient(var(--desatpruple), var(--offblack) 60%) */
 
 .textpost {
-    padding: 8rem 0 2rem;
+    padding: 6rem 0 2rem 0;
     background: linear-gradient(var(--desatpruple), var(--offblack) 60%);
     color: var(--textwhite);
 
     article {
-
+      padding-left: 8vw;
+      padding-right: 8vw;
         h1 {
             font-size: 3.5rem;
         }

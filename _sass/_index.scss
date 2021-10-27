@@ -242,7 +242,7 @@
   transition-duration: $hovertransition;
   transform: scale(102%);
   color: var(--white);
-  box-shadow: 0 0 10px var(--white), 0 0 40px -10px var(--pink), 0 0 50px -10px var(--purple);
+  box-shadow: $hoverglow;
 }
 
 .index-card-icon {
