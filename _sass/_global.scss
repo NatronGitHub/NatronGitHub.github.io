@@ -43,6 +43,7 @@ $mq-breakpoints: (
 
 $hovertransition: 0.2s;
 $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
+$hoverglow: 0 0 5px var(--white), 0 0 10px var(--white), 0 0 40px -10px var(--pink), 0 0 50px -10px var(--purple);
 
 // sRGB Colors
 
@@ -55,7 +56,7 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
   --grey: #d9d9e0;
   --white: #ffffff;
   --offblack: #08090a;
-  --desatpruple: #1a1422;
+  --desatpruple: #201830;
   --textwhite: #ECEFF4;
 }
 
@@ -67,11 +68,7 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
       --pink: color(display-p3 1.00 0.40 0.45 / 1);
       --purple: color(display-p3 0.44 0.29 1 / 1);
       --linkblue: color(display-p3 0.346 0.577 0.925/ 1);
-      --offwhite: color(display-p3 0.985 0.988 0.988 / 1);
-      --grey: color(display-p3 0.85 0.85 0.87 / 1);
       --white: color(display-p3 1 1 1 / 1);
-      --offblack: color(display-p3 0.032 0.035 0.038 / 1);
-      --desatpruple: color(display-p3 0.098 0.079 0.129/ 1)
     }
 }
 
@@ -115,7 +112,7 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
   transition-duration: $hovertransition;
   transform: scale(105%);
   // text-shadow: 0 0 40px var(--pink), 0 0 60px var(--pink), 0 0 70px var(--pink), 0 0 70px var(--pink), 0 0 80px var(--pink);
-  box-shadow: 0 0 10px var(--white), 0 0 40px -10px var(--pink), 0 0 50px -10px var(--purple);
+  box-shadow: $hoverglow;
 }
 
 // Standard layout elements
