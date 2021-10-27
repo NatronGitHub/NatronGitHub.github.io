@@ -77,13 +77,13 @@
 .newsarticles-card-link:hover {
   box-shadow: $hoverglow;
   transition-duration: $hovertransition;
-  transform:scale(1.01);
+  transform: scale(1.01);
 }
-
 /* Flexbox cards */
 .newsarticles-card {
   min-height: 30rem;
-  > img {
+
+  img {
     max-width: 100%;
     height: auto;
     /* Add spacing between image and description */
@@ -95,7 +95,8 @@
 .newsarticles-card-description {
   padding: 1.1rem;
   color: var(--textwhite);
-  > h3 {
+
+  h3 {
     margin-top: 0.7rem;
   }
 
@@ -107,5 +108,9 @@
     text-transform: uppercase;
     letter-spacing: 0.05rem;
     font-variation-settings: 'wght' 500;
+  }
+
+  p {
+    color: var(--grey)
   }
 }
