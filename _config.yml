@@ -1,5 +1,8 @@
 title: "Natron"
 description: Open Source Compositing Software For VFX and Motion Graphics
+url: "https://natrongithub.github.io"
+# Baseurl needed for some plugins to work correctly
+baseurl: ""
 twitter: https://twitter.com/natronvfx
 discord: https://discord.gg/cpMj5p3Fv5
 forum: https://discuss.pixls.us/c/software/natron
@@ -19,7 +22,7 @@ kramdown:
     block:
       line_numbers: true
       start_line: 1
-collections_dir: _collections
+collections_dir: site_collections
 collections:
   features:
     output: true
