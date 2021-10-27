@@ -40,7 +40,6 @@ footer {
     margin-bottom: 1.5rem;
   }
 }
-
 @include mq($from: mobile, $until: tablet) {
   .footer-logocontainer {
     justify-content: center;
@@ -70,12 +69,11 @@ footer {
     transition-duration: $hovertransition;
   }
 }
-
 @include mq($from: mobile, $until: tablet) {
   .footer-communitycontainer {
     margin-top: -4rem;
 
-    a{
+    a {
       margin-left: 1rem;
       margin-right: 1rem;
     }
