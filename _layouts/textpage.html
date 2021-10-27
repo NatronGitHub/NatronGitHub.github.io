@@ -5,11 +5,14 @@
 
 <body>
     {% include nav.html %}
-    <main class="textpost">
-        <section>
-            {{content}}
-        </section>
-    </main>
+    <div class="wrapper">
+      <main class="textpost stdsection">
+          <article class="section-container">
+              {{content}}
+          </article>
+      </main>
+    </div>
+
 
     {% include footer.html %}
 </body>

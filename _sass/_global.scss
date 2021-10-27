@@ -285,7 +285,7 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
     h1::after {
         content: "";
         position: absolute;
-        height: 2px;
+        height: 0.2rem;
         width: 10%;
         left: 0;
         bottom: -0.7rem;

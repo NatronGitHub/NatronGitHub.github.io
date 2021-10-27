@@ -4,11 +4,13 @@
 
 <body>
     {% include nav.html %}
-    <main class="textpost">
-        <article class="section-container">
-            {{content}}
-            </aricle>
-    </main>
+    <div class="wrapper">
+      <main class="textpost stdsection">
+          <article class="section-container">
+              {{content}}
+          </article>
+      </main>
+    </div>
     {% include footer.html %}
 </body>
 
