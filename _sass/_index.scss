@@ -1,5 +1,4 @@
 // For hero section settings see _global.scss
-
 // Feature cards section
 .index-features-titlecontainer {
   margin-top: 6rem;
@@ -36,43 +35,39 @@
     max-width: 15rem;
     color: var(--offwhite);
   }
-
   @include mq($from: mobile, $until: tablet) {
     ul {
-        grid-template-columns: repeat(1, 1fr);
-      }
+      grid-template-columns: repeat(1, 1fr);
     }
+  }
 
-    li {
-      padding: 20px;
+  li {
+    padding: 20px;
+  }
+
+  p {
+    max-width: 100%;
+  }
+  @include mq($from: tablet, $until: desktop) {
+    ul {
+      grid-template-columns: repeat(2, 1fr);
     }
 
     p {
       max-width: 100%;
     }
-
-  @include mq($from: tablet, $until: desktop) {
-    ul {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    p {
-        max-width: 100%;
-      }
-    }
+  }
 }
 
 .index-featurecard {
   text-align: left;
 }
-
 @include mq($from: mobile, $until: tablet) {
-  .index-featurecard  {
+  .index-featurecard {
     text-align: center;
   }
 }
-
 // About nodes section
-
 .index-aboutnodes {
   margin-top: 8rem;
   display: grid;
@@ -101,7 +96,6 @@
     line-height: 150%;
   }
 }
-
 @include mq($from: mobile, $until: desktop) {
   .index-aboutnodes {
     margin-top: 0;
@@ -114,21 +108,19 @@
     }
   }
 
-  .index-aboutnodes-textcontainer, .index-aboutnodes-imagecontainer {
+  .index-aboutnodes-imagecontainer,
+  .index-aboutnodes-textcontainer {
     margin-top: 4rem;
     margin-left: 5vw;
     margin-right: 5vw;
   }
-
 }
-
 // Downloads section
-
 .index-downloads-titlecontainer {
   margin-top: 8rem;
 
   .p-small {
-    color: var(--grey)
+    color: var(--grey);
   }
 }
 
@@ -180,7 +172,6 @@
     margin-right: auto;
   }
 }
-
 @include mq($from: mobile, $until: desktop) {
   .index-downloads-oscontainer {
     grid-auto-rows: auto;
@@ -192,9 +183,7 @@
     grid-template-rows: auto;
   }
 }
-
 // Community section
-
 .index-community-titlecontainer {
   margin-top: 8rem;
 }
@@ -204,17 +193,14 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
-
 @include mq($from: mobile, $until: desktop) {
   .index-community-cardgrid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
   }
+
   .index-card {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    margin-top: 1.5rem !important;
-    margin-bottom: 1.5rem !important;
+    margin: 1.5rem 0 !important;
   }
 }
 
