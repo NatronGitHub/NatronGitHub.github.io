@@ -115,5 +115,6 @@
   a:hover {
     color: var(--white);
     transition-duration: $hovertransition;
+    transform: scale(1.1);
   }
 }
