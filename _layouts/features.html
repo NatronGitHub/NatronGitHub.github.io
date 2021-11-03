@@ -19,13 +19,13 @@
             <!-- Check if the page is current, if so assign these styles -->
             {% if page.url == features.url %}
             <li>
-              <a href="{{ base }}{{ features.url }}" class="features-navhovered" style="color:var(--white); font-variation-settings: 'wght' 700; visibility: visible;">{{ features.title }}</a>
+              <a href="{% base %}{{ features.url }}" class="features-navhovered" style="color:var(--white); font-variation-settings: 'wght' 700; visibility: visible;">{{ features.title }}</a>
             </li>
             {% endif %}
             <!-- For all other pages assign these styles -->
             {% if page.url != features.url %}
             <li>
-              <a href="{{ base }}{{ features.url }}">{{ features.title }}</a>
+              <a href="{% base %}{{ features.url }}">{{ features.title }}</a>
             </li>
             {% endif %}
             {% endfor %}
