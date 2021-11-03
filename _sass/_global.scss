@@ -186,7 +186,7 @@ $hoverglow: var(--hoverglow);
 }
 
 .h1 {
-  font-size: max(min(4.5vw, 4.4rem), 3.4rem);
+  font-size: calc(max(min(4.5vw, 4.4rem), 3.4rem));
   font-variation-settings: 'wght' 700;
   color: var(--white);
   margin-top: 0;
@@ -194,7 +194,7 @@ $hoverglow: var(--hoverglow);
 }
 
 .hero-subheader {
-  font-size: max(min(2vw, 1.7rem), 1.5rem);
+  font-size: calc(max(min(2vw, 1.7rem), 1.5rem));
   font-variation-settings: 'wght' 550;
   margin-top: 0;
   margin-bottom: 2.5rem;

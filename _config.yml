@@ -1,5 +1,5 @@
 title: "Natron"
-description: Open Source Compositing Software For VFX and Motion Graphics
+description: Open Source VFX Compositing Software
 url: "https://natrongithub.github.io"
 # Baseurl needed for some plugins to work correctly
 baseurl: ""
@@ -30,3 +30,4 @@ collections:
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
+  - jekyll-relative-urls

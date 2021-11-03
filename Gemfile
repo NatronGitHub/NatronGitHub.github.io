@@ -6,5 +6,8 @@ git_source(:github) {|repo_name| "https://github.com/NatronGitHub/NatronGitHub.g
 
 # gem "rails"
 
-gem "jekyll", "~> 3.8"
-gem "github-pages", "~> 203"
+gem "github-pages"
+gem "jekyll-feed"
+gem "jekyll-redirect-from"
+gem "jekyll-relative-urls"
+gem "webrick", "~> 1.7"
