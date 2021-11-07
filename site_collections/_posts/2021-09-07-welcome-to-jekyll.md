@@ -3,6 +3,7 @@ layout: post
 title:  "Welcome to Jekyll!"
 date:   2021-09-07 11:28:03 -0400
 description: Here is an example description. I know this text is absolute nonsense but let's stick with it for now.
+postimg: https://picsum.photos/1920/1080?random
 ---
 
 # Welcome to Jekyll
