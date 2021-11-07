@@ -44,6 +44,7 @@ $mq-breakpoints: (
 $hovertransition: 0.2s;
 $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
 $hoverglow: var(--hoverglow);
+$borderradius: 0.5rem;
 
 // sRGB Colors
 
@@ -170,6 +171,11 @@ $hoverglow: var(--hoverglow);
 
 .bodycontent-pushdown {
   padding-top: 8rem;
+}
+
+.horizontal-rule {
+  height: 0.25rem;
+  background: $brandgradient;
 }
 
 // Typography

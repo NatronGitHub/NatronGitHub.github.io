@@ -28,7 +28,7 @@
 .newshero-card-link {
   text-decoration: none;
   transition-duration: $hovertransition;
-  border-radius: 0.5rem;
+  border-radius: $borderradius;
   height: 100%;
 }
 
@@ -54,7 +54,7 @@
 .newshero-container img {
   max-width: 45rem;
   width: 100%;
-  border-radius: 0.5rem;
+  border-radius: $borderradius;
 }
 
 .newsarticles-container,
@@ -93,7 +93,7 @@
 .newsarticles-card-link {
   text-decoration: none;
   transition-duration: $hovertransition;
-  border-radius: 0.5rem;
+  border-radius: $borderradius;
   background-color: var(--desatpruple);
   height: 100%;
 }
