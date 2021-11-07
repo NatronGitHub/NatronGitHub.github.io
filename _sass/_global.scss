@@ -49,7 +49,7 @@ $hoverglow: var(--hoverglow);
 
 :root
 {
-  --hoverglow: 0 0 5px var(--white), 0 0 10px var(--white), 0 0 40px -10px var(--pink), 0 0 50px -10px var(--purple);
+  --hoverglow: 0 0 2px var(--white), 0 0 5px var(--white), 0 0 5px var(--white), 0 0 10px var(--white), 0 0 40px var(--pink), 0 0 50px var(--purple);
   --pink: #ff5868;
   --purple: #7848ff;
   --linkblue: #4295f3;
@@ -266,7 +266,7 @@ $hoverglow: var(--hoverglow);
 
 .intext-link-glow:hover {
   transition-duration: 0.1s;
-  color: #acd1fb;
+  color: #d1e7ff;
   text-shadow: 0 0 20px var(--linkblue), 0 0 50px var(--linkblue), 0 0 70px var(--linkblue);
 }
 
