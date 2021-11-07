@@ -12,8 +12,6 @@
   padding-top: 4rem;
   width: 100%;
   min-height: 36rem;
-  /* Consider changing min-height to 50rem
-    as that is the default for other pages */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -23,7 +21,21 @@
 @include mq($from: mobile, $until: desktop) {
   .newshero-container {
     flex-direction: column !important;
+    margin: 4rem 0 4rem 0;
   }
+}
+
+.newshero-card-link {
+  text-decoration: none;
+  transition-duration: $hovertransition;
+  border-radius: 0.5rem;
+  height: 100%;
+}
+
+.newshero-card-link:hover {
+  box-shadow: $hoverglow;
+  transition-duration: $hovertransition;
+  transform: scale(1.01);
 }
 
 .newsarticles-container,
@@ -43,7 +55,19 @@
   max-width: 45rem;
   width: 100%;
   border-radius: 0.5rem;
-  margin-top: 2rem;
+}
+
+.newsarticles-container,
+.newshero-container-text {
+  time {
+    margin-top: 0;
+    font-size: 0.925rem;
+    color: var(--purple);
+    font-variant-numeric: tabular-nums;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-variation-settings: 'wght' 500;
+  }
 }
 
 .newshero-container-text {
@@ -100,17 +124,7 @@
     margin-top: 0.7rem;
   }
 
-  time {
-    margin-top: 0;
-    font-size: 0.925rem;
-    color: var(--purple);
-    font-variant-numeric: tabular-nums;
-    text-transform: uppercase;
-    letter-spacing: 0.05rem;
-    font-variation-settings: 'wght' 500;
-  }
-
   p {
-    color: var(--grey)
+    color: var(--grey);
   }
 }
