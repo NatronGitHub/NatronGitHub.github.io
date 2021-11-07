@@ -2,15 +2,24 @@
 {% include head.html %}
 
 <body>
-    {% include nav.html %}
-    <div class="wrapper">
-      <main class="textpost stdsection">
-          <article class="section-container">
-              {{content}}
-          </article>
-      </main>
-    </div>
-    {% include footer.html %}
+  {% include nav.html %}
+  <div class="wrapper">
+    <main class="textpost stdsection">
+      <div class="section-container">
+        <div class="newspost-header">
+          <img src="{{ page.postimg }}"/>
+          <h1>{{ page.title }}</h1>
+          <time class="text-uppercase">{{ page.date | date: "%B %d, %Y" }}</time>
+          <p>{{ page.description }}</p>
+          <div class="horizontal-rule"></div>
+        </div>
+      <article>
+        {{content}}
+      </article>
+      </div>
+    </main>
+  </div>
+  {% include footer.html %}
 </body>
 
 </html>

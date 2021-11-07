@@ -1,5 +1,43 @@
-/*  Styles are for formatted news posts as well as the about page */
-/* linear-gradient(var(--desatpruple), var(--offblack) 60%) */
+/*  Styles are for formatted news posts as well as general text post pages */
+
+.newspost-header {
+  width: 100%;
+  margin-bottom: 4rem;
+
+  img {
+    width: 100%;
+    height: 35vw;
+    min-height: 16rem;
+    object-fit: cover;
+    border-radius:$borderradius;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    padding: 0 8vw 0 8vw;
+    margin-bottom: 1.2rem;
+  }
+
+  time {
+    padding: 0 8vw 0 8vw;
+  }
+
+  p {
+    font-variation-settings: 'wght' 500;
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+    padding: 0 8vw 0 8vw;
+  }
+}
+
+// @include mq($from: mobile, $until: desktop) {
+//   .newspost-header {
+//     p {
+//       max-width: 100%;
+//     }
+//   }
+// }
+
 .textpost {
   padding: 6rem 0 2rem;
   background: linear-gradient(var(--desatpruple), var(--offblack) 60%);
@@ -25,7 +63,7 @@
     img {
       /* Newsitem picture shadow */
       filter: drop-shadow(0px 16px 24px rgba(8, 9, 10, 0.06)), drop-shadow(0px 2px 6px rgba(8, 9, 10, 0.04)), drop-shadow(0px 0px 1px rgba(8, 9, 10, 0.04));
-      border-radius: 0.5rem;
+      border-radius: $borderradius;
     }
 
     a {
