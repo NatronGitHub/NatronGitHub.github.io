@@ -58,7 +58,7 @@ $borderradius: 0.5rem;
   --grey: #d9d9e0;
   --white: #ffffff;
   --offblack: #08090a;
-  --desatpruple: #1e1830;
+  --desatpurple: #1e1830;
   --textwhite: #ECEFF4;
 }
 
@@ -136,7 +136,7 @@ $borderradius: 0.5rem;
   z-index: 0;
   width: 100%;
   min-height: inherit;
-  background-image: linear-gradient(var(--desatpruple) 10%, rgba(0, 0, 0, 0.2) 50%, var(--offblack) 100%);
+  background-image: linear-gradient(var(--desatpurple) 10%, rgba(0, 0, 0, 0.2) 50%, var(--offblack) 100%);
   background-size: cover;
 }
 
@@ -272,6 +272,7 @@ $borderradius: 0.5rem;
 
 .intext-link-glow:hover {
   transition-duration: 0.1s;
+  text-underline-offset: 0.4rem;
   color: #d1e7ff;
   text-shadow: 0 0 20px var(--linkblue), 0 0 50px var(--linkblue), 0 0 70px var(--linkblue);
 }

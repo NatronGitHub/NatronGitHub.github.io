@@ -27,6 +27,9 @@ collections:
   features:
     output: true
     permalink: /features/:path/
+  posts:
+    output: true
+    permalink: news/:path/
 plugins:
   - jekyll-feed
   - jekyll-redirect-from

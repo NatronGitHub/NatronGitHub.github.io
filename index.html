@@ -123,10 +123,10 @@ title: Natron
     <div class="index-downloads-titlecontainer">
       <h2 class="h2 center-text">Download Natron</h2>
       <p class="p-body center-text">
-        Latest version: 2.4
+        Latest version: {% for post in site.categories.release limit:1 %}{{post.version}}{% endfor %}
       </p>
       <p class="p-small center-text">
-        Released May 8th, 2020: <a href="https://github.com/NatronGitHub/Natron/releases/latest" class="intext-link intext-link-glow">Changelog<i class='bx bx-right-arrow-alt'></i></a>
+        Released {% for post in site.categories.release limit:1 %}{{ post.date | date: "%B %d, %Y" }}{% endfor %}: <a href="{% for post in site.categories.release limit:1 %}{{post.url}}{% endfor %}" class="intext-link intext-link-glow">Changelog<i class='bx bx-right-arrow-alt'></i></a>
       </p>
       <p class="p-small center-text">
         <a href="https://github.com/NatronGitHub/Natron#requirements" class="intext-link intext-link-glow">System requirements</a>
@@ -143,13 +143,16 @@ title: Natron
           </p>
         </div>
         <div class="index-downloads-os-links">
-          <a href="" class="p-small intext-link intext-link-glow">
+          <a href="https://github.com/NatronGitHub/Natron/releases/latest/download/Natron-{% for post in site.categories.release limit:1 %}{{post.version}}{% endfor %}-macOS11-x86_64.dmg" class="p-small intext-link intext-link-glow">
+            11+ (64-bit)
+          </a>
+          <a href="https://github.com/NatronGitHub/Natron/releases/latest/download/Natron-{% for post in site.categories.release limit:1 %}{{post.version}}{% endfor %}-macOS1015-x86_64.dmg" class="p-small intext-link intext-link-glow">
             10.15+ (64-bit)
           </a>
-          <a href="" class="p-small intext-link intext-link-glow">
+          <a href="https://github.com/NatronGitHub/Natron/releases/latest/download/Natron-{% for post in site.categories.release limit:1 %}{{post.version}}{% endfor %}-OSX109-x86_64.dmg" class="p-small intext-link intext-link-glow">
             10.9+ (64-bit)
           </a>
-          <a href="" class="p-small intext-link intext-link-glow">
+          <a href="https://github.com/NatronGitHub/Natron/releases/latest/download/Natron-{% for post in site.categories.release limit:1 %}{{post.version}}{% endfor %}-MacOSX106-Universal-i386-x86_64.dmg" class="p-small intext-link intext-link-glow">
             10.6+ (32-bit/64-bit)
           </a>
         </div>
@@ -164,7 +167,7 @@ title: Natron
           </p>
         </div>
         <div class="index-downloads-os-links">
-          <a href="" class="p-small intext-link intext-link-glow">
+          <a href="https://github.com/NatronGitHub/Natron/releases/latest/download/Natron-{% for post in site.categories.release limit:1 %}{{post.version}}{% endfor %}-Windows-x86_64.zip" class="p-small intext-link intext-link-glow">
             Installer & Portable (64-Bit)
           </a>
         </div>
@@ -179,11 +182,14 @@ title: Natron
           </p>
         </div>
         <div class="index-downloads-os-links">
-          <a href="" class="p-small intext-link intext-link-glow">
+          <a href="https://github.com/NatronGitHub/Natron/releases/latest/download/Natron-{% for post in site.categories.release limit:1 %}{{post.version}}{% endfor %}-Linux-x86_64.tgz" class="p-small intext-link intext-link-glow">
             Installer (64-Bit)
           </a>
-          <a href="" class="p-small intext-link intext-link-glow">
+          <a href="https://github.com/NatronGitHub/Natron/releases/latest/download/Natron-{% for post in site.categories.release limit:1 %}{{post.version}}{% endfor %}-Linux-x86_64-no-installer.tar.xz" class="p-small intext-link intext-link-glow">
             Portable (64-Bit)
+          </a>
+          <a href="https://flathub.org/apps/details/fr.natron.Natron" class="p-small intext-link intext-link-glow">
+            Flatpack
           </a>
         </div>
       </div>

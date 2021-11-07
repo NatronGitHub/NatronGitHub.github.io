@@ -4,6 +4,7 @@ title:  "Welcome to Jekyll!"
 date:   2021-09-07 11:28:03 -0400
 description: Here is an example description. I know this text is absolute nonsense but let's stick with it for now.
 postimg: https://picsum.photos/1920/1080?random
+categories: [news]
 ---
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.

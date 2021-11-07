@@ -7,6 +7,7 @@
   img {
     width: 100%;
     height: 35vw;
+    max-height: 40rem;
     min-height: 16rem;
     object-fit: cover;
     border-radius:$borderradius;
@@ -30,17 +31,32 @@
   }
 }
 
-// @include mq($from: mobile, $until: desktop) {
-//   .newspost-header {
-//     p {
-//       max-width: 100%;
-//     }
-//   }
-// }
+@include mq($from: mobile, $until: tablet) {
+  .textpost {
+    article {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+
+  .newspost-header {
+    h1 {
+      padding: 0;
+    }
+
+    time {
+      padding: 0;
+    }
+
+    p {
+      padding: 0;
+    }
+  }
+}
 
 .textpost {
   padding: 6rem 0 2rem;
-  background: linear-gradient(var(--desatpruple), var(--offblack) 60%);
+  background: linear-gradient(var(--desatpurple), var(--offblack) 60%);
   color: var(--textwhite);
 
   article {
@@ -68,6 +84,17 @@
 
     a {
       color: var(--linkblue);
+      text-decoration: underline;
+      text-decoration-thickness: 0.125rem;
+      text-underline-offset: 0.3rem;
+      transition-duration: $hovertransition;
+    }
+
+    a:hover {
+      transition-duration: 0.1s;
+      color: #d1e7ff;
+      text-underline-offset: 0.4rem;
+      text-shadow: 0 0 20px var(--linkblue), 0 0 50px var(--linkblue), 0 0 70px var(--linkblue);
     }
 
     ol,
@@ -77,15 +104,10 @@
 
     code,
     pre {
-      margin: 1.5rem;
-      padding: 0.5rem;
-      /* This color is practically
-        	used only for code blocks so
-        	I don't think this needs to be
-        	defined in the global colors */
-      background: #111111;
+      padding: 0.3rem;
+      background: #1d1a1d;
       border-radius: 0.25rem;
-      border: 1px solid #222222;
+      border: 1px solid #292044;
       counter-reset: step;
       counter-increment: step 0;
     }
