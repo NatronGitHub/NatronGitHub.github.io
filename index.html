@@ -139,22 +139,15 @@ title: Natron
         </div>
         <div>
           <p class="p-small">
-            Natron currently runs with Rosetta 2 on Macs with Apple Silicon
+            Supports Snow Leopard up to the latest version of macOS on Intel hardware.
           </p>
         </div>
         <div class="index-downloads-os-links">
-          <a href="https://github.com/NatronGitHub/Natron/releases/latest/download/Natron-{% for post in site.categories.release limit:1 %}{{post.version}}{% endfor %}-macOS11-x86_64.dmg" class="p-small intext-link intext-link-glow">
-            11+ (64-bit)
+          {% for version in site.downloads.macos.versions %}
+          <a href="{% if version[1].url == "" %}{{site.natron.release.downloadurl}}Natron-{{site.natron.release.version}}{{version[1].suffix}} {% else %} {{version[1].url}} {% endif %}" class="p-small intext-link intext-link-glow">
+            {{version[1].title}}
           </a>
-          <a href="https://github.com/NatronGitHub/Natron/releases/latest/download/Natron-{% for post in site.categories.release limit:1 %}{{post.version}}{% endfor %}-macOS1015-x86_64.dmg" class="p-small intext-link intext-link-glow">
-            10.15+ (64-bit)
-          </a>
-          <a href="https://github.com/NatronGitHub/Natron/releases/latest/download/Natron-{% for post in site.categories.release limit:1 %}{{post.version}}{% endfor %}-OSX109-x86_64.dmg" class="p-small intext-link intext-link-glow">
-            10.9+ (64-bit)
-          </a>
-          <a href="https://github.com/NatronGitHub/Natron/releases/latest/download/Natron-{% for post in site.categories.release limit:1 %}{{post.version}}{% endfor %}-MacOSX106-Universal-i386-x86_64.dmg" class="p-small intext-link intext-link-glow">
-            10.6+ (32-bit/64-bit)
-          </a>
+          {% endfor %}
         </div>
       </div>
       <div class="index-downloads-os">
@@ -163,13 +156,15 @@ title: Natron
         </div>
         <div>
           <p class="p-small">
-            Supports Windows 8+
+            Supports 64 bit Windows 8.1/10/11
           </p>
         </div>
         <div class="index-downloads-os-links">
-          <a href="https://github.com/NatronGitHub/Natron/releases/latest/download/Natron-{% for post in site.categories.release limit:1 %}{{post.version}}{% endfor %}-Windows-x86_64.zip" class="p-small intext-link intext-link-glow">
-            Installer & Portable (64-Bit)
+          {% for version in site.downloads.windows.versions %}
+          <a href="{% if version[1].url == "" %}{{site.natron.release.downloadurl}}Natron-{{site.natron.release.version}}{{version[1].suffix}} {% else %} {{version[1].url}} {% endif %}" class="p-small intext-link intext-link-glow">
+            {{version[1].title}}
           </a>
+          {% endfor %}
         </div>
       </div>
       <div class="index-downloads-os">
@@ -178,19 +173,15 @@ title: Natron
         </div>
         <div>
           <p class="p-small">
-            Requires glibc 2.12+/gcc 4.4+
+            Supports any x86_64 distribution with X11, glibc 2.17+ and libgcc 4.8+.
           </p>
         </div>
         <div class="index-downloads-os-links">
-          <a href="https://github.com/NatronGitHub/Natron/releases/latest/download/Natron-{% for post in site.categories.release limit:1 %}{{post.version}}{% endfor %}-Linux-x86_64.tgz" class="p-small intext-link intext-link-glow">
-            Installer (64-Bit)
+          {% for version in site.downloads.linux.versions %}
+          <a href="{% if version[1].url == "" %}{{site.natron.release.downloadurl}}Natron-{{site.natron.release.version}}{{version[1].suffix}} {% else %} {{version[1].url}}{% endif %}" class="p-small intext-link intext-link-glow">
+            {{version[1].title}}
           </a>
-          <a href="https://github.com/NatronGitHub/Natron/releases/latest/download/Natron-{% for post in site.categories.release limit:1 %}{{post.version}}{% endfor %}-Linux-x86_64-no-installer.tar.xz" class="p-small intext-link intext-link-glow">
-            Portable (64-Bit)
-          </a>
-          <a href="https://flathub.org/apps/details/fr.natron.Natron" class="p-small intext-link intext-link-glow">
-            Flatpack
-          </a>
+          {% endfor %}
         </div>
       </div>
     </div>

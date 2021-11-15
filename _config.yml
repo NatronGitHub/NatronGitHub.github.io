@@ -3,10 +3,62 @@ description: Open Source VFX Compositing Software
 url: "https://natrongithub.github.io"
 # Baseurl needed for some plugins to work correctly
 baseurl: ""
+
+# Variables
 twitter: https://twitter.com/natronvfx
 discord: https://discord.gg/cpMj5p3Fv5
 forum: https://discuss.pixls.us/c/software/natron
 github: https://github.com/NatronGitHub/Natron
+
+natron:
+  branch: 2.4
+  release:
+    version: 2.4.1
+    date: "2021-04-20"
+    downloadurl: "https://github.com/NatronGitHub/Natron/releases/latest/download/"
+
+# Keep URL blank unless distribution URL for the specified version doesn"t use the GitHub releases system.
+
+downloads:
+  windows:
+    versions:
+      installer:
+        title: "Installer & Portable"
+        url: ""
+        suffix: "-Windows-x86_64.zip"
+  linux:
+    versions:
+      installer:
+        title: "Installer"
+        url: ""
+        suffix: "-Linux-x86_64.tgz"
+      portable:
+        title: "Portable"
+        url: ""
+        suffix: "-Linux-x86_64-no-installer.tar.xz"
+      flatpak:
+        title: "Flatpak"
+        url: "https://flathub.org/apps/details/fr.natron.Natron"
+        suffix: ""
+  macos:
+    versions:
+      v11:
+        title: "Big Sur and later"
+        url: ""
+        suffix: "-macOS11-x86_64.dmg"
+      v1015:
+        title: "Catalina"
+        url: ""
+        suffix: "-macOS1015-x86_64.dmg"
+      v109:
+        title: "Mavericks, Yosemite, El Capitan, (High) Sierra, Mojave"
+        url: ""
+        suffix: "-OSX109-x86_64.dmg"
+      v106:
+        title: "Snow Leopard, (Mountain) Lion"
+        url: ""
+        suffix: "-OSX-Universal.dmg"
+
 # Build settings
 sass:
   style: compressed
@@ -16,7 +68,7 @@ kramdown:
   input: GFM
   syntax_highlighter_opts:
     default_lang: python
-    css_class: 'highlight'
+    css_class: "highlight"
     span:
       line_numbers: false
     block:
