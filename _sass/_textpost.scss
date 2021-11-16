@@ -55,8 +55,9 @@
 }
 
 .textpost {
+  min-height: 50rem;
   padding: 6rem 0 2rem;
-  background: linear-gradient(var(--desatpurple), var(--offblack) 60%);
+  background: linear-gradient(var(--desatpurple) 3rem, var(--offblack) 60%);
   color: var(--textwhite);
 
   article {
@@ -74,6 +75,10 @@
 
     h3 {
       font-size: 1.6rem;
+    }
+
+    p {
+      line-height: 160%;
     }
 
     img {
