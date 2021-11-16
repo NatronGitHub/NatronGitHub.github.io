@@ -43,19 +43,19 @@ downloads:
   macos:
     versions:
       v11:
-        title: "Big Sur and later"
+        title: "macOS 11+"
         url: ""
         suffix: "-macOS11-x86_64.dmg"
       v1015:
-        title: "Catalina"
+        title: "macOS 10.15"
         url: ""
         suffix: "-macOS1015-x86_64.dmg"
       v109:
-        title: "Mavericks, Yosemite, El Capitan, (High) Sierra, Mojave"
+        title: "OS X 10.9+"
         url: ""
         suffix: "-OSX109-x86_64.dmg"
       v106:
-        title: "Snow Leopard, (Mountain) Lion"
+        title: "OS X 10.6+"
         url: ""
         suffix: "-OSX-Universal.dmg"
 

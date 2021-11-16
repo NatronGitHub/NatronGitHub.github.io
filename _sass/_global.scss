@@ -18,6 +18,7 @@ body {
   font-feature-settings: "frac", "cv03", "cv04", "cv09";
   // It's bad to set this in pixels becuase that overrides users who change their default sizing, font-size is instead set to a relative percentage of all browser's default size of 16px
   font-size: 100%;
+  background-color: var(--desatpurple);
 }
 
 // _mq.scss media query settings

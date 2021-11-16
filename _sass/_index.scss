@@ -172,6 +172,20 @@
     margin-right: auto;
   }
 }
+
+.index-downloads-other {
+  margin-top: 4rem;
+
+  a {
+    display: block;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 @include mq($from: mobile, $until: desktop) {
   .index-downloads-oscontainer {
     grid-auto-rows: auto;
