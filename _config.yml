@@ -81,7 +81,7 @@ collections:
     permalink: /features/:path/
   posts:
     output: true
-    permalink: news/:path/
+    permalink: /news/:path/
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
