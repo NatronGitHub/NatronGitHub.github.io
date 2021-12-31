@@ -4,9 +4,41 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#1e1830">
+  <meta name="keywords" content="node-based, compositor, compositing, computer graphics, cgi, open source, vfx, software">
   <title>{{ page.title }}</title>
+  <!-- OpenGraph Card -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{page.title}}">
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1080">
+  <meta name="og:description" content="{% if page.description %}
+      {{ page.description | strip_html | strip_newlines | truncate: 160 }}
+    {% else %}
+      {{ site.description }}
+    {% endif %}">
+  <meta property="og:locale" content="en_US" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:domain" content="natrongithub.github.io">
+  <meta name="twitter:title" content="{{page.title}}">
+  <meta name="twitter:description" content="{% if page.description %}
+      {{ page.description | strip_html | strip_newlines | truncate: 160 }}
+    {% else %}
+      {{ site.description }}
+    {% endif %}">
+  <meta name="twitter:image" content="">
+
+  {% if page.postimg %}
+    <meta property="og:image" content="{{ site.url | append: "/" }}{{ page.postimg }}" />
+    <meta name="twitter:image" content="{{ site.url | append: "/"}}{{ page.postimg }}" />
+  {% else %}
+    <meta property="og:image" content="{{ "/img/social-preview.jpg" | prepend: site.url }}" />
+    <meta name="twitter:image" content="{{ "/img/social-preview.jpg" | prepend: site.url }}" />
+  {% endif %}
+
   <!-- Stylesheets & Fonts -->
-  <link rel="stylesheet" href="{% base %}/css/main.css">
+  <link rel="stylesheet" href="{% base %}css/main.css">
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   <!-- Favicon -->
