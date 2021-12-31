@@ -10,34 +10,69 @@
         </div>
       </a>
     </div>
-    <ul class="nav-menulist">
-      <li>
-        <a href="{% base %}features/2d-compositing">Features</a>
-      </li>
-      <li>
-        <a href="{% base %}news">News</a>
-      </li>
-      <li>
-        <a href="http://natron.readthedocs.io">Docs</a>
-      </li>
-      </li>
-      <li>
-        <a href="{% base %}about">About</a>
-      </li>
-    </ul>
-    <div class="nav-sociallinks">
-      <a title="GitHub" href="{{site.github}}">
-        <i class='bx bxl-github'></i>
-      </a>
-      <a title="Forum" href="{{site.forum}}">
-        <i class='bx bxl-discourse'></i>
-      </a>
-      <!-- <a title="Twitter" href="{{site.twitter}}">
-        <i class='bx bxl-twitter'></i>
-      </a> -->
-      <a title="Discord" href="{{site.discord}}">
-        <i class='bx bxl-discord'></i>
-      </a>
+    <div id="nav-hamburgerbutton">
+        <div>
+          <input type="checkbox" id="nav-hamburgercheckbox" onclick="openNavMenu()"/>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+    </div>
+    <div id="nav-menulinkscontainer" class="nav-menulinkscontainer">
+      <ul class="nav-menulist">
+        <li>
+          <a href="{% base %}features/2d-compositing">Features</a>
+        </li>
+        <li>
+          <a href="{% base %}news">News</a>
+        </li>
+        <li>
+          <a href="http://natron.readthedocs.io">Docs</a>
+        </li>
+        <li>
+          <a href="{% base %}about">About</a>
+        </li>
+      </ul>
+      <div class="nav-sociallinks">
+        <a title="GitHub" href="{{site.github}}">
+          <i class='bx bxl-github'></i>
+        </a>
+        <a title="Forum" href="{{site.forum}}">
+          <i class='bx bxl-discourse'></i>
+        </a>
+        <!-- <a title="Twitter" href="{{site.twitter}}">
+          <i class='bx bxl-twitter'></i>
+        </a> -->
+        <a title="Discord" href="{{site.discord}}">
+          <i class='bx bxl-discord'></i>
+        </a>
+      </div>
     </div>
   </div>
 </nav>
+<script>
+  document.onload = document.getElementById("nav-hamburgercheckbox").checked = false
+  window.addEventListener('resize', function(event) {
+    const vw = window.innerWidth;
+    if (vw >= 980) {
+      document.getElementById("nav-menulinkscontainer").style.visibility = "visible";
+      document.getElementById("nav-menulinkscontainer").style.display = "flex";
+      document.getElementById("nav-hamburgercheckbox").checked = false
+    }
+    if (vw < 980 && document.getElementById("nav-hamburgercheckbox").checked == false) {
+      document.getElementById("nav-menulinkscontainer").style.visibility = "hidden";
+      document.getElementById("nav-menulinkscontainer").style.display = "none";
+    }
+  })
+  function openNavMenu() {
+  if (document.getElementById("nav-hamburgercheckbox").checked == true) {
+      document.getElementById("nav-menulinkscontainer").style.visibility = "visible";
+      document.getElementById("nav-menulinkscontainer").style.display = "flex";
+      }
+  else {
+      document.getElementById("nav-menulinkscontainer").style.visibility = "hidden";
+      document.getElementById("nav-menulinkscontainer").style.display = "none";
+      }
+  }
+
+</script>
