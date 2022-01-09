@@ -153,6 +153,26 @@ $borderradius: 0.5rem;
   z-index: 1;
 }
 
+.herosection-bylinecontainer {
+  position: relative;
+  top: -4rem;
+  width: 100%;
+  text-align: right;
+  z-index: 3;
+}
+
+.heresection-byline-text {
+  color: var(--textwhite);
+  opacity: 50%;
+  font-variation-settings: 'wght'480;
+  margin: 0;
+
+  a {
+    text-decoration: none;
+    color: var(--textwhite);
+  }
+}
+
 .stdsection {
   display: flex;
   justify-content: center;
