@@ -5,7 +5,7 @@ title: About Natron
 
 # About
 
-![An animated cartoon shot open in Natron](../img/about-screenshot.png)
+![An animated cartoon shot open in Natron](/img/about-screenshot.png)
 
 Natron is a free and open-source compositing application geared towards VFX work. It is currently actively developed by a small team of developers as a community effort.
 
@@ -41,14 +41,14 @@ Yes, Natron is free and due to its GPL license it always will be.
 
 ### What can Natron do?
 
-Natron is specialized around 2D compositing. That means it can:
+Natron is suited to perform 2D compositing tasks. That means it can:
 
-* Key out green screens
+* Chromakey blue and green screens
 * Rotoscope a moving object or person
 * Combine multiple pieces of footage on top of each-other
-* Stabilizing and tracking objects
-* Warping, cropping, blurring, and other effects
-* Combining and editing render passes of OpenEXR files
+* Perform 2D stablization and tracking
+* Warp, crop, blur, and other effects
+* Combine and edit render passes of OpenEXR files
 
 Natron does *not* include 3D compositing features. You will need to use a 3D package like [Blender](https://www.blender.org/) to render your 3D objects before bringing them into Natron for compositing.
 

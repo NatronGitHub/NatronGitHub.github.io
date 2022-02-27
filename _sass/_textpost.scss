@@ -34,9 +34,15 @@
 @include mq($from: mobile, $until: tablet) {
   .textpost {
     article {
+      // Set padding to 0 for news page to accomidate for padding higher up
       padding-left: 0 !important;
       padding-right: 0 !important;
     }
+  }
+  // Set padding to 1rem for textpages
+  .textpage.textpost{
+      padding-left: 1rem;
+      padding-right: 1rem;
   }
 
   .newspost-header {
