@@ -28,7 +28,7 @@ title: News - Natron
     {% for post in site.posts offset:1 %}
     <a class="newsarticles-card-link" href="{% base %}{{ post.url }}">
       <article class="newsarticles-card">
-        <img src="{% base %}{% base %}{{ post.postimg }}" />
+        <img src="{% base %}{{ post.postimg }}" />
         <div class="newsarticles-card-description">
           <time class="text-uppercase">{{ post.date | date: "%B %d, %Y" }}</time>
           <h3 class="h4">{{ post.title }}</h3>

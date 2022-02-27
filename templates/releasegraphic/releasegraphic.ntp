@@ -22655,7 +22655,7 @@ A value of 1 should already give completely new results each frame.</Help>
 					</item>
 					<UserKnob>1</UserKnob>
 					<Label> </Label>
-					<Help>Automatically corrects for the offset introduced by big distortions. 
+					<Help>Automatically corrects for the offset introduced by big distortions.
 Useful for distorting premultiplied inputs and alphas.
 
 Doesn&apos;t work too great when noise gets rotated, adjust offset manually if needed.</Help>
@@ -22933,7 +22933,7 @@ Use the mix overlay to see it even better! :)</Help>
 					</item>
 					<UserKnob>1</UserKnob>
 					<Label>motion factor</Label>
-					<Help>Multiplier for the automatic noise animation over time. 
+					<Help>Multiplier for the automatic noise animation over time.
 
 Hit &apos;2&apos; to set it individually for small and big noise (x = small noise, y = big noise)</Help>
 					<NewLine>1</NewLine>
@@ -26728,7 +26728,7 @@ Hit the &apos;2&apos; for individual control of small and big noise (x = small n
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(releaseimg.jpeg)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(releaseimg.jpg)&lt;/Natron&gt;&lt;/font&gt;</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -26784,7 +26784,7 @@ Hit the &apos;2&apos; for individual control of small and big noise (x = small n
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>[Project]/releaseimg.jpeg</Value>
+					<Value>[Project]/releaseimg.jpg</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>

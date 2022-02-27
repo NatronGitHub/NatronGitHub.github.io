@@ -134,7 +134,7 @@ title: Natron
         Released {% for post in site.categories.release limit:1 %}{{ post.date | date: "%B %d, %Y" }}{% endfor %}: <a href="{% for post in site.categories.release limit:1 %}{{post.url}}{% endfor %}" class="intext-link intext-link-glow">Changelog<i class='bx bx-right-arrow-alt'></i></a>
       </p>
       <p class="p-small center-text">
-        <a href="/system-requirements" class="intext-link intext-link-glow">System requirements</a>
+        <a href="{% base %}system-requirements" class="intext-link intext-link-glow">System requirements</a>
       </p>
     </div>
     <div class="index-downloads-oscontainer">
