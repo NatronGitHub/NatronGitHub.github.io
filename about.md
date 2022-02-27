@@ -5,7 +5,7 @@ title: About Natron
 
 # About
 
-![An animated cartoon shot open in Natron](/img/about-screenshot.png)
+![An animated cartoon shot open in Natron](img/about-screenshot.png)
 
 Natron is a free and open-source compositing application geared towards VFX work. It is currently actively developed by a small team of developers as a community effort.
 
