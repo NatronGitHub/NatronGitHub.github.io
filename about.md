@@ -25,8 +25,8 @@ Natron has a logo and you're welcome to use it to identify the program as long a
 
 ### Please do:
 
-- Use the Natron logo whenever you wish to give credit to the program, when using the logo in film credits try to place it with any other relevant logos to ensure it does not seem like your film was created by Natron or its developers
-- Try to use the full version of the logo with text wherever possible
+- Use the Natron logo whenever you wish to give credit to the program, when using the logo in film credits please place it with any other relevant logos to ensure it does not imply that your film was created by Natron or its developers
+- Try to use the full version of the logo with text wherever space allows
 - Use the logo that provides the most contrast against the background it is placed on
 
 ### Please do not:
@@ -62,4 +62,4 @@ Natron does *not* include 3D compositing features. You will need to use a 3D pac
 
 ### Where can I donate to Natron?
 
-While we appreciate your generosity Natron does not currently accept donations.
+While we appreciate your generosity Natron does not currently accept donations.  Currently all of our contributors have full time jobs and the amount we would likely receive from community donations wouldn't justify the administrative overhead of collecting them.  With that caveat aside, if you are a corporate entity willing to fund development on a larger scale please do reach out!

@@ -62,11 +62,20 @@ Keep indenting clean and follow the existing standards of the files.
 
 Jekyll is a static site generator and relative file URLs don't really work unless you hardcode them which requires thinking and doesn't work for stuff like navigation.  To fix this there is a file called `baseurl.html` that tells Jekyll how to link things nicely and relatively!  Place `{% base %}` directly before any link that links to a resource inside the website and refer to this resource as a path straight from the home directly.  Think of it as automatically handling the `../`'s for you... because that's exactly what it's doing!  For more information see [this website](https://ricostacruz.com/til/relative-paths-in-jekyll).
 
-### SVGs & Colours In General
+### SVGs & Colors In General
 
-All colour variables are referenced as both P3 and an sRGB fallback.  Variables can be found and set in `_sass/_global.scss`.
+All color variables are referenced as both P3 and an sRGB fallback.  Variables can be found and set in `_sass/_global.scss`.
 
-SVGs can only have their colours set with variables if they exist in the DOM.  This matters most for SVGs set to our brand colours & 100% white.  If the SVG is not using these colours _it doesn't have to be embedded!_  Otherwise, it should be.
+SVGs can only have their colors set with variables if they exist in the DOM.  This matters most for SVGs set to our brand colors & 100% white.  If the SVG is not using these colors _it doesn't have to be embedded!_  Otherwise, it should be.
+
+### Authoring an Update Post
+
+After building and setting up the release through GitHub Releases...
+
+1. Create a standard release graphic: Natron project file and instructions on how to do this are available in the releasegraphic folder in `/templates`.  Place the generated image in `/img/news/releases`.
+2. Author an update post: Markdown template also available in `/templates`, be sure to change the relevant info in both the file name and the front matter section, most of the body text can be copied from the GitHub `CHANGELOG.md`, please include any extra information about the release before the "Major Changes" section.
+3. Change the download links by setting the variables in `_config.yml`.
+4. Publish to main!  Bonus points for testing the site locally first ;)
 
 ## Licensing
 
