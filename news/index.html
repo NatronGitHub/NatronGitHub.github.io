@@ -8,10 +8,10 @@ title: News - Natron
   <div class="newshero-container">
     {% for post in site.posts limit: 1 %}
     <a href="{% base %}{{ post.url }}">
-      <img src="{% base %}{{ post.postimg }}" class="newshero-card-link" />
+      <img src="{% base %}{{ post.postimg }}" class="newshero-card-link" alt=""/>
     </a>
     <div class="newshero-container-text">
-      <time class="text-uppercase">{{ post.date | date: "%B %d, %Y" }}</time>
+      <time class="text-uppercase" datetime="{{ post.date | date: "%Y-%m-%d" }}"> {{ post.date | date: "%B %d, %Y" }}</time>
       <h2 class="h2-nonwhite">{{ post.title }}</h2>
       <p class="p-body">{{ post.description }}</p>
       <a class="intext-link intext-link-glow" href="../{{ post.url }}">Read more →</a>
@@ -28,9 +28,9 @@ title: News - Natron
     {% for post in site.posts offset:1 %}
     <a class="newsarticles-card-link" href="{% base %}{{ post.url }}">
       <article class="newsarticles-card">
-        <img src="{% base %}{{ post.postimg }}" />
+        <img src="{% base %}{{ post.postimg }}" alt=""/>
         <div class="newsarticles-card-description">
-          <time class="text-uppercase">{{ post.date | date: "%B %d, %Y" }}</time>
+          <time class="text-uppercase" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %d, %Y" }}</time>
           <h3 class="h4">{{ post.title }}</h3>
           <p class="p-small">{{ post.description }}</p>
         </div>
