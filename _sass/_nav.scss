@@ -1,0 +1,248 @@
+.nav {
+  background-color: var(--desatpurple);
+  display: flex;
+  justify-content: center;
+  height: 4.5rem;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+.nav-container {
+  padding: 0 20px;
+  max-width: 1340px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+
+.nav-logocontainer {
+  position: relative;
+  top: 2px;
+  max-width: 200px;
+  min-height: 4.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.nav-logo {
+  width: 100%;
+  fill: var(--grey);
+  color: var(--grey);
+  transition-duration: $hovertransition;
+}
+
+.nav-logo:hover {
+  fill: var(--white);
+  color: var(--white);
+  transition-duration: $hovertransition;
+}
+
+.nav-menulist {
+  margin: 0;
+  padding: 0 1rem 0 1rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  flex-grow: 5;
+
+  li {
+    display: inline;
+    position: relative;
+  }
+
+  a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--grey);
+    font-variation-settings: 'wght' 600;
+    vertical-align: bottom;
+    transition-duration: $hovertransition;
+  }
+
+  a:hover {
+    color: var(--white);
+    font-variation-settings: 'wght' 700;
+    transition-duration: $hovertransition;
+  }
+
+  a:before {
+    content: "";
+    position: absolute;
+    height: 0.15rem;
+    width: 100%;
+    bottom: -0.5rem;
+    background: $brandgradient;
+    transition: width 0.5s ease;
+    // These properties hide the lines
+    visibility: hidden;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: all $hovertransition ease-in-out 0s;
+  }
+
+  a:hover:before {
+    // These properties un-hide the lines
+    visibility: visible;
+    transform-origin: left center;
+    transform: scaleX(1);
+  }
+}
+
+.nav-sociallinks {
+  max-width: 310px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+
+  i {
+    font-size: 1.5rem;
+    vertical-align: bottom;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--grey);
+    transition-duration: $hovertransition;
+  }
+
+  a:hover {
+    color: var(--white);
+    transition-duration: $hovertransition;
+    transform: scale(1.1);
+  }
+}
+
+.nav-menulinkscontainer {
+  display: flex;
+  flex-grow: 1;
+}
+
+#nav-hamburgerbutton {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  visibility: hidden;
+  width: 0;
+  justify-content: flex-end;
+
+  input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: fixed;
+    top: 1rem;
+    right: 0.5rem;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+  }
+}
+
+// CSS Hamburger Button
+#nav-hamburgerbutton span {
+  display: block;
+  width: 1.6rem;
+  height: 0.2rem;
+  margin-bottom: 5px;
+  background: var(--grey);
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform $hovertransition cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.1s ease;
+}
+
+#nav-hamburgerbutton span:nth-child(2) {
+  transform-origin: 0% -50%;
+}
+
+#nav-hamburgerbutton span:nth-child(4) {
+  transform-origin: 0% 100%;
+}
+
+// Top slice
+#nav-hamburgerbutton input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(0px, -1px);
+}
+
+// Hide middle slice
+#nav-hamburgerbutton input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+// Bottom slice
+#nav-hamburgerbutton input:checked ~ span:nth-child(4) {
+  opacity: 1;
+  transform: rotate(-45deg) translate(-1px, -1px);
+}
+
+
+@include mq($from: desktop, $until: desktop) {
+  .nav-menulinkscontainer {
+    visibility: visible !important;
+  }
+}
+
+// Switch to hamburger menu on mobile
+@include mq($from: mobile, $until: desktop) {
+
+  .nav {
+    min-height: 4.5rem;
+    height: auto;
+  }
+
+  .nav-container {
+
+    grid-template-rows: max-content max-content;
+  }
+
+  .nav-menulist {
+    padding: 2rem;
+    flex-direction: column;
+
+    a {
+      display: block;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    a:before {
+      height: 0.25rem !important;
+      bottom: 0.5rem !important;
+    }
+  }
+
+  #nav-hamburgerbutton {
+    display: flex;
+    visibility: visible;
+    width: auto;
+  }
+
+  .nav-menulinkscontainer {
+    grid-column: span 2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    display: none;
+  }
+
+  .nav-sociallinks {
+    width: 100%;
+    padding-bottom: 2rem;
+
+    i {
+      font-size: 2rem;
+    }
+  }
+
+}

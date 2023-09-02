@@ -1,0 +1,42 @@
+---
+layout: default
+title: News - Natron
+---
+
+<!--Featured news item first-->
+<section class="newshero">
+  <div class="newshero-container">
+    {% for post in site.posts limit: 1 %}
+    <a href="{% base %}{{ post.url }}">
+      <img src="{% base %}{{ post.postimg }}" class="newshero-card-link" alt=""/>
+    </a>
+    <div class="newshero-container-text">
+      <time class="text-uppercase" datetime="{{ post.date | date: "%Y-%m-%d" }}"> {{ post.date | date: "%B %d, %Y" }}</time>
+      <h2 class="h2-nonwhite">{{ post.title }}</h2>
+      <p class="p-body">{{ post.description }}</p>
+      <a class="intext-link intext-link-glow" href="../{{ post.url }}">Read more →</a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!--Grid view of other news items-->
+<section class="newsarticles">
+  <!--Grid wrapper-->
+  <div class="newsarticles-container">
+    <!--News cards below in <article> tags-->
+    {% for post in site.posts offset:1 %}
+    <a class="newsarticles-card-link" href="{% base %}{{ post.url }}">
+      <article class="newsarticles-card">
+        <img src="{% base %}{{ post.postimg }}" alt=""/>
+        <div class="newsarticles-card-description">
+          <time class="text-uppercase" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %d, %Y" }}</time>
+          <h3 class="h4">{{ post.title }}</h3>
+          <p class="p-small">{{ post.description }}</p>
+        </div>
+      </article>
+    </a>
+    {% endfor %}
+  </div>
+  <!--END Grid wrapper-->
+</section>

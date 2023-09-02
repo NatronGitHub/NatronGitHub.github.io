@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+{% include head.html %}
+
+<body>
+    {% include nav.html %}
+    <div class="wrapper">
+      <main class="textpage textpost stdsection">
+          <article class="section-container">
+              {{content}}
+          </article>
+      </main>
+    </div>
+
+
+    {% include footer.html %}
+</body>
+
+</html>
