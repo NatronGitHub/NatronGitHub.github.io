@@ -99,3 +99,11 @@ exclude:
   - DEVELOP.md
   - templates/
 
+# Jekyll RSS Feed settings
+
+feed:
+  path: /feed.atom
+  collections:
+    posts:
+      path: "/feed.atom"
+  posts_limit: 20

@@ -28,6 +28,8 @@
       {{ site.description }}
     {% endif %}">
   <meta name="twitter:image" content="">
+  <!-- RSS Feed -->
+  <link rel="alternate" type="application/rss+xml" href="{% base %}feed.xml">
 
   {% if page.postimg %}
     <meta property="og:image" content="{{ site.url | append: "/" }}{{ page.postimg }}" />
