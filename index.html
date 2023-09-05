@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  <!-- Metadata -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1e1830">
+  <meta name="keywords" content="node-based, compositor, compositing, computer graphics, cgi, open source, vfx, software">
+  <title>Natron</title>
+  <!-- OpenGraph Card -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Natron">
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1080">
+  <meta name="og:description" content="
+      Open Source VFX Compositing Software
+    ">
+  <meta property="og:locale" content="en_US" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:domain" content="natrongithub.github.io">
+  <meta name="twitter:title" content="Natron">
+  <meta name="twitter:description" content="
+      Open Source VFX Compositing Software
+    ">
+  <meta name="twitter:image" content="">
+  <!-- RSS Feed -->
+  <link rel="alternate" type="application/rss+xml" href="feed.atom">
+
+  
+    <meta property="og:image" content="https://natrongithub.github.io/img/social-preview.jpg" />
+    <meta name="twitter:image" content="https://natrongithub.github.io/img/social-preview.jpg" />
+  
+
+  <!-- Stylesheets & Fonts -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+
+  <body>
+    <nav class="nav" aria-label="main">
+  <div class="nav-container">
+    <div class="nav-logocontainer">
+      <a title="Home" href=".">
+        <div>
+          <svg class="nav-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 170.7 32" xml:space="preserve">
+            <path class="st0" d="M47.9 11.3v12.3h-3.5v-17h3.5l12.6 12.5V6.7H64v17h-3.5L47.9 11.3zM74.5 6.7h3.8l8.1 17h-3.8L80.8 20h-8.9l-1.7 3.7h-3.8l8.1-17zm5 10.4l-3.1-6.9-3.1 6.9h6.2zM102.5 6.7v2.9h-7.2v14.1h-3.5V9.6h-7.2V6.7h17.9zM105.1 6.7h11.5c3.9 0 6.5 1.6 6.5 5.2 0 2.8-1.8 4-4.3 4.4 2.6.2 3.9.9 3.9 3.4v4h-3.5v-3.8c0-1.9-.8-2.5-4.1-2.5h-6.6v6.3H105v-17zm11.5 8c2 0 3-1 3-2.6s-1.1-2.4-3-2.4h-8v5h8zM126.2 15.2c0-5.5 4-8.9 10.7-8.9 6.8 0 10.7 3.3 10.7 8.9 0 5.5-3.9 8.8-10.7 8.8-6.8 0-10.7-3.3-10.7-8.8zm17.8 0c0-3.9-2.9-5.8-7.1-5.8s-7.2 1.9-7.2 5.8 3 5.8 7.2 5.8 7.1-1.9 7.1-5.8zM154.6 11.3v12.3h-3.5v-17h3.5l12.6 12.5V6.7h3.5v17h-3.5l-12.6-12.4zM25.6 32H10.4c-1 0-1.9-.5-2.4-1.4L.4 17.4c-.5-.9-.5-2 0-2.8L8 1.4C8.5.5 9.4 0 10.4 0h15.2c1 0 1.9.5 2.4 1.4l7.6 13.2c.5.9.5 2 0 2.8L28 30.6c-.4.9-1.3 1.4-2.4 1.4zM10.4 2c-.3 0-.6.2-.7.4L2.1 15.6c-.1.3-.1.6 0 .8l7.6 13.2c.1.3.4.4.7.4h15.2c.3 0 .6-.2.7-.4L34 16.4c.1-.3.1-.6 0-.8L26.4 2.4c-.2-.3-.5-.4-.8-.4H10.4z"/>
+            <path id="logo-n" class="st0" d="M24.5 4.9v9.9c0 .2-.1.3-.3.3-.1 0-.2-.1-.3-.2l-5.3-9.2c-.3-.5-.9-.9-1.6-.9h-4.4c-.7 0-1.3.3-1.6.9L5.6 15c-.3.6-.3 1.3 0 1.8L11.5 27v-9.9c0-.2.1-.3.3-.3.1 0 .2.1.3.2l5.3 9.2c.3.5.9.9 1.6.9h4.4c.7 0 1.3-.3 1.6-.9l5.4-9.3c.3-.6.3-1.3 0-1.8L24.5 4.9z"/>
+          </svg>
+        </div>
+      </a>
+    </div>
+    <div id="nav-hamburgerbutton">
+        <div>
+          <input type="checkbox" id="nav-hamburgercheckbox" onclick="openNavMenu()"/>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+    </div>
+    <div id="nav-menulinkscontainer" class="nav-menulinkscontainer">
+      <ul class="nav-menulist">
+        <!-- <li>
+          <a href="features/2d-compositing">Features</a>
+        </li> -->
+        <li>
+          <a href="news">News</a>
+        </li>
+        <li>
+          <a href="http://natron.readthedocs.io">Docs</a>
+        </li>
+        <li>
+          <a href="about">About</a>
+        </li>
+      </ul>
+      <div class="nav-sociallinks">
+        <a title="GitHub" href="https://github.com/NatronGitHub/Natron">
+          <i class='bx bxl-github'></i>
+        </a>
+        <a title="Forum" href="https://discuss.pixls.us/c/software/natron">
+          <i class='bx bxl-discourse'></i>
+        </a>
+        <!-- <a title="Twitter" href="https://twitter.com/natronvfx">
+          <i class='bx bxl-twitter'></i>
+        </a> -->
+        <a title="Discord" href="https://discord.gg/cpMj5p3Fv5">
+          <i class='bx bxl-discord'></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+<script>
+  document.onload = document.getElementById("nav-hamburgercheckbox").checked = false
+  window.addEventListener('resize', function(event) {
+    const vw = window.innerWidth;
+    if (vw >= 980) {
+      document.getElementById("nav-menulinkscontainer").style.visibility = "visible";
+      document.getElementById("nav-menulinkscontainer").style.display = "flex";
+      document.getElementById("nav-hamburgercheckbox").checked = false
+    }
+    if (vw < 980 && document.getElementById("nav-hamburgercheckbox").checked == false) {
+      document.getElementById("nav-menulinkscontainer").style.visibility = "hidden";
+      document.getElementById("nav-menulinkscontainer").style.display = "none";
+    }
+  })
+  function openNavMenu() {
+  if (document.getElementById("nav-hamburgercheckbox").checked == true) {
+      document.getElementById("nav-menulinkscontainer").style.visibility = "visible";
+      document.getElementById("nav-menulinkscontainer").style.display = "flex";
+      }
+  else {
+      document.getElementById("nav-menulinkscontainer").style.visibility = "hidden";
+      document.getElementById("nav-menulinkscontainer").style.display = "none";
+      }
+  }
+
+</script>
+
+    <div class="wrapper">
+      <section class="herosection" style="background-image: url(img/hero.jpg)">
+  <div class="herosection-container">
+    <div>
+      <h1 class="h1 large-dropshadow-text"><span class="word-wrap-section">Visual Effects&nbsp;</span><span class="word-wrap-section">Without Limits.</span></h1>
+      <p class="hero-subheader large-dropshadow-text"><span class="word-wrap-section">Node-based compositing,&nbsp;</span><span class="word-wrap-section">backed by the freedom&nbsp;<span class="word-wrap-section">of open-source.</span></span></p>
+      <div>
+        <a class="button large-dropshadow" href="/#download"><i class='bx bxs-download'></i> Download Natron</a>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="stdsection">
+  <div class="herosection-bylinecontainer section-container">
+    <h5 class="heresection-byline-text">Art by: <a href="https://www.artstation.com/parallelmayhem">Sam Morse-Brown</a></h5>
+  </div>
+</div>
+<section class="stdsection">
+  <div class="section-container">
+    <div class="index-features-titlecontainer">
+      <h2 class="h2 center-text">The tools youʼd expect to be here</h2>
+      <p class="p-body center-text">
+        The standard 2D compositing toolkit you already know and love.
+      </p>
+    </div>
+    <div class="index-features">
+      <ul>
+        <li>
+          <div class="index-featurecard">
+            <img src="img/index-feature-cards/openfx.svg" alt="">
+            <div>
+              <h4 class="h4">OpenFX Plugin Support</h4>
+              <p class="p-small">
+                Natron supports industry-standard OFX plug-ins.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="index-featurecard">
+            <img src="img/index-feature-cards/tracking.svg" alt="">
+            <div>
+              <h4 class="h4">2D Tracking</h4>
+              <p class="p-small">
+                Natron includes a fast, pixel-perfect 2D tracker.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="index-featurecard">
+            <img src="img/index-feature-cards/roto.svg" alt="">
+            <div>
+              <h4 class="h4">Roto</h4>
+            </div>
+            <p class="p-small">
+              Multi-layered rotoscoping with per-vertex feathering.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="index-featurecard">
+            <img src="img/index-feature-cards/keyer.svg" alt="">
+            <div>
+              <h4 class="h4">Keying</h4>
+              <p class="p-small">
+                Natron offers various keying and matte refinement tools.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="index-featurecard">
+            <img src="img/index-feature-cards/dopesheet.svg" alt="">
+            <div>
+              <h4 class="h4">Curve & Dope-sheet Editors</h4>
+              <p class="p-small">
+                If you've used a curve editor before you know how to use this one too.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="index-featurecard">
+            <img src="img/index-feature-cards/gpu.svg" alt="">
+            <div>
+              <h4 class="h4">Headless Rendering</h4>
+              <p class="p-small">
+                Natron is capable of running without a GUI can be integrated with render farm managers.
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="stdsection">
+  <div class="section-container">
+    <div class="index-aboutnodes">
+      <div class="index-aboutnodes-imagecontainer">
+        <img src="img/natron-screenshot.png" alt="A flatscreen monitor displaying Natron's node-based interface">
+      </div>
+      <div class="index-aboutnodes-textcontainer">
+        <div>
+          <h2 class="h2">Work smarter with nodes</h2>
+          <p class="p-body">
+            No more frustrating hunts through nested precomps! Fusion and Nuke users will be right at home in Natron’s node graph. Group, merge, and tinker to achieve just about any effect. Create pixel perfect mattes, cleanplates, and set
+            extensions, all with node trees.
+            <br />
+            <br />
+            Build, group, and save your own nodes to create custom tools and presets. Natron features drag-and-drop installation of <a href="https://github.com/NatronGitHub/natron-plugins" class="intext-link intext-link-glow">community-made “pyplug”
+              nodes.</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- To update releases paste the link to the new build in the href="" attribute within the appropriate <a> tag.  <a> tags can be created or removed as more or fewer are required over time.  Be sure to update the version number and release date too!-->
+
+<section class="stdsection" id="download">
+  <div class="section-container">
+    <div class="index-downloads-titlecontainer">
+      <h2 class="h2 center-text">Download Natron</h2>
+      <p class="p-body center-text">
+        Latest version: 2.5.0
+      </p>
+      <p class="p-small center-text">
+        Released November 25, 2022: <a href="news/2022-11-25-release-2-5-0/" class="intext-link intext-link-glow">Changelog<i class='bx bx-right-arrow-alt'></i></a>
+      </p>
+      <p class="p-small center-text">
+        <a href="system-requirements" class="intext-link intext-link-glow">System requirements</a>
+      </p>
+    </div>
+    <div class="index-downloads-oscontainer">
+      <div class="index-downloads-os">
+        <div>
+          <h3 class="h3"><i class='bx bxl-apple'></i>macOS</h3>
+        </div>
+        <div>
+          <p class="p-small">
+            Supports Snow Leopard up to the latest version of macOS on Intel hardware.
+          </p>
+        </div>
+        <div class="index-downloads-os-links">
+          
+          <a href="https://github.com/NatronGitHub/Natron/releases/latest/download/Natron-2.5.0-macOS11-x86_64.dmg " class="p-small intext-link intext-link-glow">
+            macOS 11+
+          </a>
+          
+          <a href="https://github.com/NatronGitHub/Natron/releases/latest/download/Natron-2.5.0-macOS1015-x86_64.dmg " class="p-small intext-link intext-link-glow">
+            macOS 10.15
+          </a>
+          
+          <a href="https://github.com/NatronGitHub/Natron/releases/latest/download/Natron-2.5.0-OSX109-x86_64.dmg " class="p-small intext-link intext-link-glow">
+            OS X 10.9+
+          </a>
+          
+          <a href="https://github.com/NatronGitHub/Natron/releases/latest/download/Natron-2.5.0-OSX-Universal.dmg " class="p-small intext-link intext-link-glow">
+            OS X 10.6+
+          </a>
+          
+        </div>
+      </div>
+      <div class="index-downloads-os">
+        <div>
+          <h3 class="h3"><i class='bx bxl-windows'></i>Windows</h3>
+        </div>
+        <div>
+          <p class="p-small">
+            Supports Windows 8.1/10/11 on 64 bit, x86 hardware.
+          </p>
+        </div>
+        <div class="index-downloads-os-links">
+          
+          <a href="https://github.com/NatronGitHub/Natron/releases/latest/download/Natron-2.5.0-Windows-x86_64.zip " class="p-small intext-link intext-link-glow">
+            Installer & Portable
+          </a>
+          
+        </div>
+      </div>
+      <div class="index-downloads-os">
+        <div>
+          <h3 class="h3"><i class='bx bxl-tux'></i>GNU/Linux</h3>
+        </div>
+        <div>
+          <p class="p-small">
+            Supports any x86_64 distribution with X11, glibc 2.17+ and libgcc 4.8+.
+          </p>
+        </div>
+        <div class="index-downloads-os-links">
+          
+          <a href="https://github.com/NatronGitHub/Natron/releases/latest/download/Natron-2.5.0-Linux-x86_64.tgz " class="p-small intext-link intext-link-glow">
+            Installer
+          </a>
+          
+          <a href="https://github.com/NatronGitHub/Natron/releases/latest/download/Natron-2.5.0-Linux-x86_64-no-installer.tar.xz " class="p-small intext-link intext-link-glow">
+            Portable
+          </a>
+          
+          <a href=" https://flathub.org/apps/details/fr.natron.Natron" class="p-small intext-link intext-link-glow">
+            Flatpak
+          </a>
+          
+        </div>
+      </div>
+    </div>
+    <div class="index-downloads-other">
+      <h4 class="h4 center-text">Other Downloads:</h4>
+      <p class="p-small center-text">
+        <a href="https://www.freshports.org/graphics/natron/" class="intext-link intext-link-glow">FreeBSD: Freshports</a>
+        <a href="https://sourceforge.net/projects/natron/files/Examples/" class="intext-link intext-link-glow">Sample projects</a>
+        <a href="https://github.com/NatronGitHub/natron-plugins" class="intext-link intext-link-glow">Community Plugins</a>
+        <a href="https://github.com/NatronGitHub/natron-python-scripting" class="intext-link intext-link-glow">Community Scripts</a>
+      </p>
+    </div>
+  </div>
+</section>
+<section class="stdsection">
+  <div class="section-container">
+    <div class="index-community-titlecontainer">
+      <h2 class="h2 center-text">Join the community!</h2>
+    </div>
+    <div class="index-community-cardgrid">
+      <div class="index-community-cardcontainer">
+        <a href="https://github.com/NatronGitHub/Natron" class="index-card">
+          <div class="index-card-icon">
+            <i class='bx bxl-github'></i>
+          </div>
+          <div class="index-card-text">
+            <div>
+              <h4 class="h4">Contribute on GitHub</h4>
+              <p class="p-small">
+                Source code, bug reports, and build guides for developers!
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="index-community-cardcontainer">
+        <a href="https://discord.gg/cpMj5p3Fv5" class="index-card">
+          <div class="index-card-icon">
+            <i class='bx bxl-discord'></i>
+          </div>
+          <div class="index-card-text">
+            <div>
+              <h4 class="h4">Join us on Discord</h4>
+              <p class="p-small">
+                If you prefer text chat, check out the Discord server!
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="index-community-cardcontainer">
+        <a href="https://discuss.pixls.us/c/software/natron" class="index-card">
+          <div class="index-card-icon">
+            <i class='bx bxl-discourse'></i>
+          </div>
+          <div class="index-card-text">
+            <div>
+              <h4 class="h4">Discuss on the forum</h4>
+              <p class="p-small">
+                The official place for questions and discussion about Natron!
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="index-community-cardcontainer">
+        <a href="https://facebook.com/groups/NatronNation/" class="index-card">
+          <div class="index-card-icon">
+            <i class='bx bxl-facebook-circle'></i>
+          </div>
+          <div class="index-card-text">
+            <div>
+              <h4 class="h4">Find us on Facebook</h4>
+              <p class="p-small">
+                Join the Natron Nation group on Facebook!
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+    </div>
+    <footer class="stdsection">
+  <div class="section-container">
+    <div class="horizontal-rule"></div>
+    <div class="footer-logocontainer">
+      <a class="footer-logo-link" href="">
+        <object type="image/svg+xml" class="footer-logo" data="img/natron-wordmark-logo.svg"></object>
+      </a>
+    </div>
+    <div class="footer-linkscontainer">
+      <nav aria-label="main">
+        <h4 class="h4">Explore</h4>
+        <ul class="footer-links-list">
+          <li>
+            <a href="">Home</a>
+          </li>
+          <li>
+            <a href="features/2d-compositing">Features</a>
+          </li>
+          <li>
+            <a href="news">News</a>
+          </li>
+          <li>
+            <a href="http://natron.readthedocs.io">Docs</a>
+          </li>
+          <li>
+            <a href="about">About</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="footer-tutorialcontainer">
+        <h4 class="h4">Learn</h4>
+        <ul class="footer-links-list">
+          <li>
+            <a href="getting-started">Getting Started</a>
+          </li>
+          <li>
+            <a href="https://sourceforge.net/projects/natron/files/Examples/">Demo Files</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-communitycontainer">
+        <h4 class="h4">Community</h4>
+        <p class="p-small">Follow us on social media for the latest on Natron!</p>
+        <div>
+          <a title="GitHub" href="https://github.com/NatronGitHub/Natron">
+            <i class='bx bxl-github'></i>
+          </a>
+          <a title="Forum" href="https://discuss.pixls.us/c/software/natron">
+            <i class='bx bxl-discourse'></i>
+          </a>
+          <!-- <a title="Twitter" href="https://twitter.com/natronvfx">
+            <i class='bx bxl-twitter'></i>
+          </a> -->
+          <a title="Discord" href="https://discord.gg/cpMj5p3Fv5">
+            <i class='bx bxl-discord'></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>

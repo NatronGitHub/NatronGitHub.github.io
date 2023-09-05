@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://natrongithub.github.io/feed.atom" rel="self" type="application/atom+xml" /><link href="https://natrongithub.github.io/" rel="alternate" type="text/html" /><updated>2023-09-05T07:21:43+00:00</updated><id>https://natrongithub.github.io/feed.atom</id><title type="html">Natron</title><subtitle>Open Source VFX Compositing Software</subtitle><entry><title type="html">Natron 2.5.0 Released</title><link href="https://natrongithub.github.io/news/2022-11-25-release-2-5-0/" rel="alternate" type="text/html" title="Natron 2.5.0 Released" /><published>2022-11-25T00:00:00+00:00</published><updated>2022-11-25T00:00:00+00:00</updated><id>https://natrongithub.github.io/news/release-2-5-0</id><content type="html" xml:base="https://natrongithub.github.io/news/2022-11-25-release-2-5-0/">&lt;p&gt;Natron 2.5.0 is here, bringing Python 3 support, a new CMake-based build system, and an overall improved developer experience! As with all major releases everything you need to get started can be downloaded &lt;a href=&quot;../../#download&quot;&gt;here!&lt;/a&gt; Downloads for previous versions can be found on &lt;a href=&quot;https://github.com/NatronGitHub/Natron/releases&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;major-changes&quot;&gt;Major changes&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Use Python 3 rather than Python 2 (which is not maintained anymore). This will require very few changes to the Python code (mainly print statements), and most code can be easily adapted to be 2-3 compatible. #686&lt;/li&gt;
+  &lt;li&gt;Use &lt;a href=&quot;https://pypi.org/project/QtPy/&quot;&gt;QtPy&lt;/a&gt;==1.11.2 rather than PySide. QtPy is an abstraction layer for PyQt5/PyQt4/PySide2/PySide (newer versions support PyQt6/PySide6). QtPy uses the Qt5 layout (where the QtGui module has been split into QtGui and QtWidgets). Using QtPy guarantees a higher level of forward-compatibility with future versions of Natron, which may use Qt5 or Qt6. PySide can still be imported explicitly, if required, but the resulting code will not be forward-compatible. Note that 2.4.4 binaries include qtpy, but still import PySide by default. #687&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;known-issues&quot;&gt;Known issues&lt;/h2&gt;
+
+&lt;h3 id=&quot;all-operating-systems&quot;&gt;All operating systems&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Rendering sometimes silently stalls after X frames. #248&lt;/li&gt;
+  &lt;li&gt;Some image formats may have issues (PCX, PSB). #602&lt;/li&gt;
+  &lt;li&gt;MTS video files are sometimes not read correctly. #186&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Frédéric Devernay</name></author><category term="news" /><category term="release" /><summary type="html">Natron 2.5.0 is here, bringing Python 3 support, a new CMake-based build system, and an overall improved developer experience! As with all major releases everything you need to get started can be downloaded here! Downloads for previous versions can be found on GitHub.</summary></entry><entry><title type="html">Natron 2.4.3 Released</title><link href="https://natrongithub.github.io/news/2022-02-18-release-2-4-3/" rel="alternate" type="text/html" title="Natron 2.4.3 Released" /><published>2022-02-18T00:00:00+00:00</published><updated>2022-02-18T00:00:00+00:00</updated><id>https://natrongithub.github.io/news/release-2-4-3</id><content type="html" xml:base="https://natrongithub.github.io/news/2022-02-18-release-2-4-3/">&lt;p&gt;Natron 2.4.3 is here! As with all major releases everything you need to get started can be downloaded &lt;a href=&quot;../../#download&quot;&gt;here!&lt;/a&gt; Downloads for previous versions can be found on &lt;a href=&quot;https://github.com/NatronGitHub/Natron/releases&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This will probably be the last version supporting Python 2.7. Development will focus on supporting Python 3 and Qt 5, especially in the binary releases:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Natron 2.5 will support Python 3 (Python 2 will be dropped).&lt;/li&gt;
+  &lt;li&gt;Natron 2.6 will support Qt5 (Qt 4 support will be dropped).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;major-changes&quot;&gt;Major Changes&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Added palette support in color selector. #754&lt;/li&gt;
+  &lt;li&gt;Allow creating a node with the same name that was just deleted. #732&lt;/li&gt;
+  &lt;li&gt;Natron can now keep up to 32 project backups (see Preferences/General/Save versions). #562&lt;/li&gt;
+  &lt;li&gt;Only display the overlays for nodes that are in the viewer render path and have their properties panel maximized. Can be disabled in Preferences/Viewer. #744&lt;/li&gt;
+  &lt;li&gt;Fixed rendering from Python (by calling app.render()) when nodes use Python expressions. #560&lt;/li&gt;
+  &lt;li&gt;Fixed drawing of closed Bezier overlays. #659&lt;/li&gt;
+  &lt;li&gt;RotoPaint does not reconnect to the viewer at each stroke by default. Added a button to the viewer interface to re-enable this behavior. #641&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;known-issues&quot;&gt;Known Issues&lt;/h2&gt;
+
+&lt;h3 id=&quot;all-operating-systems&quot;&gt;All Operating Systems&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Crash when closing a project window on macOS 12+ (Qt4 only). #712&lt;/li&gt;
+  &lt;li&gt;Rendering sometimes silently stalls after X frames. #248&lt;/li&gt;
+  &lt;li&gt;Some image formats may have issues (PCX, PSB). #602&lt;/li&gt;
+  &lt;li&gt;MTS video files are sometimes not read correctly. #186&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Frédéric Devernay</name></author><category term="news" /><category term="release" /><summary type="html">Natron 2.4.3 is here! As with all major releases everything you need to get started can be downloaded here! Downloads for previous versions can be found on GitHub.</summary></entry><entry><title type="html">Natron 2.4.2 Released</title><link href="https://natrongithub.github.io/news/2021-12-17-release-2-4-2/" rel="alternate" type="text/html" title="Natron 2.4.2 Released" /><published>2021-12-17T00:00:00+00:00</published><updated>2021-12-17T00:00:00+00:00</updated><id>https://natrongithub.github.io/news/release-2-4-2</id><content type="html" xml:base="https://natrongithub.github.io/news/2021-12-17-release-2-4-2/">&lt;p&gt;Natron 2.4.2 is here! As with all major releases everything you need to get started can be downloaded &lt;a href=&quot;../../#download&quot;&gt;here!&lt;/a&gt; Downloads for previous versions can be found on &lt;a href=&quot;https://github.com/NatronGitHub/Natron/releases&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;major-changes&quot;&gt;Major Changes&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fixed OpenFX overlay actions being executed in the wrong order. #711&lt;/li&gt;
+  &lt;li&gt;Fixed enabling node preview from Python. #710&lt;/li&gt;
+  &lt;li&gt;Natron will not display the “Loading project” splash screen on macOS 12+ to avoid crash due to Qt4 bug. #712&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;plugins&quot;&gt;Plugins&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fixed bug in Transform plugin interact. #708&lt;/li&gt;
+  &lt;li&gt;Fixed EXR reader outputting the color plane only when an OCIO transform is applied. #714&lt;/li&gt;
+  &lt;li&gt;OpenColorIO plugins can now use OpenColorIO 2.1.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;known-issues&quot;&gt;Known Issues&lt;/h2&gt;
+
+&lt;h3 id=&quot;all-operating-systems&quot;&gt;All Operating Systems&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Crash when closing a project window on macOS 12+ (Qt4 only). #712&lt;/li&gt;
+  &lt;li&gt;Rendering sometimes silently stalls after X frames. #248&lt;/li&gt;
+  &lt;li&gt;Some image formats may have issues (PCX, PSB). #602&lt;/li&gt;
+  &lt;li&gt;MTS video files are sometimes not read correctly. #186&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Frédéric Devernay</name></author><category term="news" /><category term="release" /><summary type="html">Natron 2.4.2 is here! As with all major releases everything you need to get started can be downloaded here! Downloads for previous versions can be found on GitHub.</summary></entry><entry><title type="html">Natron 2.4.1 Released</title><link href="https://natrongithub.github.io/news/2021-10-24-release-2-4-1/" rel="alternate" type="text/html" title="Natron 2.4.1 Released" /><published>2021-10-24T00:00:00+00:00</published><updated>2021-10-24T00:00:00+00:00</updated><id>https://natrongithub.github.io/news/release-2-4-1</id><content type="html" xml:base="https://natrongithub.github.io/news/2021-10-24-release-2-4-1/">&lt;p&gt;Natron 2.4.1 is here! As with all major releases everything you need to get started can be downloaded &lt;a href=&quot;../../#download&quot;&gt;here!&lt;/a&gt; Downloads for previous versions can be found on &lt;a href=&quot;https://github.com/NatronGitHub/Natron/releases&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;major-changes&quot;&gt;Major Changes&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Default number of render threads is more reasonable on multi-core systems: &lt;code class=&quot;language-python highlighter-rouge&quot;&gt;&lt;span class=&quot;nb&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_cores&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RAM&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;3.5&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Gb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;. #554&lt;/li&gt;
+  &lt;li&gt;Fix checkerboard drawing on macOS Catalina and later. #614&lt;/li&gt;
+  &lt;li&gt;Fix undoing “Reset to default” on parameters. #630&lt;/li&gt;
+  &lt;li&gt;Fix NodeGraph manipulation and navigation issues. #491 #627&lt;/li&gt;
+  &lt;li&gt;Fix Retina/High-DPI display issues on macOS, Windows and Linux/X11. #635&lt;/li&gt;
+  &lt;li&gt;Fix multi-dimensional parameter linking (bug introduced in 2.4.0 #594). #631&lt;/li&gt;
+  &lt;li&gt;Fix bug where any argument containing an integer between commas would be interpreted as a frame range. #644&lt;/li&gt;
+  &lt;li&gt;Python: &lt;code class=&quot;language-python highlighter-rouge&quot;&gt;&lt;span class=&quot;n&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;saveProject&lt;/span&gt;&lt;/code&gt;  and &lt;code class=&quot;language-python highlighter-rouge&quot;&gt;&lt;span class=&quot;n&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;saveProjectAs&lt;/span&gt;&lt;/code&gt; now do project variable substitution, as in &lt;code class=&quot;language-python highlighter-rouge&quot;&gt;&lt;span class=&quot;n&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;saveProjectAs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;[Variable]/output.ntp&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Fix ASCII curve import. #656&lt;/li&gt;
+  &lt;li&gt;New color selection dialog for RGB and RGBA knobs. #210&lt;/li&gt;
+  &lt;li&gt;Fix histogram smoothing (was 5 times too strong).&lt;/li&gt;
+  &lt;li&gt;Add Python functions &lt;code class=&quot;language-python highlighter-rouge&quot;&gt;&lt;span class=&quot;n&quot;&gt;guiApp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;copySelectedNodes&lt;/span&gt;&lt;/code&gt; and &lt;code class=&quot;language-python highlighter-rouge&quot;&gt;&lt;span class=&quot;n&quot;&gt;guiApp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pasteNodes&lt;/span&gt;&lt;/code&gt;. #390 #674 #675&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;plugins&quot;&gt;Plugins&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Transform, CornerPin, Position and Ramp nodes now display the motion path.&lt;/li&gt;
+  &lt;li&gt;HueCorrect now has the ability to do hue vs. hue adjustments, with an option to change the background curve guide. #610&lt;/li&gt;
+  &lt;li&gt;Merge: Fix behavior on most operators when A is not connected or A’s RoD and B’s RoD are disjoint. #647&lt;/li&gt;
+  &lt;li&gt;Reformat: fix bugs when “turn” is checked with Resize Type = None or Type = Scale.&lt;/li&gt;
+  &lt;li&gt;Write: Remove file first when overwriting. #666&lt;/li&gt;
+  &lt;li&gt;Mirror: Fix crash. #660&lt;/li&gt;
+  &lt;li&gt;SeNoise: Add option for colored noise.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;known-issues&quot;&gt;Known Issues&lt;/h2&gt;
+
+&lt;h3 id=&quot;all-operating-systems&quot;&gt;All Operating Systems&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Viewer is not updated correctly after interacting with the transform gizmo in the viewer #708 - will be fixed in 2.4.2&lt;/li&gt;
+  &lt;li&gt;Rendering sometimes silently stalls after X frames. #248&lt;/li&gt;
+  &lt;li&gt;Some image formats may have issues (PCX, PSB). #602&lt;/li&gt;
+  &lt;li&gt;MTS video files are sometimes not read correctly. #186&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Frédéric Devernay</name></author><category term="news" /><category term="release" /><summary type="html">Natron 2.4.1 is here! As with all major releases everything you need to get started can be downloaded here! Downloads for previous versions can be found on GitHub.</summary></entry><entry><title type="html">Natron 2.4 Released</title><link href="https://natrongithub.github.io/news/2021-04-19-release-2-4-0/" rel="alternate" type="text/html" title="Natron 2.4 Released" /><published>2021-04-19T00:00:00+00:00</published><updated>2021-04-19T00:00:00+00:00</updated><id>https://natrongithub.github.io/news/release-2-4-0</id><content type="html" xml:base="https://natrongithub.github.io/news/2021-04-19-release-2-4-0/">&lt;p&gt;Natron 2.4.0 is here! As with all major releases everything you need to get started can be downloaded &lt;a href=&quot;../../#download&quot;&gt;here!&lt;/a&gt; Downloads for previous versions can be found on &lt;a href=&quot;https://github.com/NatronGitHub/Natron/releases&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;major-changes&quot;&gt;Major Changes&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Updated documentation. #572 #566 #551 #539 #538 #537 #520 #514&lt;/li&gt;
+  &lt;li&gt;Handle console output on Windows. #524&lt;/li&gt;
+  &lt;li&gt;Detect user installed fonts on Windows 10. #523&lt;/li&gt;
+  &lt;li&gt;New Windows installer. #596&lt;/li&gt;
+  &lt;li&gt;Improvements to SequenceFileDialog. #565&lt;/li&gt;
+  &lt;li&gt;Snap timeline alpha cursor to nearest frame. #574&lt;/li&gt;
+  &lt;li&gt;Handle UTF-8 values in KnobTable (fixes use of project path containing Unicode). #578&lt;/li&gt;
+  &lt;li&gt;Tabs UI adjustments. #564&lt;/li&gt;
+  &lt;li&gt;Do not allow Python keywords as node name or script name. #588&lt;/li&gt;
+  &lt;li&gt;Always serialize nodes with an expression or a link, even if they have the default value. #585&lt;/li&gt;
+  &lt;li&gt;Support cloned group nodes or hard links between groups. #568 #579 #594 #598&lt;/li&gt;
+  &lt;li&gt;Default keyframe interpolation method for strokes and shapes is now “Smooth” (was “Linear”). #597&lt;/li&gt;
+  &lt;li&gt;Fixed animation of Roto Beziers with non-broken tangents. #102&lt;/li&gt;
+  &lt;li&gt;Remember properties panels state when reopening project. #168&lt;/li&gt;
+  &lt;li&gt;Fixed slow node graph display on macOS 11 Big Sur. #606&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;plugins&quot;&gt;Plugins&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ReadFFmpeg, WriteFFmpeg: upgrade to work more nicely with the FFmpeg 4 API. #148 #231 #241&lt;/li&gt;
+  &lt;li&gt;ReadFFmpeg: add support for reading AV1 &amp;amp; Canopus HQ/HQX/Lossless.&lt;/li&gt;
+  &lt;li&gt;WriteFFmpeg: add support for writing AV1 &amp;amp; Cineform HD.&lt;/li&gt;
+  &lt;li&gt;Fixed another bug in DenoiseSharpen that caused crash when stoping/aborting. #300&lt;/li&gt;
+  &lt;li&gt;Fixed Lin2Log to be consistent with Log2Lin. #570&lt;/li&gt;
+  &lt;li&gt;Merge: never consider RGB as being transparent by default - this is OK for unpremultiplied compositing (After Effects) but is invalid in a premultiplied compositor such as Natron or Nuke. Users still have the option to ignore the alpha channel. #571&lt;/li&gt;
+  &lt;li&gt;WriteOIIO: Do not add “Color.” to the channel names of the color plane (affects mainly OpenEXR). #583&lt;/li&gt;
+  &lt;li&gt;Writers: when writing RGBA to format that does not support alpha, just drop alpha - don’t premultiply. #582&lt;/li&gt;
+  &lt;li&gt;RGBtoHSL: Fix bug with white and superwhite values. #512&lt;/li&gt;
+  &lt;li&gt;Reformat: Default to project size. #533&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;known-issues&quot;&gt;Known Issues&lt;/h2&gt;
+
+&lt;h3 id=&quot;all-operating-systems&quot;&gt;All Operating Systems&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Rendering sometimes silently stalls after X frames #248&lt;/li&gt;
+  &lt;li&gt;Some image formats may have issues (PCX, PSB, CR2) #602&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Frédéric Devernay</name></author><category term="news" /><category term="release" /><summary type="html">Natron 2.4.0 is here! As with all major releases everything you need to get started can be downloaded here! Downloads for previous versions can be found on GitHub.</summary></entry><entry><title type="html">Natron 2.3.15 Released</title><link href="https://natrongithub.github.io/news/2020-06-07-release-2-3-15/" rel="alternate" type="text/html" title="Natron 2.3.15 Released" /><published>2020-06-07T00:00:00+00:00</published><updated>2020-06-07T00:00:00+00:00</updated><id>https://natrongithub.github.io/news/release-2-3-15</id><content type="html" xml:base="https://natrongithub.github.io/news/2020-06-07-release-2-3-15/">&lt;p&gt;Natron 2.3.15 is here! As with all major releases everything you need to get started can be downloaded &lt;a href=&quot;../../#download&quot;&gt;here!&lt;/a&gt; Downloads for previous versions can be found on &lt;a href=&quot;https://github.com/NatronGitHub/Natron/releases&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;major-changes&quot;&gt;Major Changes&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Inputs of the selected nodes are now always visible.&lt;/li&gt;
+  &lt;li&gt;Avoid crash and issues when &lt;code class=&quot;language-python highlighter-rouge&quot;&gt;&lt;span class=&quot;n&quot;&gt;NatronEngine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Effect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;destroy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt; is called. &lt;a href=&quot;https://github.com/NatronGitHub/Natron/issues/368&quot;&gt;#368&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;MacOS: Fix version numbers in Finder information. &lt;a href=&quot;https://github.com/NatronGitHub/Natron/issues/372&quot;&gt;#372&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Fix callbacks in PyPanel and PyModalDialog. &lt;a href=&quot;https://github.com/NatronGitHub/Natron/issues/379&quot;&gt;#379&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Fix recursive Python calls and handle the Python GIL properly.&lt;/li&gt;
+  &lt;li&gt;Fix loading of Python Toolsets, and document how Toolsets are detected.&lt;/li&gt;
+  &lt;li&gt;Fix using Rotopaint with multiple layers. &lt;a href=&quot;https://github.com/NatronGitHub/Natron/issues/420&quot;&gt;#420&lt;/a&gt; &lt;a href=&quot;https://github.com/NatronGitHub/Natron/issues/205&quot;&gt;#205&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Fix loading project settings. &lt;a href=&quot;https://github.com/NatronGitHub/Natron/issues/439&quot;&gt;#439&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Fix property panels of PyPlug nodes. &lt;a href=&quot;https://github.com/NatronGitHub/Natron/issues/449&quot;&gt;#449&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Fix missing python API entry points. &lt;a href=&quot;https://github.com/NatronGitHub/Natron/issues/485&quot;&gt;#485&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Make “Use Host Interact” setting available from user parameters. &lt;a href=&quot;https://github.com/NatronGitHub/Natron/issues/490&quot;&gt;#490&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Fix deadlock when creating a dialog from initGui.py. &lt;a href=&quot;https://github.com/NatronGitHub/Natron/issues/487&quot;&gt;#487&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;plugins&quot;&gt;Plugins&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fix bugs in DenoiseSharpen that caused crashes. &lt;a href=&quot;https://github.com/NatronGitHub/Natron/issues/300&quot;&gt;#300&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Add support for chromatic aberration correction when reading RAW files. &lt;a href=&quot;https://github.com/NatronGitHub/Natron/issues/309&quot;&gt;#309&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Update CImg and G’MIC to 2.8.4 and fix several issues in GMIC plugins (which are still beta).&lt;/li&gt;
+  &lt;li&gt;Many new GMIC plugins, including GMIC Custom Code.&lt;/li&gt;
+  &lt;li&gt;FrameRange: New options “Loop” and “Bounce”. &lt;a href=&quot;https://github.com/NatronGitHub/Natron/issues/411&quot;&gt;#411&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Update OpenImageIO to 2.1.11.0. &lt;a href=&quot;https://github.com/NatronGitHub/Natron/issues/350&quot;&gt;#350&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Fix reading multi-view EXRs. &lt;a href=&quot;https://github.com/NatronGitHub/Natron/issues/429&quot;&gt;#429&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Support for reading and writing HEIF/HEIC images. HEIC is the still-image sibling of HEVC (a.k.a. H.265), and compresses to about half the size of JPEG but with higher visual quality.&lt;/li&gt;
+  &lt;li&gt;Text: Added SRT subtitle format support.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://natron.readthedocs.io/en/rb-2.3/plugins/net.fxarena.openfx.AudioCurve.html&quot;&gt;AudioCurve&lt;/a&gt; (audio curve generator): new plugin.&lt;/li&gt;
+  &lt;li&gt;Fix plugin bugs (IO and CImg) with images that take more than 2GiB of memory (e.g. 12000x12000 RGBA float). &lt;a href=&quot;https://github.com/NatronGitHub/Natron/issues/456&quot;&gt;#456&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Fix “Fill” PyPlug: was not filling everything if the Source was larger than the project. &lt;a href=&quot;https://github.com/NatronGitHub/Natron/issues/475&quot;&gt;#475&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Shadertoy: use the preset name as a sublabel.&lt;/li&gt;
+  &lt;li&gt;LensDistortion/IDistort/STMap: add “Use src RoD” option to override format.&lt;/li&gt;
+  &lt;li&gt;Blur: fix handling of render scale when computing derivatives. &lt;a href=&quot;https://github.com/NatronGitHub/Natron/issues/496&quot;&gt;#496&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Text: fix animating font family and retiming the text output. &lt;a href=&quot;https://github.com/NatronGitHub/Natron/issues/482&quot;&gt;#482&lt;/a&gt; &lt;a href=&quot;https://github.com/NatronGitHub/Natron/issues/476&quot;&gt;#476&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;known-issues&quot;&gt;Known Issues&lt;/h2&gt;
+
+&lt;h3 id=&quot;all-operating-systems&quot;&gt;All Operating Systems&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Rendering silently stalls after X frames &lt;a href=&quot;https://github.com/NatronGitHub/Natron/issues/248&quot;&gt;#248&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;DnxHR is not properly formatted &lt;a href=&quot;https://github.com/NatronGitHub/Natron/issues/329&quot;&gt;#329&lt;/a&gt; (may have to wait for the WriteFFmpeg rewrite)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Frédéric Devernay</name></author><category term="news" /><category term="release" /><summary type="html">Natron 2.3.15 is here! As with all major releases everything you need to get started can be downloaded here! Downloads for previous versions can be found on GitHub.</summary></entry></feed>
