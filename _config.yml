@@ -12,10 +12,10 @@ github: https://github.com/NatronGitHub/Natron
 
 # Values to change when setting up a new Natron release
 natron:
-  branch: 2.4
+  branch: 2.5
   release:
-    version: 2.4.3
-    date: "2022-02-18"
+    version: 2.5.0
+    date: "2022-11-25"
     downloadurl: "https://github.com/NatronGitHub/Natron/releases/latest/download/"
 
 # Keep URL blank unless distribution URL for the specified version doesn"t use the GitHub releases system.
