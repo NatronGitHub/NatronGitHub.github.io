@@ -13,7 +13,7 @@
   max-width: 1340px;
   width: 100%;
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: max-content auto;
 }
 
 .nav-logocontainer {
