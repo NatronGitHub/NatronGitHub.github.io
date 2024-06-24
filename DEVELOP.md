@@ -4,7 +4,9 @@ Natron's website uses Jekyll, a static site generator. It usually saves us a lot
 
 If you run into any issues, look at the FAQ and common build problems section at the bottom of this guide.
 
-## Prerequisites for all operating systems
+## Installing prerequisites for development
+
+### Prerequisites for all operating systems
 
 Make sure you have `git` installed. If you are using macOS or GNU/Linux, you likely already have it installed; Windows users can download and run the installer from [its official download page](https://git-scm.com/download/). Check that you have `git` correctly installed by running this on Mac/Linux:
 
@@ -24,7 +26,7 @@ Now, head to correct instructions for your operating system:
 - [Windows](#windows-instructions)
 - [macOS](#macos-instructions)
 
-## GNU/Linux Instructions
+### GNU/Linux Instructions
 
 First, you want to install `rbenv` simply because many packaged versions of ruby (which is the programming language Jekyll is written in) have lots of other things "dragged in" - we don't want that. We also highly recommend that any already-installed versions of ruby or Jekyll be removed. Check if you have one with the command `command -v /usr/bin/ruby` - if it returns a result, then you have a system ruby installation. This guide presumes that you've already uninstalled any system ruby installation before starting the guide.
 
@@ -143,8 +145,14 @@ $env:DISABLE_WHITELIST=1 # to load the jekyll plugins we use
 bundle exec jekyll serve
 ```
 
-## macOS Instructions
+### macOS Instructions
 
 First, you want to get [Homebrew](https://brew.sh/), which is a package manager for macOS that installs development tools and libraries.
 
 Instructions will be fleshed-out in time, but for now, follow the same steps as in the GNU/Linux guide, with the one difference being that you want to use Homebrew to install `rbenv`, by running `brew install rbenv`. The remainder of the steps should be exactly the same as on GNU/Linux.
+
+## Important contributing information
+
+You are welcome to make pull requests (PRs) to contribute your changes to the website! We will give your PR a review, and as long as there are no issues, your changes will be accepted and added to the website. 
+
+However, please take note that you **do not overwrite** the `Gemfile.lock`. It is easy for this to happen if you use a version of Ruby, `bundler`, or Jekyll that is different from the official versions given in this guide. The `Gemfile.lock` is important for making sure that the GitHub action builds can take place in a carefully-controlled environment, and as such, should not be modified lightly. In certain cases, such as when changing Jekyll or Ruby versions, it may be changed, but otherwise, please do not submit a commit that has overwritten it, and check that you did not accidentally commit any locally-different `Gemfile.lock`.
