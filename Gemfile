@@ -4,12 +4,8 @@ source "https://rubygems.org"
 
 git_source(:github) {|repo_name| "https://github.com/NatronGitHub/NatronGitHub.github.io" }
 
-# gem "rails"
-
-# Note: the github-pages gem version
-# must be updated regularly from
-# https://pages.github.com/versions/
-gem "github-pages", "~> 231"
+gem "jekyll", "~> 3.9"
+gem "kramdown-parser-gfm"
 # Explicitly specify Jekyll plugins
 group :jekyll_plugins do
     gem "jekyll-feed"
