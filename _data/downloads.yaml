@@ -1,0 +1,58 @@
+# Keep URL blank unless distribution URL for the specified version doesn't use the GitHub releases system.
+platforms:
+  macos:
+    name: macOS
+    icon: bxl-apple
+    detail: Supports Snow Leopard up to the latest version of macOS on Intel hardware.
+    versions:
+      v11:
+        title: "macOS 11+"
+        url: ""
+        suffix: "-macOS11-x86_64.dmg"
+      v1015:
+        title: "macOS 10.15"
+        url: ""
+        suffix: "-macOS1015-x86_64.dmg"
+      v109:
+        title: "OS X 10.9+"
+        url: ""
+        suffix: "-OSX109-x86_64.dmg"
+      v106:
+        title: "OS X 10.6+"
+        url: ""
+        suffix: "-OSX-Universal.dmg"
+  windows:
+    name: Windows
+    icon: bxl-windows
+    detail: Supports Windows 8.1/10/11 on 64 bit, x86 hardware.
+    versions:
+      installer:
+        title: "Installer & Portable"
+        url: ""
+        suffix: "-Windows-x86_64.zip"
+  linux:
+    name: GNU/Linux
+    icon: bxl-tux
+    detail: Supports any x86_64 distribution with X11, glibc 2.17+ and libgcc 4.8+.
+    versions:
+      installer:
+        title: "Installer"
+        url: ""
+        suffix: "-Linux-x86_64.tgz"
+      portable:
+        title: "Portable"
+        url: ""
+        suffix: "-Linux-x86_64-no-installer.tar.xz"
+      flatpak:
+        title: "Flatpak"
+        url: "https://flathub.org/apps/details/fr.natron.Natron"
+        suffix: ""
+others:
+  - name: "FreeBSD: Freshports"
+    href: https://www.freshports.org/graphics/natron/
+  - name: Sample projects
+    href: https://sourceforge.net/projects/natron/files/Examples
+  - name: Community Plugins
+    href: https://github.com/NatronGitHub/natron-plugins
+  - name: Community Scripts
+    href: https://github.com/NatronGitHub/natron-python-scripting

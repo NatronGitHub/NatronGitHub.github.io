@@ -1,0 +1,46 @@
+# Copy is separated based on
+# word-breaking locations
+header:
+  - Visual Effects
+  - Without Limits.
+subheader:
+  - Node-based compositing
+  - backed by the freedom
+  - of open-source.
+hero_btn: "Download Natron"
+hero_art:
+  artist: Sam Morse-Brown
+  link: https://www.artstation.com/parallelmayhem
+features:
+  title: The tools youʼd expect to be here
+  subtitle: The standard 2D compositing toolkit you already know and love.
+  features:
+    - name: OpenFX Plugin Support
+      description: Natron supports industry-standard OFX plug-ins.
+      icon: img/index-feature-cards/openfx.svg
+    - name: 2D Tracking
+      description: Natron includes a fast, pixel-perfect 2D tracker.
+      icon: img/index-feature-cards/tracking.svg
+    - name: Roto
+      description: Multi-layered rotoscoping with per-vertex feathering.
+      icon: img/index-feature-cards/roto.svg
+    - name: Keying
+      description: Natron offers various keying and matte refinement tools.
+      icon: img/index-feature-cards/keyer.svg
+    - name: Curve & Dope-sheet Editors
+      description: If you've used a curve editor before you know how to use this one too.
+      icon: img/index-feature-cards/dopesheet.svg
+    - name: Headless Rendering
+      description: Natron is capable of running without a GUI can be integrated with render farm managers.
+      icon: img/index-feature-cards/gpu.svg
+nodes:
+  title: Work smarter with nodes
+  feature_image: img/natron-screenshot.png
+  feature_image_alt: A flatscreen monitor displaying Natron's node-based interface
+  body:
+    p1: |
+      No more frustrating hunts through nested precomps! Fusion and Nuke users will be right at home in Natron’s node graph. Group, merge, and tinker to achieve just about any effect. Create pixel perfect mattes, cleanplates, and set extensions, all with node trees.
+    p2: |
+      Build, group, and save your own nodes to create custom tools and presets. Natron features drag-and-drop installation of
+    p3: |
+      community-made PyPlugs (Gizmos).
