@@ -37,7 +37,7 @@ To install `rbenv`:
 
 After installation, open a new terminal. If you run the command `rbenv init`, you should see an instruction to paste `eval "$(rbenv init -)"`  into your `.bashrc` or `.zshrc`. Do that, and then restart your shell (or just open a new terminal window).
 
-Next, we want to install ruby itself. We will be using ruby 2.7.3, as per [GitHub's standardized requirements](https://pages.github.com/versions/). Interestingly, `rbenv` doesn't actually do the installing of ruby itself, we need the `ruby-build` plugin before we can actually install it. So, run:
+Next, we want to install ruby itself. Interestingly, `rbenv` doesn't actually do the installing of ruby itself, we need the `ruby-build` plugin before we can actually install it. So, run:
 
 ```bash
 mkdir -p "$(rbenv root)"/plugins
@@ -51,9 +51,9 @@ To make sure everything is working right, run:
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
 ```
 
-You should have all the checks pass - great! Now we start doing the install. Run `rbenv install 2.7.3` - `rbenv` will begin downloading and install ruby for you. Note - it will take a while! 3-5 minutes is to be expected, up to 10 minutes for some installs is possible. Grab a snack and a coffee while you're at it.
+You should have all the checks pass - great! Now we start doing the install. Run `rbenv install 3.3.3` - `rbenv` will begin downloading and install ruby for you. Note - it will take a while! 3-5 minutes is to be expected, up to 10 minutes for some installs is possible. Grab a snack and a coffee while you're at it.
 
-Next, run `rbenv versions`. You should see 2.7.3 as the listed version. We want to make this our default version of ruby, so run `rbenv global 2.7.3`. This sets our specific version of ruby to be accessible system-wide. Don't worry, you can easily use a different version of Ruby with `rbenv` if you're developing a different ruby project. As before, run `exec $SHELL` to reload your shell. You should now have the `ruby` command available to you.
+Next, run `rbenv versions`. You should see 3.3.3 as the listed version. We want to make this our default version of ruby, so run `rbenv global 3.3.3`. This sets our specific version of ruby to be accessible system-wide. Don't worry, you can easily use a different version of Ruby with `rbenv` if you're developing a different ruby project. As before, run `exec $SHELL` to reload your shell. You should now have the `ruby` command available to you.
 
 We can now begin installing Jekyll. We first install `bundler`, the package manger that installs Jekyll, with `gem install bundler`. Then, clone a copy of the Natron website repository to your computer, like this:
 
@@ -66,6 +66,7 @@ If you would like to troubleshoot Jekyll, run `bundle exec jekyll doctor` which 
 Finally, you can run bundler which automatically installs Jekyll as well as starts a development server:
 
 ```bash
+DISABLE_WHITELIST=true # allows plugings to run
 bundle install && bundle exec jekyll serve
 ```
 
@@ -85,8 +86,65 @@ bundle exec jekyll build --watch
 
 ## Windows Instructions
 
-To be completed...
+Getting Jekyll on Windows is a more lengthy process. First, install [rbenv for Windows](https://github.com/ccmywish/rbenv-for-windows). To do so, open a Powershell terminal, and then run:
+
+```powershell
+$env:RBENV_ROOT = "$HOME\Ruby-on-Windows"
+iwr -useb "https://github.com/ccmywish/rbenv-for-windows/raw/main/tools/install.ps1" | iex
+```
+
+If either command doesn't run correctly, you may lack the ability to run Powershell scripts. To solve this, open an _administrator_ Powershell terminal, and run:
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
+Then opening another terminal and re-running the installation command for `rbenv` should work. The powershell profile must then be modified to activate rbenv. To do so, run `notepad $PROFILE`, and in the resulting notepad window add in the following lines:
+
+```powershell
+# rbenv for Windows
+$env:RBENV_ROOT = "$HOME\Ruby-on-Windows"
+
+# init rbenv
+& "$env:RBENV_ROOT\rbenv\bin\rbenv.ps1" init
+```
+
+Now open another powershell terminal, and rbenv should automatically start downloading the Ruby toolchain. If it does not, run:
+
+```powershell
+rbenv install 3.3.3
+rbenv global 3.3.3
+```
+
+To check that these commands succeeded, run `rbenv global` and it should output something like `3.3.3-1`.
+
+Note that if it prompts between installing the lite version or the full version, choose the **full version**. Once this is installed, run:
+
+```powershell
+gem install bundler
+```
+
+Then, clone the repository with Git:
+
+```powershell
+git clone https://github.com/NatronGitHub/NatronGitHub.github.io && cd NatronGitHub.github.io
+```
+
+And install the dependencies for Jekyll (which might take quite a while, you can let it run in the background):
+
+```powershell
+bundle install
+```
+
+For reasons we are not entirely aware, this command may fail even when rbenv is installed to a directory that does not require elevated (administrator) permissions. As a temporary fix, open an administrator powershell, and then re-run `bundle install`, which should allow it to work. Finally, to launch the website server, run:
+
+```powershell
+$env:DISABLE_WHITELIST=1 # to load the jekyll plugins we use
+bundle exec jekyll serve
+```
 
 ## macOS Instructions
 
-To be completed...
+First, you want to get [Homebrew](https://brew.sh/), which is a package manager for macOS that installs development tools and libraries.
+
+Instructions will be fleshed-out in time, but for now, follow the same steps as in the GNU/Linux guide, with the one difference being that you want to use Homebrew to install `rbenv`, by running `brew install rbenv`. The remainder of the steps should be exactly the same as on GNU/Linux.
