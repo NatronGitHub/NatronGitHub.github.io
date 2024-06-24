@@ -6,7 +6,10 @@ git_source(:github) {|repo_name| "https://github.com/NatronGitHub/NatronGitHub.g
 
 # gem "rails"
 
-gem "github-pages"
+# Note: the github-pages gem version
+# must be updated regularly from
+# https://pages.github.com/versions/
+gem "github-pages", "~> 231", group: :jekyll_plugins
 gem "jekyll-feed"
 gem "jekyll-redirect-from"
 gem "jekyll-relative-urls"
