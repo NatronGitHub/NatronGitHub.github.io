@@ -1,10 +1,10 @@
+<!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
-  {% include baseurl.html %}
   {% include head.html %}
   <body>
     {% include nav.html %}
     <div class="wrapper">
-      <section class="herosection" style="background-image: url({{base}}/img/feature-images/feature-hero.png); min-height: 35rem;">
+      <section class="herosection herosection-img" style="background-image: url({% base %}/img/feature-images/feature-hero.png); min-height: 35rem;">
         <div class="herosection-container">
           <div>
             <h1 class="h1 large-dropshadow-text">Natronʼs Features</h1>
@@ -12,7 +12,7 @@
           </div>
         </div>
       </section>
-      <nav class="stdsection">
+      <nav class="stdsection gradient-top">
         <div class="section-container">
           <ul class="features-linkscontainer">
             <!-- Generate a list of everything in the features collection -->
@@ -20,13 +20,13 @@
             <!-- Check if the page is current, if so assign these styles -->
             {% if page.url == features.url %}
             <li>
-              <a href="{{ base }}{{ features.url }}" class="features-navhovered" style="color:var(--white); font-variation-settings: 'wght' 700; visibility: visible;">{{ features.title }}</a>
+              <a href="{% base %}{{ features.url }}" class="features-navhovered" style="color:var(--white); font-variation-settings: 'wght' 700; visibility: visible;">{{ features.title }}</a>
             </li>
             {% endif %}
             <!-- For all other pages assign these styles -->
             {% if page.url != features.url %}
             <li>
-              <a href="{{ base }}{{ features.url }}">{{ features.title }}</a>
+              <a href="{% base %}{{ features.url }}">{{ features.title }}</a>
             </li>
             {% endif %}
             {% endfor %}

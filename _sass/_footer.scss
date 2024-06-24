@@ -1,11 +1,6 @@
 footer {
+  padding-top: 8rem;
   background: var(--offblack);
-}
-
-.footer-rule {
-  margin-top: 8rem;
-  height: 0.25rem;
-  background: $brandgradient;
 }
 
 .footer-logocontainer {
@@ -40,7 +35,6 @@ footer {
     margin-bottom: 1.5rem;
   }
 }
-
 @include mq($from: mobile, $until: tablet) {
   .footer-logocontainer {
     justify-content: center;
@@ -68,14 +62,14 @@ footer {
   a:hover {
     color: var(--white);
     transition-duration: $hovertransition;
+    text-shadow: 0 0 10px var(--grey);
   }
 }
-
 @include mq($from: mobile, $until: tablet) {
   .footer-communitycontainer {
     margin-top: -4rem;
 
-    a{
+    a {
       margin-left: 1rem;
       margin-right: 1rem;
     }
@@ -103,5 +97,6 @@ footer {
     color: var(--white);
     font-variation-settings: 'wght' 700;
     transition-duration: $hovertransition;
+    text-shadow: 0 0 10px var(--grey);
   }
 }

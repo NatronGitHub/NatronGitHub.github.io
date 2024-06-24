@@ -1,5 +1,193 @@
-.textpost {
+/*  Styles are for formatted news posts as well as general text post pages */
+
+.newspost-header {
+  width: 100%;
+  margin-bottom: 4rem;
+
+  img {
+    width: 100%;
+    height: 35vw;
+    max-height: 40rem;
+    min-height: 16rem;
+    object-fit: cover;
+    border-radius:$borderradius;
+  }
+
   h1 {
-    margin-top: 0;
+    font-size: 3.5rem;
+    padding: 0 8vw 0 8vw;
+    margin-bottom: 1.2rem;
+  }
+
+  time {
+    padding: 0 8vw 0 8vw;
+  }
+
+  p {
+    font-variation-settings: 'wght' 500;
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+    padding: 0 8vw 0 8vw;
+  }
+}
+
+@include mq($from: mobile, $until: tablet) {
+  .textpost {
+    article {
+      // Set padding to 0 for news page to accomidate for padding higher up
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+  // Set padding to 1rem for textpages
+  .textpage.textpost{
+      padding-left: 1rem;
+      padding-right: 1rem;
+  }
+
+  .newspost-header {
+    h1 {
+      padding: 0;
+    }
+
+    time {
+      padding: 0;
+    }
+
+    p {
+      padding: 0;
+    }
+  }
+}
+
+.textpost {
+  min-height: 50rem;
+  padding: 6rem 0 2rem;
+  background: linear-gradient(var(--desatpurple) 3rem, var(--offblack) 60%);
+  color: var(--textwhite);
+
+  article {
+    padding-left: 8vw;
+    padding-right: 8vw;
+
+    h1 {
+      font-size: 3.5rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-top: 6rem;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      margin-top: 3rem;
+    }
+
+    p {
+      line-height: 160%;
+    }
+
+    img {
+      /* Newsitem picture shadow */
+      max-width: 100%;
+      filter: drop-shadow(0px 16px 24px rgba(8, 9, 10, 0.06)), drop-shadow(0px 2px 6px rgba(8, 9, 10, 0.04)), drop-shadow(0px 0px 1px rgba(8, 9, 10, 0.04));
+      border-radius: $borderradius;
+      margin-bottom: 2rem;
+    }
+
+    a {
+      color: var(--linkblue);
+      text-decoration: underline;
+      text-decoration-thickness: 0.125rem;
+      text-underline-offset: 0.3rem;
+      transition-duration: $hovertransition;
+    }
+
+    a:hover {
+      transition-duration: 0.1s;
+      color: #d1e7ff;
+      text-underline-offset: 0.4rem;
+      text-shadow: 0 0 20px var(--linkblue), 0 0 50px var(--linkblue), 0 0 70px var(--linkblue);
+    }
+
+    ol,
+    ul {
+      line-height: 175%;
+    }
+
+    code,
+    pre {
+      padding: 0.3rem;
+      background: #1d1a1d;
+      border-radius: 0.25rem;
+      border: 1px solid #292044;
+      counter-reset: step;
+      counter-increment: step 0;
+    }
+    /* Using code sourced from newcss.net */
+    pre code {
+      /* When <code> is in a <pre>, reset it's formatting to blend in */
+      background: inherit;
+      font-size: inherit;
+      color: var(--textwhite);
+      border: 0;
+      padding: 0;
+      margin: 0;
+    }
+
+    code pre {
+      /* When <pre> is in a <code>, reset it's formatting to blend in */
+      display: inline;
+      background: inherit;
+      font-size: inherit;
+      color: var(--textwhite);
+      border: 0;
+      padding: 0;
+      margin: 0;
+    }
+
+    p code {
+      display: inline-block;
+      padding: 0.25rem;
+      margin: 0;
+    }
+    /* Some Jekyll resets for code blocks */
+    code td {
+      font-size: 0.8rem;
+      padding-left: 1rem;
+    }
+
+    pre .lineno {
+      opacity: 50%;
+      line-height: 125%;
+    }
+  }
+
+  section {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+
+    h1 {
+      font-size: 3.5rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+    }
+
+    a {
+      color: var(--linkblue);
+    }
+
+    ol,
+    ul {
+      line-height: 175%;
+    }
   }
 }

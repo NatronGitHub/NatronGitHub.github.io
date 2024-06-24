@@ -1,0 +1,135 @@
+/* Styles are for news page */
+.newshero::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  min-height: inherit;
+  background: linear-gradient(var(--desatpurple) 10%, rgba(0, 0, 0, 0.2) 65%, var(--offblack));
+}
+
+.newshero {
+  padding-top: 4rem;
+  width: 100%;
+  min-height: 36rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+@include mq($from: mobile, $until: desktop) {
+  .newshero-container {
+    flex-direction: column !important;
+    margin: 4rem 0 4rem 0;
+
+    a {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.newshero-card-link {
+  text-decoration: none;
+  transition-duration: $hovertransition;
+  border-radius: $borderradius;
+  height: 100%;
+}
+
+.newshero-card-link:hover {
+  box-shadow: $hoverglow;
+  transition-duration: $hovertransition;
+  transform: scale(1.01);
+}
+
+.newsarticles-container,
+.newshero-container {
+  padding: 0 20px;
+  max-width: 1340px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.newshero-container img {
+  max-width: 45rem;
+  width: 100%;
+  border-radius: $borderradius;
+}
+
+.newsarticles-container,
+.newshero-container-text,
+.newspost-header {
+  time {
+    font-size: 0.925rem;
+    color: var(--purple);
+    font-variant-numeric: tabular-nums;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-variation-settings: 'wght' 500;
+  }
+}
+
+.newshero-container-text {
+  padding: 2vw;
+}
+/* Section for all other articles */
+.newsarticles {
+  padding-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+/* Flexbox cards container */
+.newsarticles-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  justify-content: center;
+  grid-gap: 4vw;
+  align-items: start;
+}
+
+.newsarticles-card-link {
+  text-decoration: none;
+  transition-duration: $hovertransition;
+  border-radius: $borderradius;
+  background-color: var(--desatpurple);
+  height: 100%;
+}
+
+.newsarticles-card-link:hover {
+  box-shadow: $hoverglow;
+  transition-duration: $hovertransition;
+  transform: scale(1.01);
+}
+/* Flexbox cards */
+.newsarticles-card {
+  min-height: 30rem;
+
+  img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    /* Add spacing between image and description */
+    margin: 0;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+}
+/* Description in flexbox cards */
+.newsarticles-card-description {
+  padding: 1.1rem;
+  color: var(--textwhite);
+
+  h3 {
+    margin-top: 0.7rem;
+  }
+
+  p {
+    color: var(--grey);
+  }
+}

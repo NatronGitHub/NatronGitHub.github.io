@@ -18,6 +18,7 @@ body {
   font-feature-settings: "frac", "cv03", "cv04", "cv09";
   // It's bad to set this in pixels becuase that overrides users who change their default sizing, font-size is instead set to a relative percentage of all browser's default size of 16px
   font-size: 100%;
+  background-color: var(--desatpurple);
 }
 
 // _mq.scss media query settings
@@ -43,11 +44,14 @@ $mq-breakpoints: (
 
 $hovertransition: 0.2s;
 $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
+$hoverglow: var(--hoverglow);
+$borderradius: 0.5rem;
 
 // sRGB Colors
 
 :root
 {
+  --hoverglow: 0 0 2px var(--white), 0 0 5px var(--white), 0 0 5px var(--white), 0 0 10px var(--white), 0 0 40px var(--pink), 0 0 50px var(--purple);
   --pink: #ff5868;
   --purple: #7848ff;
   --linkblue: #4295f3;
@@ -55,7 +59,8 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
   --grey: #d9d9e0;
   --white: #ffffff;
   --offblack: #08090a;
-  --desatpruple: #1a1422;
+  --desatpurple: #1e1830;
+  --textwhite: #ECEFF4;
 }
 
 // P3 Colors (when supported)
@@ -66,11 +71,7 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
       --pink: color(display-p3 1.00 0.40 0.45 / 1);
       --purple: color(display-p3 0.44 0.29 1 / 1);
       --linkblue: color(display-p3 0.346 0.577 0.925/ 1);
-      --offwhite: color(display-p3 0.985 0.988 0.988 / 1);
-      --grey: color(display-p3 0.85 0.85 0.87 / 1);
       --white: color(display-p3 1 1 1 / 1);
-      --offblack: color(display-p3 0.032 0.035 0.038 / 1);
-      --desatpruple: color(display-p3 0.098 0.079 0.129/ 1)
     }
 }
 
@@ -114,7 +115,7 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
   transition-duration: $hovertransition;
   transform: scale(105%);
   // text-shadow: 0 0 40px var(--pink), 0 0 60px var(--pink), 0 0 70px var(--pink), 0 0 70px var(--pink), 0 0 80px var(--pink);
-  box-shadow: 0 0 10px var(--white), 0 0 40px -10px var(--pink), 0 0 50px -10px var(--purple);
+  box-shadow: $hoverglow;
 }
 
 // Standard layout elements
@@ -136,7 +137,8 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
   z-index: 0;
   width: 100%;
   min-height: inherit;
-  background: linear-gradient(var(--desatpruple) 10%, rgba(0,0,0,0.2) 65%, var(--offblack));
+  background-image: linear-gradient(var(--desatpurple) 10%, rgba(0, 0, 0, 0.2) 50%, var(--offblack) 100%);
+  background-size: cover;
 }
 
 .herosection-container {
@@ -149,6 +151,26 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
   align-items: center;
   position: relative;
   z-index: 1;
+}
+
+.herosection-bylinecontainer {
+  position: relative;
+  top: -4rem;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+}
+
+.heresection-byline-text {
+  color: var(--textwhite);
+  opacity: 50%;
+  font-variation-settings: 'wght'480;
+  margin: 0;
+
+  a {
+    text-decoration: none;
+    color: var(--textwhite);
+  }
 }
 
 .stdsection {
@@ -172,6 +194,11 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
   padding-top: 8rem;
 }
 
+.horizontal-rule {
+  height: 0.25rem;
+  background: $brandgradient;
+}
+
 // Typography
 
 //Apply this class to specific text that you want to break in specific places when the page is resized
@@ -186,7 +213,7 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
 }
 
 .h1 {
-  font-size: max(min(4.5vw, 4.4rem), 3.4rem);
+  font-size: calc(max(min(4.5vw, 4.4rem), 3.4rem));
   font-variation-settings: 'wght' 700;
   color: var(--white);
   margin-top: 0;
@@ -194,7 +221,7 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
 }
 
 .hero-subheader {
-  font-size: max(min(2vw, 1.7rem), 1.5rem);
+  font-size: calc(max(min(2vw, 1.7rem), 1.5rem));
   font-variation-settings: 'wght' 550;
   margin-top: 0;
   margin-bottom: 2.5rem;
@@ -205,6 +232,18 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
   font-size: 2.625rem;
   font-variation-settings: 'wght' 700;
   background: $brandgradient;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.h2-nonwhite {
+  margin-top: 0;
+  font-size: 2.625rem;
+  font-variation-settings: 'wght'700;
+  background: var(--offwhite);
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -228,7 +267,7 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
 .p-body {
   font-size: 1.125rem;
   font-variation-settings: 'wght' 450;
-  line-height: 1.5rem;
+  line-height: 150%;
 }
 
 .p-small {
@@ -254,6 +293,29 @@ $brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
 
 .intext-link-glow:hover {
   transition-duration: 0.1s;
-  color: #acd1fb;
+  text-underline-offset: 0.4rem;
+  color: #d1e7ff;
   text-shadow: 0 0 20px var(--linkblue), 0 0 50px var(--linkblue), 0 0 70px var(--linkblue);
+}
+
+// For 404.html
+
+.errorpage {
+    max-width: 80%;
+
+    h1 {
+        position: relative;
+        width: fit-content;
+    }
+
+    h1::after {
+        content: "";
+        position: absolute;
+        height: 0.2rem;
+        width: 10%;
+        left: 0;
+        bottom: -0.7rem;
+        border-radius: 0.3rem;
+        background: linear-gradient(90deg, #7848FF 0%, #FC4355 100%);
+    }
 }

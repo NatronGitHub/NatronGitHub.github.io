@@ -2,7 +2,7 @@
 layout: default
 title: Natron
 ---
-<section class="herosection" style="background-image: url(https://picsum.photos/1920/1080)">
+<section class="herosection" style="background-image: url(img/hero.jpg)">
   <div class="herosection-container">
     <div>
       <h1 class="h1 large-dropshadow-text"><span class="word-wrap-section">Visual Effects&nbsp;</span><span class="word-wrap-section">Without Limits.</span></h1>
@@ -13,6 +13,11 @@ title: Natron
     </div>
   </div>
 </section>
+<div class="stdsection">
+  <div class="herosection-bylinecontainer section-container">
+    <h5 class="heresection-byline-text">Art by: <a href="https://www.artstation.com/parallelmayhem">Sam Morse-Brown</a></h5>
+  </div>
+</div>
 <section class="stdsection">
   <div class="section-container">
     <div class="index-features-titlecontainer">
@@ -25,7 +30,7 @@ title: Natron
       <ul>
         <li>
           <div class="index-featurecard">
-            <img src="{{base}}img/index-feature-cards/openfx.svg">
+            <img src="{% base %}img/index-feature-cards/openfx.svg" alt="">
             <div>
               <h4 class="h4">OpenFX Plugin Support</h4>
               <p class="p-small">
@@ -36,7 +41,7 @@ title: Natron
         </li>
         <li>
           <div class="index-featurecard">
-            <img src="{{base}}img/index-feature-cards/tracking.svg">
+            <img src="{% base %}img/index-feature-cards/tracking.svg" alt="">
             <div>
               <h4 class="h4">2D Tracking</h4>
               <p class="p-small">
@@ -47,7 +52,7 @@ title: Natron
         </li>
         <li>
           <div class="index-featurecard">
-            <img src="{{base}}img/index-feature-cards/roto.svg">
+            <img src="{% base %}img/index-feature-cards/roto.svg" alt="">
             <div>
               <h4 class="h4">Roto</h4>
             </div>
@@ -58,7 +63,7 @@ title: Natron
         </li>
         <li>
           <div class="index-featurecard">
-            <img src="{{base}}img/index-feature-cards/keyer.svg">
+            <img src="{% base %}img/index-feature-cards/keyer.svg" alt="">
             <div>
               <h4 class="h4">Keying</h4>
               <p class="p-small">
@@ -69,7 +74,7 @@ title: Natron
         </li>
         <li>
           <div class="index-featurecard">
-            <img src="{{base}}img/index-feature-cards/dopesheet.svg">
+            <img src="{% base %}img/index-feature-cards/dopesheet.svg" alt="">
             <div>
               <h4 class="h4">Curve & Dope-sheet Editors</h4>
               <p class="p-small">
@@ -80,11 +85,11 @@ title: Natron
         </li>
         <li>
           <div class="index-featurecard">
-            <img src="{{base}}img/index-feature-cards/gpu.svg">
+            <img src="{% base %}img/index-feature-cards/gpu.svg" alt="">
             <div>
-              <h4 class="h4">GPU & Network Rendering</h4>
+              <h4 class="h4">Headless Rendering</h4>
               <p class="p-small">
-                Natron is GPU accelerated and can be integrated with render farm managers.
+                Natron is capable of running without a GUI can be integrated with render farm managers.
               </p>
             </div>
           </div>
@@ -97,7 +102,7 @@ title: Natron
   <div class="section-container">
     <div class="index-aboutnodes">
       <div class="index-aboutnodes-imagecontainer">
-        <img src="{{base}}img/natron-screenshot.png" alt="A flatscreen monitor displaying Natron's node-based interface">
+        <img src="{% base %}img/natron-screenshot.png" alt="A flatscreen monitor displaying Natron's node-based interface">
       </div>
       <div class="index-aboutnodes-textcontainer">
         <div>
@@ -123,13 +128,13 @@ title: Natron
     <div class="index-downloads-titlecontainer">
       <h2 class="h2 center-text">Download Natron</h2>
       <p class="p-body center-text">
-        Latest version: 2.4
+        Latest version: {% for post in site.categories.release limit:1 %}{{post.version}}{% endfor %}
       </p>
       <p class="p-small center-text">
-        Released May 8th, 2020: <a href="https://github.com/NatronGitHub/Natron/releases/latest" class="intext-link intext-link-glow">Changelog<i class='bx bx-right-arrow-alt'></i></a>
+        Released {% for post in site.categories.release limit:1 %}{{ post.date | date: "%B %d, %Y" }}{% endfor %}: <a href="{% for post in site.categories.release limit:1 %}{{post.url}}{% endfor %}" class="intext-link intext-link-glow">Changelog<i class='bx bx-right-arrow-alt'></i></a>
       </p>
       <p class="p-small center-text">
-        <a href="https://github.com/NatronGitHub/Natron#requirements" class="intext-link intext-link-glow">System requirements</a>
+        <a href="{% base %}system-requirements" class="intext-link intext-link-glow">System requirements</a>
       </p>
     </div>
     <div class="index-downloads-oscontainer">
@@ -139,19 +144,15 @@ title: Natron
         </div>
         <div>
           <p class="p-small">
-            Natron currently runs with Rosetta 2 on Macs with Apple Silicon
+            Supports Snow Leopard up to the latest version of macOS on Intel hardware.
           </p>
         </div>
         <div class="index-downloads-os-links">
-          <a href="" class="p-small intext-link intext-link-glow">
-            10.15+ (64-bit)
+          {% for version in site.downloads.macos.versions %}
+          <a href="{% if version[1].url == "" %}{{site.natron.release.downloadurl}}Natron-{{site.natron.release.version}}{{version[1].suffix}} {% else %} {{version[1].url}} {% endif %}" class="p-small intext-link intext-link-glow">
+            {{version[1].title}}
           </a>
-          <a href="" class="p-small intext-link intext-link-glow">
-            10.9+ (64-bit)
-          </a>
-          <a href="" class="p-small intext-link intext-link-glow">
-            10.6+ (32-bit/64-bit)
-          </a>
+          {% endfor %}
         </div>
       </div>
       <div class="index-downloads-os">
@@ -160,13 +161,15 @@ title: Natron
         </div>
         <div>
           <p class="p-small">
-            Supports Windows 8+
+            Supports Windows 8.1/10/11 on 64 bit, x86 hardware.
           </p>
         </div>
         <div class="index-downloads-os-links">
-          <a href="" class="p-small intext-link intext-link-glow">
-            Installer & Portable (64-Bit)
+          {% for version in site.downloads.windows.versions %}
+          <a href="{% if version[1].url == "" %}{{site.natron.release.downloadurl}}Natron-{{site.natron.release.version}}{{version[1].suffix}} {% else %} {{version[1].url}} {% endif %}" class="p-small intext-link intext-link-glow">
+            {{version[1].title}}
           </a>
+          {% endfor %}
         </div>
       </div>
       <div class="index-downloads-os">
@@ -175,18 +178,26 @@ title: Natron
         </div>
         <div>
           <p class="p-small">
-            Requires glibc 2.12+/gcc 4.4+
+            Supports any x86_64 distribution with X11, glibc 2.17+ and libgcc 4.8+.
           </p>
         </div>
         <div class="index-downloads-os-links">
-          <a href="" class="p-small intext-link intext-link-glow">
-            Installer (64-Bit)
+          {% for version in site.downloads.linux.versions %}
+          <a href="{% if version[1].url == "" %}{{site.natron.release.downloadurl}}Natron-{{site.natron.release.version}}{{version[1].suffix}} {% else %} {{version[1].url}}{% endif %}" class="p-small intext-link intext-link-glow">
+            {{version[1].title}}
           </a>
-          <a href="" class="p-small intext-link intext-link-glow">
-            Portable (64-Bit)
-          </a>
+          {% endfor %}
         </div>
       </div>
+    </div>
+    <div class="index-downloads-other">
+      <h4 class="h4 center-text">Other Downloads:</h4>
+      <p class="p-small center-text">
+        <a href="https://www.freshports.org/graphics/natron/" class="intext-link intext-link-glow">FreeBSD: Freshports</a>
+        <a href="https://sourceforge.net/projects/natron/files/Examples/" class="intext-link intext-link-glow">Sample projects</a>
+        <a href="https://github.com/NatronGitHub/natron-plugins" class="intext-link intext-link-glow">Community Plugins</a>
+        <a href="https://github.com/NatronGitHub/natron-python-scripting" class="intext-link intext-link-glow">Community Scripts</a>
+      </p>
     </div>
   </div>
 </section>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+{% include head.html %}
+
+<body>
+  {% include nav.html %}
+  <div class="wrapper">
+    <main class="textpost stdsection">
+      <div class="section-container">
+        <div class="newspost-header">
+          <img src="{% base %}{{ page.postimg }}" alt="{{ page.postimgalttext }}"/>
+          <h1>{{ page.title }}</h1>
+          <time class="text-uppercase" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%B %d, %Y" }}</time>
+          <p>{{ page.description }}</p>
+          <div class="horizontal-rule"></div>
+        </div>
+      <article>
+        {{content}}
+      </article>
+      </div>
+    </main>
+  </div>
+  {% include footer.html %}
+</body>
+
+</html>

@@ -1,9 +1,9 @@
 <footer class="stdsection">
   <div class="section-container">
-    <div class="footer-rule"></div>
+    <div class="horizontal-rule"></div>
     <div class="footer-logocontainer">
-      <a class="footer-logo-link" href="{{base}}">
-        <object type="image/svg+xml" class="footer-logo" data="{{base}}/img/natron-wordmark-logo.svg"></object>
+      <a class="footer-logo-link" href="{% base %}">
+        <object type="image/svg+xml" class="footer-logo" data="{% base %}img/natron-wordmark-logo.svg"></object>
       </a>
     </div>
     <div class="footer-linkscontainer">
@@ -11,19 +11,19 @@
         <h4 class="h4">Explore</h4>
         <ul class="footer-links-list">
           <li>
-            <a href="{{base}}">Home</a>
+            <a href="{% base %}">Home</a>
           </li>
           <li>
-            <a href="{{base}}/features/2d-compositing">Features</a>
+            <a href="{% base %}features/2d-compositing">Features</a>
           </li>
           <li>
-            <a href="{{base}}/news">News</a>
+            <a href="{% base %}news">News</a>
           </li>
           <li>
             <a href="http://natron.readthedocs.io">Docs</a>
           </li>
           <li>
-            <a href="{{base}}/brand">Brand</a>
+            <a href="{% base %}about">About</a>
           </li>
         </ul>
       </nav>
@@ -31,10 +31,10 @@
         <h4 class="h4">Learn</h4>
         <ul class="footer-links-list">
           <li>
-            <a>Getting Started</a>
+            <a href="{% base %}getting-started">Getting Started</a>
           </li>
           <li>
-            <a>Demo Files</a>
+            <a href="https://sourceforge.net/projects/natron/files/Examples/">Demo Files</a>
           </li>
         </ul>
       </div>
@@ -48,9 +48,9 @@
           <a title="Forum" href="{{site.forum}}">
             <i class='bx bxl-discourse'></i>
           </a>
-          <a title="Twitter" href="{{site.twitter}}">
+          <!-- <a title="Twitter" href="{{site.twitter}}">
             <i class='bx bxl-twitter'></i>
-          </a>
+          </a> -->
           <a title="Discord" href="{{site.discord}}">
             <i class='bx bxl-discord'></i>
           </a>

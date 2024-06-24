@@ -4,16 +4,13 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 vendor/
-# Gemfiles may be regenerated
-# depending on system environment
-# and jekyll configuration
-Gemfile.lock
 
 # macOS
 .DS_Store
 
-# Text editor artifacts
-.swp
-.tmp
-.temp
-Gemfile.lock
+# Editor-specific
+*.swp
+*.temp
+*.tmp
+*.vscode
+*.idea

@@ -8,9 +8,6 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
 
-  li {
-  }
-
   a {
     color: var(--grey);
     text-decoration: none;
@@ -19,7 +16,8 @@
     font-variation-settings: 'wght' 600;
   }
 
-  a:hover, a.features-navhovered {
+  a.features-navhovered,
+  a:hover {
     color: var(--white);
     font-variation-settings: 'wght' 700;
     transition-duration: $hovertransition;
@@ -47,7 +45,6 @@
     transform-origin: left center;
     transform: scaleX(1);
   }
-
   // Show a line under the current page
   a.features-navhovered:before {
     display: block;
@@ -60,6 +57,10 @@
     visibility: visible;
     transform: scaleX(1);
   }
+}
+
+.herosection-img {
+  min-height: 35rem;
 }
 
 .features-featurecontainer {
@@ -78,17 +79,19 @@
 
 .features-featureimage {
   width: 100%;
-  border-radius: 0.5rem;
+  border-radius: $borderradius;
 }
 
 .features-textcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   max-width: 530px;
   flex-shrink: 1;
 }
 
 .features-reversedsection {
-
   .features-imagecontainer {
     margin-right: 0;
     margin-left: 5vw;
@@ -98,7 +101,6 @@
     flex-direction: row-reverse;
   }
 }
-
 @include mq($from: mobile, $until: tablet) {
   .features-linkscontainer {
     flex-direction: column;
@@ -110,18 +112,19 @@
     }
   }
 }
-
 @include mq($from: mobile, $until: desktop) {
   .features-featurecontainer {
     flex-direction: column !important;
     align-items: center;
     margin-bottom: 4rem;
   }
+
   .features-imagecontainer {
     margin-left: 0 !important;
     margin-right: 0 !important;
     margin-bottom: 1rem;
   }
+
   .h3 {
     text-align: center;
   }
