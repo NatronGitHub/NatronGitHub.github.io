@@ -149,7 +149,7 @@ bundle exec jekyll serve
 
 First, you want to get [Homebrew](https://brew.sh/), which is a package manager for macOS that installs development tools and libraries.
 
-Instructions will be fleshed-out in time, but for now, follow the same steps as in the GNU/Linux guide, with the one difference being that you want to use Homebrew to install `rbenv`, by running `brew install rbenv`. The remainder of the steps should be exactly the same as on GNU/Linux.
+Follow the same steps as in the GNU/Linux guide, with the one difference being that you want to use Homebrew to install `rbenv`, by running `brew install rbenv`. The remainder of the steps should be exactly the same as on GNU/Linux.
 
 ## Important contributing information
 
