@@ -11,16 +11,16 @@ We're open to any contributions! To contribute, make sure you have a decent gras
 * HTML/CSS and SCSS
 * Some prior experience with Jekyll
 
-Note that if you're a beginner programmer and this is your first time working on an open-source project, we advise you to read [the detailed development guide](DEVELOP.md). The process described below assumes a pre-existing knowledge of version control systems and Jekyll in general. If that's ok with you, follow these steps to quickly get started:
+Note that if you're a beginner programmer and this is your first time working on an open-source project, we advise you to read [the detailed development guide](DEVELOP.md). The guide is also helpful if you encounter issues in the setup process. The process described below assumes a pre-existing knowledge of version control systems and Jekyll in general. If that's ok with you, follow these steps to quickly get started:
 
 ### Getting Dependencies
 
-Make sure you have `git` already installed. This website also requires Jekyll, a static site generator we use to generate markup from templates. Installing Jekyll should be quick and easy:
+Make sure you have `git` already installed. This website also requires Jekyll, a static site generator we use to generate markup from templates. Installing Jekyll is generally a variation of these steps:
 
-* Step 1: Install `rbenv` via `brew install rbenv` on macOS with [Homebrew](https://brew.sh/) installed, `sudo apt install rbenv` on Debian Linux distros, `yay -S rbenv` on Arch-based distros, or compiling manually from its sources at <https://github.com/rbenv/rbenv>
-* Step 2: Run `rbenv init` and open a new terminal
-* Step 3: Run the command `rbenv install 2.7.3 && rbenv global 2.7.3`
-* Step 4: Now, open a new terminal again, and run `gem install bundler && bundler install bundler` - this gives you access to the `bundle` command which (confusingly) is what installs Jekyll!
+* Step 1: Install `rbenv` via `brew install rbenv` on macOS with [Homebrew](https://brew.sh/) installed, `sudo apt install rbenv` on Debian Linux distros, `yay -S rbenv` on Arch-based distros, or compiling manually from its sources at <https://github.com/rbenv/rbenv>. For Windows, follow the instructions for [rbenv for Windows](https://github.com/ccmywish/rbenv-for-windows), just making sure to substitute `$env:RBENV_ROOT = "$HOME\Ruby-on-Windows"` wherever it is mentioned.
+* Step 2: Run `rbenv init` and open a new terminal (not necessary on Windows)
+* Step 3: Run the command `rbenv install 3.3.3 && rbenv global 3.3.3` (or any recent version) (not necessary on Windows, it auto-installs)
+* Step 4: Now, open a new terminal again, and run `gem install bundler` - this gives you access to the `bundle` command which (confusingly) is what installs Jekyll!
 
 ## Building With Jekyll
 
