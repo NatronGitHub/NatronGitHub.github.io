@@ -1,0 +1,19 @@
+{% capture site-link %}
+    site.{{ include.name }}
+{% endcapture %}
+
+<div class="index-community-cardcontainer">
+    <a href="{{ site[include.name] }}" class="index-card" target="_blank">
+      <div class="index-card-icon">
+        <i class='bx {{ include.icon }}'></i>
+      </div>
+      <div class="index-card-text">
+        <div>
+          <h4 class="h4">{{ include.title }}</h4>
+          <p class="p-small">
+            {{ include.detail }}
+          </p>
+        </div>
+      </div>
+    </a>
+</div>
