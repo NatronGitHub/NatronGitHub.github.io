@@ -7,9 +7,10 @@ title: Natron
     <div>
       <h1 class="h1 large-dropshadow-text"><span class="word-wrap-section">Visual Effects&nbsp;</span><span class="word-wrap-section">Without Limits.</span></h1>
       <p class="hero-subheader large-dropshadow-text"><span class="word-wrap-section">Node-based compositing,&nbsp;</span><span class="word-wrap-section">backed by the freedom&nbsp;<span class="word-wrap-section">of open-source.</span></span></p>
-      <div>
-        <a class="button large-dropshadow" href="#download"><i class='bx bxs-download' style="font-size: 1.4rem;margin-right: 0.4rem;"></i> Download Natron</a>
-      </div>
+      {% include download-btn.html 
+         name="Download Natron"
+         href="#download"
+      %}
     </div>
   </div>
 </section>
@@ -21,79 +22,48 @@ title: Natron
 <section class="stdsection">
   <div class="section-container">
     <div class="index-features-titlecontainer">
-      <h2 class="h2 center-text">The tools youʼd expect to be here</h2>
+      <h2 class="h2 center-text">Tools you can count on</h2>
       <p class="p-body center-text">
         The standard 2D compositing toolkit you already know and love.
       </p>
     </div>
     <div class="index-features">
       <ul>
-        <li>
-          <div class="index-featurecard">
-            <img src="{% base %}img/index-feature-cards/openfx.svg" alt="">
-            <div>
-              <h4 class="h4">OpenFX Plugin Support</h4>
-              <p class="p-small">
-                Natron supports industry-standard OFX plug-ins.
-              </p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="index-featurecard">
-            <img src="{% base %}img/index-feature-cards/tracking.svg" alt="">
-            <div>
-              <h4 class="h4">2D Tracking</h4>
-              <p class="p-small">
-                Natron includes a fast, pixel-perfect 2D tracker.
-              </p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="index-featurecard">
-            <img src="{% base %}img/index-feature-cards/roto.svg" alt="">
-            <div>
-              <h4 class="h4">Roto</h4>
-            </div>
-            <p class="p-small">
-              Multi-layered rotoscoping with per-vertex feathering.
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="index-featurecard">
-            <img src="{% base %}img/index-feature-cards/keyer.svg" alt="">
-            <div>
-              <h4 class="h4">Keying</h4>
-              <p class="p-small">
-                Natron offers various keying and matte refinement tools.
-              </p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="index-featurecard">
-            <img src="{% base %}img/index-feature-cards/dopesheet.svg" alt="">
-            <div>
-              <h4 class="h4">Curve & Dope-sheet Editors</h4>
-              <p class="p-small">
-                If you've used a curve editor before you know how to use this one too.
-              </p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="index-featurecard">
-            <img src="{% base %}img/index-feature-cards/gpu.svg" alt="">
-            <div>
-              <h4 class="h4">Headless Rendering</h4>
-              <p class="p-small">
-                Natron is capable of running without a GUI can be integrated with render farm managers.
-              </p>
-            </div>
-          </div>
-        </li>
+        {% include feature-card.html 
+            icon="openfx.svg"
+            title="OpenFX Plugin Support"
+            detail="Industry-standard OFX plug-in support"
+        %}
+
+        {% include feature-card.html 
+            icon="tracking.svg"
+            title="2D Tracking"
+            detail="Fast, pixel-perfect tracking toolset"
+        %}
+
+        {% include feature-card.html 
+            icon="roto.svg"
+            title="Roto"
+            detail="Multi-layered rotoscoping toolset with per-vertex feathering"
+        %}
+
+        {% include feature-card.html 
+            icon="keyer.svg"
+            title="Keying"
+            detail="Industry-proven chroma keying and matte refinement tools"
+        %}
+
+        {% include feature-card.html 
+            icon="dopesheet.svg"
+            title="Curve & dope-sheet editors"
+            detail="Curve editor and dope sheet for complete control over keyframes"
+        %}
+
+        {% include feature-card.html 
+            icon="gpu.svg"
+            title="Headless rendering"
+            detail="Smooth headless integration with render farms for distributed network rendering"
+        %}
       </ul>
     </div>
   </div>
@@ -108,12 +78,11 @@ title: Natron
         <div>
           <h2 class="h2">Work smarter with nodes</h2>
           <p class="p-body">
-            No more frustrating hunts through nested precomps! Fusion and Nuke users will be right at home in Natron’s node graph. Group, merge, and tinker to achieve just about any effect. Create pixel perfect mattes, cleanplates, and set
-            extensions, all with node trees.
+            No more hunting through nested pre-comps!
+            Nuke and Fusion users will be right at home with Natron's node-based workflow. Group, merge, and tinker to achieve just about any effect. Create pixel perfect mattes, set-extensions, Hollywood-style VFX and more, all with Natron's offerings.
             <br />
             <br />
-            Build, group, and save your own nodes to create custom tools and presets. Natron features drag-and-drop installation of <a href="https://github.com/NatronGitHub/natron-plugins" class="intext-link intext-link-glow">community-made PyPlugs (Gizmos).</a>
-          </p>
+            Build, group, and save your own node snippets to create and share custom tools and presets. Natron features drag-and-drop installation of <a href="https://github.com/NatronGitHub/natron-plugins" class="intext-link intext-link-glow">community-made PyPlugs (Gizmos).</a>          </p>
         </div>
       </div>
     </div>
@@ -192,10 +161,10 @@ title: Natron
     <div class="index-downloads-other">
       <h4 class="h4 center-text">Other Downloads:</h4>
       <p class="p-small center-text">
-        <a href="https://www.freshports.org/graphics/natron/" class="intext-link intext-link-glow">FreeBSD: Freshports</a>
-        <a href="https://sourceforge.net/projects/natron/files/Examples/" class="intext-link intext-link-glow">Sample projects</a>
-        <a href="https://github.com/NatronGitHub/natron-plugins" class="intext-link intext-link-glow">Community Plugins</a>
-        <a href="https://github.com/NatronGitHub/natron-python-scripting" class="intext-link intext-link-glow">Community Scripts</a>
+        <a href="{{ site.downloads.other.freshports }}" class="intext-link intext-link-glow">FreeBSD: Freshports</a>
+        <a href="{{ site.downloads.other.examples }}" class="intext-link intext-link-glow">Sample projects</a>
+        <a href="{{ site.downloads.other.natron-plugins }}" class="intext-link intext-link-glow">Community Plugins</a>
+        <a href="{{ site.downloads.other.natron-scripts }}" class="intext-link intext-link-glow">Community Scripts</a>
       </p>
     </div>
   </div>
@@ -206,66 +175,30 @@ title: Natron
       <h2 class="h2 center-text">Join the community!</h2>
     </div>
     <div class="index-community-cardgrid">
-      <div class="index-community-cardcontainer">
-        <a href="{{site.github}}" class="index-card" target="_blank">
-          <div class="index-card-icon">
-            <i class='bx bxl-github'></i>
-          </div>
-          <div class="index-card-text">
-            <div>
-              <h4 class="h4">Contribute on GitHub</h4>
-              <p class="p-small">
-                Source code, bug reports, and build guides for developers!
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="index-community-cardcontainer">
-        <a href="{{site.discord}}" class="index-card" target="_blank">
-          <div class="index-card-icon">
-            <i class='bx bxl-discord'></i>
-          </div>
-          <div class="index-card-text">
-            <div>
-              <h4 class="h4">Join us on Discord</h4>
-              <p class="p-small">
-                If you prefer text chat, check out the Discord server!
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="index-community-cardcontainer">
-        <a href="{{site.forum}}" class="index-card" target="_blank">
-          <div class="index-card-icon">
-            <i class='bx bxl-discourse'></i>
-          </div>
-          <div class="index-card-text">
-            <div>
-              <h4 class="h4">Discuss on the forum</h4>
-              <p class="p-small">
-                The official place for questions and discussion about Natron!
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="index-community-cardcontainer">
-        <a href="https://facebook.com/groups/NatronNation/" class="index-card" target="_blank">
-          <div class="index-card-icon">
-            <i class='bx bxl-facebook-circle'></i>
-          </div>
-          <div class="index-card-text">
-            <div>
-              <h4 class="h4">Find us on Facebook</h4>
-              <p class="p-small">
-                Join the Natron Nation group on Facebook!
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
+      {% include community-card.html
+          name="github"
+          title="Contribute on GitHub"
+          detail="Source code, bug reports, and build guides for developers!"
+          icon="bxl-github"
+      %}
+      {% include community-card.html
+          name="discord"
+          title="Join us on Discord"
+          detail="Join our Discord server to get access to fast-paced community support, feedback and events!"
+          icon="bxl-discord"
+      %}
+      {% include community-card.html
+          name="forum"
+          title="Discuss on the forum"
+          detail="Join the official forum on PIXLS.US to discuss all things Natron!"
+          icon="bxl-discourse"
+      %}
+      {% include community-card.html
+          name="facebook"
+          title="Find us on Facebook"
+          detail="Join the NatronNation group on Facebook!"
+          icon="bxl-facebook-circle"
+      %}
     </div>
   </div>
 </section>
