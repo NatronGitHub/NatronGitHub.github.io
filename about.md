@@ -11,13 +11,13 @@ title: About Natron
 
 Natron is a powerful free and open-source VFX compositor geared towards digital post-production work, with industry-standard UI, 100+ nodes, and support for OpenFX and community-made plugins. With its robust OpenFX based engine and support for OpenImageIO and OpenColorIO, Natron can handle all of your VFX post-production needs.
 
+Natron was a proud recipient of Inria funding from 2013 to 2018, and is currently being developed by a team of open-source contributors as a community effort.
+
 {% include logo.html
    alt="The logo of Inria, sponsor of Natron until 2018"
    src="files/assets/inr_logo_gris.png"
    width="200px" 
 %}
-
-Natron was a proud recipient of Inria funding from 2013 to 2018, and is currently being developed by a team of open-source contributors as a community effort.
 
 We accept feature requests and bug reports [on GitHub](https://github.com/natronGitHub/natron/issues).
 
