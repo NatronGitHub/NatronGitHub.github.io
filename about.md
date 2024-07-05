@@ -11,10 +11,10 @@ title: About Natron
 
 Natron is a powerful free and open-source VFX compositor geared towards digital post-production work, with industry-standard UI, 100+ nodes, and support for OpenFX and community-made plugins. With its robust OpenFX based engine and support for OpenImageIO and OpenColorIO, Natron can handle all of your VFX post-production needs.
 
-Natron was a proud recipient of Inria funding from 2013 to 2018, and is currently being developed by a team of open-source contributors as a community effort.
+Natron was a proud recipient of Inria funding from 2013–2018, and is currently being developed by a team of open-source contributors as a community effort.
 
 {% include logo.html
-   alt="The logo of Inria, sponsor of Natron until 2018"
+   alt="Inria logo"
    src="files/assets/inr_logo_gris.png"
    width="200px" 
 %}
@@ -23,7 +23,7 @@ We accept feature requests and bug reports [on GitHub](https://github.com/natron
 
 ## Development
 
-We always welcome and are on the lookout for new contributions to the Natron project, may they be minor bug fixes or big new features. As such, we regularly review the GitHub and accept pull requests. If you are a software developer who is well versed in C++, Qt and graphics programming, and are interested in contributing to the Natron project, please do not hesitate to reach out to us!
+We are always on the lookout for new contributions to Natron, be they minor bug fixes or big new features. As such, we regularly review the GitHub and accept pull requests. If you are a developer who is well versed in C++, Qt, and graphics programming, and are interested in contributing, please do not hesitate to reach out to us!
 
 For instructions on how to build Natron from source, read through [the README document here.](https://github.com/NatronGitHub/Natron#building-and-installing-from-source)
 
@@ -35,7 +35,7 @@ For instructions on how to build Natron from source, read through [the README do
 - #### What can Natron do?
   Natron is a powerful digital compositor capable of handling a multitude of VFX and post-production tasks. Natron's capabilities include but are not limited to:
    * Linear node-based workflow
-   * 32bpcc floating-point linear processing pipeline
+   * 32bit/channel floating-point linear processing pipeline
    * Industry-standard OIIO file format support
    * Powerful chroma-keying and matte refinement
    * Industry-standard rotoscoping and rotopaint
@@ -44,10 +44,10 @@ For instructions on how to build Natron from source, read through [the README do
    * Extensive OpenFX and community plugins support
    * And much more!
 
-  Natron can be used in conjunction with [Blender](https://www.blender.org/) to extend it's capabilities by utilising Blender's 3D environment. This is facilitated by Natron's support for CHAN files.
+  Natron can be used in conjunction with [Blender](https://www.blender.org/) to extend it's capabilities by utilising Blender's 3D environment. This is facilitated by Natron's support for CHAN files for transferring camera tracking data.
 
 - #### Does the Natron Project accept donations?
   While we appreciate your generosity, the Natron Project does not currently accept donations.
 
 - #### Where can I find brand assets for Natron?
-  If you wish to add Natron to the credits of your project or use the logo for other non-commercial purposes, you can download the logomark and wordmark [here](/brand).
+  If you wish to add Natron to the credits of your project or use the logo for other non-commercial purposes, you can download the logomark on our [brand assets page](/brand).
