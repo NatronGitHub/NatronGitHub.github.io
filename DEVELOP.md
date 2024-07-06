@@ -2,7 +2,7 @@
 
 Natron's website uses Jekyll, a static site generator. It usually saves us a lot of time reduces our trouble, but we know it can be confusing to many newer developers and get *them* in lots of trouble. So, here is a reliable means of developing Natron's website for Mac users, Windows users, and GNU/Linux users!
 
-If you run into any issues, look at the FAQ and common build problems section at the bottom of this guide.
+If you run into any issues, look at the FAQ and [Development Gotchas](#development-gotchas) section at the bottom of this guide.
 
 ## Installing prerequisites for development
 
@@ -151,8 +151,30 @@ First, you want to get [Homebrew](https://brew.sh/), which is a package manager 
 
 Follow the same steps as in the GNU/Linux guide, with the one difference being that you want to use Homebrew to install `rbenv`, by running `brew install rbenv`. The remainder of the steps should be exactly the same as on GNU/Linux.
 
-## Important contributing information
+## Contributing guide
+
+Our development workflow uses Git, which tracks development changes so that we can easily synchronize work by multiple developers, locate any change in history, and not worry about losing work. Git relies on the concept of _branches_ and _commits_. A commit is any change: it can be anything from editing an existing file, creating a new file, to deleting a file. Commits happen on _branches_, which are like paths for commits. A quick reference to Git's many, many commands, as well as links to resources for beginners, can be found [here](https://learnxinyminutes.com/docs/git/). We host our Git repository and collaborate on [GitHub](https://github.com/), and a starting guide for GitHub can be found [here](https://docs.github.com/en/get-started/start-your-journey).
+
+It is *strongly encouraged* to create a new branch for any new additions, via `git checkout -b my-new-branch-name`, as this will avoid [many issues](https://stackoverflow.com/questions/64369860/github-no-file-changes-but-many-commits-when-comparing-branches). Open a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) once you are finished making your changes and have pushed them to GitHub.
+
+### Important contributing information
 
 You are welcome to make pull requests (PRs) to contribute your changes to the website! We will give your PR a review, and as long as there are no issues, your changes will be accepted and added to the website. 
 
 However, please take note that you **do not overwrite** the `Gemfile.lock`. It is easy for this to happen if you use a version of Ruby, `bundler`, or Jekyll that is different from the official versions given in this guide. The `Gemfile.lock` is important for making sure that the GitHub action builds can take place in a carefully-controlled environment, and as such, should not be modified lightly. In certain cases, such as when changing Jekyll or Ruby versions, it may be changed, but otherwise, please do not submit a commit that has overwritten it, and check that you did not accidentally commit any locally-different `Gemfile.lock`.
+
+## Development Gotchas
+
+Due to the nature of our development setup, there are lots of hidden surprises that may happen, and they are documented here.
+
+- I got the error `Invalid syntax for include tag. File contains invalid characters or sequences.`
+    - This is because the correct syntax is `{% include component.html param="value" %}`, with the include html path **not surrounded by quotes** (i.e. not `"component.html"`)
+- My site variables are not being updated!
+    - Reload the development server, open a new terminal if necessary, as Jekyll's development server does not seem to reload config files
+
+## FAQ
+
+- Why did you use Jekyll? Why not Hugo/Next.js/Gatsby?
+    - This is because Jekyll is native to GitHub, and we originally wanted to use GitHub pages' native Jekyll support, though we ended up switching to GitHub actions to reduce dependencies and use a more recent version of Jekyll
+- Why is the Git repo so big?
+    - We include images, brand assets and third-party binary files necessary for Natron that are not available anymore, the Jekyll site itself is relatively small

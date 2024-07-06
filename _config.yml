@@ -9,6 +9,7 @@ twitter: https://twitter.com/natronvfx
 discord: https://discord.gg/cpMj5p3Fv5
 forum: https://discuss.pixls.us/c/software/natron
 github: https://github.com/NatronGitHub/Natron
+facebook: https://facebook.com/groups/NatronNation/
 
 # Values to change when setting up a new Natron release
 natron:
@@ -59,6 +60,11 @@ downloads:
         title: "OS X 10.6+"
         url: ""
         suffix: "-OSX-Universal.dmg"
+  other:
+    freshports: https://www.freshports.org/graphics/natron/
+    examples: https://sourceforge.net/projects/natron/files/Examples/
+    natron-plugins: https://github.com/NatronGitHub/natron-plugins
+    natron-scripts: https://github.com/NatronGitHub/natron-python-scripting
 
 # Build settings
 sass:

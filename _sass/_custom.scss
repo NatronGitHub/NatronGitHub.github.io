@@ -1,0 +1,34 @@
+// For custom components and includes
+@import "mq";
+
+.download-btn {
+    color: var(--textwhite) !important;
+    text-decoration: none !important;
+}
+  
+
+.brand-logo {
+    display: inline-block;
+    max-width: 50% !important;
+    height: auto;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+@include mq($until: tablet) {
+    .brand-logo {
+        max-width: 70% !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@include mq($until: mobile) {
+    .brand-logo {
+        max-width: 90% !important;
+    }
+}
+
+.with-spacers {
+    margin: 2rem 0.5rem;
+}
