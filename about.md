@@ -13,12 +13,6 @@ Natron is a powerful free and open-source VFX compositor geared towards digital 
 
 Natron was a proud recipient of Inria funding from 2013–2018, and is currently being developed by a team of open-source contributors as a community effort.
 
-{% include logo.html
-   alt="Inria logo"
-   src="files/assets/inr_logo_gris.png"
-   width="200px" 
-%}
-
 We accept feature requests and bug reports [on GitHub](https://github.com/natronGitHub/natron/issues).
 
 ## Development
