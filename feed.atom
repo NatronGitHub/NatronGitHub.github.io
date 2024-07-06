@@ -1,0 +1,37 @@
+---
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Natron</title>
+    <subtitle>News and Project Updates</subtitle>
+    <link href="{{ site.url }}/feed.atom" rel="self" type="application/rss+xml"></link>
+    <link href="{{ site.url }}"></link>
+    <id>https://natrongithub.github.io/</id>
+    <author>
+      <name>Natron Developers</name>
+    </author>
+    <updated>{{ site.time | date_to_xmlschema }}</updated>
+    <generator>Jekyll v{{ jekyll.version }}</generator>
+    <rights>© Natron</rights>
+    <icon>{{ site.url }}/apple-touch-icon.png</icon>
+  {% assign pagesArray = "" | split: "" %}
+  {% for post in site.posts %}
+    {% if post.nofeed != true %}
+      {% assign pagesArray = pagesArray | push: post %}
+    {% endif %}
+  {% endfor %}
+  {% assign sorted = pagesArray | sort: "date" | reverse %}
+  {% for post in sorted limit: 20 %}
+    <entry>
+      <title>{{ post.title | xml_escape }}</title>
+      <author>
+        <name>{{ post.author }}</name>
+      </author>
+      <updated>{{ post.date | date_to_xmlschema }}</updated>
+      <summary>{{ post.description | escape }}</summary>
+      <id>{{ site.url | append: '/'| append: post.url }}</id>
+      <link href="{{ site.url | append: '/'| append: post.url }}"></link>
+      <content type="html"><![CDATA[{{ post.content |  markdownify }}]]></content>
+    </entry>
+  {% endfor %}
+</feed>

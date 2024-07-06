@@ -90,7 +90,6 @@ collections:
     output: true
     permalink: /news/:path/
 plugins:
-  - jekyll-feed
   - jekyll-redirect-from
   - jekyll-relative-urls
 exclude:
@@ -104,12 +103,3 @@ exclude:
   - README.md
   - DEVELOP.md
   - templates/
-
-# Jekyll RSS Feed settings
-
-feed:
-  path: /feed.atom
-  collections:
-    posts:
-      path: "/feed.atom"
-  posts_limit: 20

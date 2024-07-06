@@ -8,7 +8,6 @@ gem "jekyll", "~> 3.9"
 gem "kramdown-parser-gfm"
 # Explicitly specify Jekyll plugins
 group :jekyll_plugins do
-    gem "jekyll-feed"
     gem "jekyll-redirect-from"
     gem "jekyll-relative-urls"
 end
