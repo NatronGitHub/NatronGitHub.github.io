@@ -5,10 +5,7 @@ title: Natron Brand Assets
 
 ## Logo
 
-{% include logo.html
-   alt="Natron's full logo in white"
-   src="files/assets/Natron Full Logo White.svg" 
-%}
+<img class="brand-logo" src="{{ 'files/assets/Natron Full Logo White.svg' | relative_url }}" alt="Natron's full logo in white" />
 
 Natron has lettermark and wordmark logos. The logos are properties of the Natron Project and are used to identify official Natron content. Third parties can use the Natron logo to provide credit to the Natron software or to refer to the Natron Project.
 
@@ -20,10 +17,7 @@ Natron has lettermark and wordmark logos. The logos are properties of the Natron
 
 Several variations of the Natron lettermark and wordmark are available for use with different backdrops:
 
-{% include logo.html
-   alt="Brand logos for Natron, with a stylized N and Natron beside it"
-   src="files/assets/logos.jpg" 
-%}
+<img class="brand-logo" src="{{ 'files/assets/logos.jpg' | relative_url }}" alt="Brand logos for Natron, with a stylized N and Natron beside it" />
 
 ### Usage
 
