@@ -43,7 +43,7 @@ $mq-breakpoints: (
 // Assorted SASS Variables
 
 $hovertransition: 0.2s;
-$brandgradient: linear-gradient(90deg, var(--purple), var(--pink));
+$brandgradient: linear-gradient(in oklch shorter hue to right, var(--purple), var(--pink));
 $hoverglow: var(--hoverglow);
 $borderradius: 0.5rem;
 
@@ -52,27 +52,15 @@ $borderradius: 0.5rem;
 :root
 {
   --hoverglow: 0 0 2px var(--white), 0 0 5px var(--white), 0 0 5px var(--white), 0 0 10px var(--white), 0 0 40px var(--pink), 0 0 50px var(--purple);
-  --pink: #ff5868;
-  --purple: #7848ff;
-  --linkblue: #4295f3;
+  --pink: oklch(72.18% 0.222 17.93);
+  --purple: oklch(57.61% 0.263 285.89);
+  --linkblue: oklch(66.38% 0.161 253.7);
   --offwhite: #fbfcfc;
   --grey: #d9d9e0;
-  --white: #ffffff;
-  --offblack: #08090a;
-  --desatpurple: #1e1830;
-  --textwhite: #ECEFF4;
-}
-
-// P3 Colors (when supported)
-
-@supports (color: color(display-p3 1 1 1 / 1)) {
-  :root
-    {
-      --pink: color(display-p3 1.00 0.40 0.45 / 1);
-      --purple: color(display-p3 0.44 0.29 1 / 1);
-      --linkblue: color(display-p3 0.346 0.577 0.925/ 1);
-      --white: color(display-p3 1 1 1 / 1);
-    }
+  --white: oklch(100% 0 0);
+  --offblack: oklch(13.9% 0.003 246.26);
+  --desatpurple: oklch(21.22% 0.0609 293.97);
+  --textwhite: oklch(95.13% 0.007 260.73);
 }
 
 // Styles you can apply individually with classes
@@ -137,7 +125,7 @@ $borderradius: 0.5rem;
   z-index: 0;
   width: 100%;
   min-height: inherit;
-  background-image: linear-gradient(var(--desatpurple) 10%, rgba(0, 0, 0, 0.2) 50%, var(--offblack) 100%);
+  background-image: linear-gradient(in oklch, var(--desatpurple) 10%, rgba(0, 0, 0, 0.2) 50%, var(--offblack) 100%);
   background-size: cover;
 }
 

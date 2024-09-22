@@ -5,7 +5,7 @@
   z-index: 0;
   width: 100%;
   min-height: inherit;
-  background: linear-gradient(var(--desatpurple) 10%, rgba(0, 0, 0, 0.2) 65%, var(--offblack));
+  background: linear-gradient(in oklch, var(--desatpurple) 10%, rgba(0, 0, 0, 0.2) 65%, var(--offblack));
 }
 
 .newshero {
