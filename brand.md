@@ -9,8 +9,8 @@ title: Natron Brand Assets
 
 Natron has lettermark and wordmark logos. The logos are properties of the Natron Project and are used to identify official Natron content. Third parties can use the Natron logo to provide credit to the Natron software or to refer to the Natron Project.
 
-{% include download-btn.html 
-   name="Download logo kit"
+{% include download-btn.html
+   name="Download Logo Kit"
    href="files/Natron-Brand-Package.zip"
    styling="with-spacers"
 %}
@@ -33,4 +33,3 @@ Third parties may only use the Natron logo under the following conditions:
 - The logo may be placed alongside others, e.g. when listing software in the credits.
 - To use the logo on commercial products, you must contact us with a picture of how it will be used, and ask for explicit permission. Showing the Natron logo on film credits is not considered to be commercial use.
 - The logo must not be used by third parties to impersonate or act on behalf of the Natron Project, its developers and contributors.
-
