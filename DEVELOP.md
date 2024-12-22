@@ -2,11 +2,15 @@
 
 Natron's website uses Jekyll, a static site generator. It usually saves us a lot of time reduces our trouble, but we know it can be confusing to many newer developers and get *them* in lots of trouble. So, here is a reliable means of developing Natron's website for Mac users, Windows users, and GNU/Linux users!
 
+If you're an absolute beginner, we recommend taking a look at the [terminal cheat sheet](https://terminalcheatsheet.com/) as well as the [Atlassian tutorials on version control and git](https://www.atlassian.com/git/tutorials/what-is-version-control) before continuing. In addition, it may be helpful to look through the [Jekyll setup guide](https://jekyllrb.com/docs/step-by-step/01-setup/).
+
 If you run into any issues, look at the FAQ and [Development Gotchas](#development-gotchas) section at the bottom of this guide.
 
 ## Installing prerequisites for development
 
 ### Prerequisites for all operating systems
+
+Before doing anything, check that you have a reliable internet connection. Additionally, Windows users should run all the listed commands in **powershell**, not the command prompt.
 
 Make sure you have `git` installed. If you are using macOS or GNU/Linux, you likely already have it installed; Windows users can download and run the installer from [its official download page](https://git-scm.com/download/). Check that you have `git` correctly installed by running this on Mac/Linux:
 
@@ -111,7 +115,16 @@ $env:RBENV_ROOT = "$HOME\Ruby-on-Windows"
 & "$env:RBENV_ROOT\rbenv\bin\rbenv.ps1" init
 ```
 
-Now open another powershell terminal, and rbenv should automatically start downloading the Ruby toolchain. If it does not, run:
+`rbenv` also requires that the free 7-zip file archiver is installed. If not, then [head to the 7-zip website](https://www.7-zip.org/). Then run `notepad $profile` and add the following line:
+
+```powershell
+# Add 7zip to PATH
+$env:Path += ';C:\Program Files\7-Zip'
+```
+
+Test by running `7z`, if it simply shows a bunch of options (it is quite verbose!) but no "executable not found"-style error, you may proceed with the rest of these steps.
+
+Now (assuming you either have installed 7-zip or have followed the steps to install it) open another powershell terminal, and rbenv should automatically start downloading the Ruby toolchain. If it does not, run:
 
 ```powershell
 rbenv install 3.3.3
@@ -171,6 +184,8 @@ Due to the nature of our development setup, there are lots of hidden surprises t
     - This is because the correct syntax is `{% include component.html param="value" %}`, with the include html path **not surrounded by quotes** (i.e. not `"component.html"`)
 - My site variables are not being updated!
     - Reload the development server, open a new terminal if necessary, as Jekyll's development server does not seem to reload config files
+- I am getting some variation of the error `"<command> not found"` or `"<command> is not recognized as a file, script, or operable command"`
+	- Try opening a new terminal window and navigating to the natron website folder again. This reloads the shell and allows it to find any newly-installed developer tools and components
 
 ## FAQ
 
