@@ -61,6 +61,7 @@ downloads:
         url: ""
         suffix: "-OSX-Universal.dmg"
   other:
+    silicon-prerelease: https://github.com/NatronGitHub/Natron/releases/tag/v2.6.0-alpha1
     freshports: https://www.freshports.org/graphics/natron/
     examples: https://sourceforge.net/projects/natron/files/Examples/
     natron-plugins: https://github.com/NatronGitHub/natron-plugins
