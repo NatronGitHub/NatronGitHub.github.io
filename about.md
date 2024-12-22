@@ -7,9 +7,9 @@ title: About Natron
 
 ![An animated cartoon shot open in Natron](img/about-screenshot.png)
 
-## Cross-platform open-source compositor for the visual effects industry
+## Cross-platform open-source compositor for the VFX industry
 
-Natron is a powerful free and open-source VFX compositor geared towards digital post-production work, with industry-standard UI, 100+ nodes, and support for OpenFX and community-made plugins. With its robust OpenFX based engine and support for OpenImageIO and OpenColorIO, Natron can handle all of your VFX post-production needs.
+Natron is a powerful - and free and open-source - VFX compositor geared towards digital post-production work, with industry-standard UI, 100+ nodes, and support for OpenFX and community-made plugins. With its robust OpenFX-based engine and support for OpenImageIO and OpenColorIO, Natron can handle all of your VFX post-production needs.
 
 Natron was a proud recipient of [Inria](https://www.inria.fr/en) funding from 2013–2018, and is currently being developed by a team of open-source contributors as a community effort.
 
@@ -29,7 +29,7 @@ Yes, Natron is free software. Free to use, free to modify, and free to share, du
 
 ### What can Natron do?
 
-Natron is a powerful digital compositor capable of handling a multitude of VFX and post-production tasks. Natron's capabilities include but are not limited to:
+Natron is a powerful digital compositor capable of handling a multitude of VFX and post-production tasks. Natron's capabilities include (but are not limited to):
 
 - Linear node-based workflow
 - 32bit/channel floating-point linear processing pipeline
@@ -41,7 +41,7 @@ Natron is a powerful digital compositor capable of handling a multitude of VFX a
 - Extensive OpenFX and community plugins support
 - And much more!
 
-Natron can be used in conjunction with [Blender](https://www.blender.org/) to extend it's capabilities by utilising Blender's 3D environment. This is facilitated by Natron's support for CHAN files for transferring camera tracking data.
+While Natron **does not yet have a 3D workspace**, it can be used in conjunction with [Blender](https://www.blender.org/) to extend its capabilities by utilizing Blender's 3D environment. Natron additionally supports CHAN files for transferring camera tracking data.
 
 ### Does the Natron Project accept donations?
 
