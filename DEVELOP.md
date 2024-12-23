@@ -2,11 +2,15 @@
 
 Natron's website uses Jekyll, a static site generator. It usually saves us a lot of time reduces our trouble, but we know it can be confusing to many newer developers and get *them* in lots of trouble. So, here is a reliable means of developing Natron's website for Mac users, Windows users, and GNU/Linux users!
 
+If you're an absolute beginner, we recommend taking a look at the [terminal cheat sheet](https://terminalcheatsheet.com/) as well as the [Atlassian tutorials on version control and git](https://www.atlassian.com/git/tutorials/what-is-version-control) before continuing. In addition, it may be helpful to look through the [Jekyll setup guide](https://jekyllrb.com/docs/step-by-step/01-setup/).
+
 If you run into any issues, look at the FAQ and [Development Gotchas](#development-gotchas) section at the bottom of this guide.
 
 ## Installing prerequisites for development
 
 ### Prerequisites for all operating systems
+
+Before doing anything, check that you have a reliable internet connection. Additionally, Windows users should run all the listed commands in **powershell**, not the command prompt.
 
 Make sure you have `git` installed. If you are using macOS or GNU/Linux, you likely already have it installed; Windows users can download and run the installer from [its official download page](https://git-scm.com/download/). Check that you have `git` correctly installed by running this on Mac/Linux:
 
@@ -22,7 +26,7 @@ where git; if %errorlevel% neq 0 echo git is not installed.
 
 Now, head to correct instructions for your operating system:
 
-- [GNU/Linux](#gnu/linux-instructions)
+- [GNU/Linux](#gnulinux-instructions)
 - [Windows](#windows-instructions)
 - [macOS](#macos-instructions)
 
@@ -68,7 +72,7 @@ If you would like to troubleshoot Jekyll, run `bundle exec jekyll doctor` which 
 Finally, you can run bundler which automatically installs Jekyll as well as starts a development server:
 
 ```bash
-DISABLE_WHITELIST=true # allows plugings to run
+DISABLE_WHITELIST=true # allows plugins to run
 bundle install && bundle exec jekyll serve
 ```
 
@@ -111,7 +115,16 @@ $env:RBENV_ROOT = "$HOME\Ruby-on-Windows"
 & "$env:RBENV_ROOT\rbenv\bin\rbenv.ps1" init
 ```
 
-Now open another powershell terminal, and rbenv should automatically start downloading the Ruby toolchain. If it does not, run:
+`rbenv` also requires that the free 7-zip file archiver is installed. If not, then [head to the 7-zip website](https://www.7-zip.org/). Then run `notepad $profile` and add the following line:
+
+```powershell
+# Add 7zip to PATH
+$env:Path += ';C:\Program Files\7-Zip'
+```
+
+Test by running `7z`, if it simply shows a bunch of options (it is quite verbose!) but no "executable not found"-style error, you may proceed with the rest of these steps.
+
+Now (assuming you either have installed 7-zip or have followed the steps to install it) open another powershell terminal, and rbenv should automatically start downloading the Ruby toolchain. If it does not, run:
 
 ```powershell
 rbenv install 3.3.3
@@ -155,7 +168,7 @@ Follow the same steps as in the GNU/Linux guide, with the one difference being t
 
 Our development workflow uses Git, which tracks development changes so that we can easily synchronize work by multiple developers, locate any change in history, and not worry about losing work. Git relies on the concept of _branches_ and _commits_. A commit is any change: it can be anything from editing an existing file, creating a new file, to deleting a file. Commits happen on _branches_, which are like paths for commits. A quick reference to Git's many, many commands, as well as links to resources for beginners, can be found [here](https://learnxinyminutes.com/docs/git/). We host our Git repository and collaborate on [GitHub](https://github.com/), and a starting guide for GitHub can be found [here](https://docs.github.com/en/get-started/start-your-journey).
 
-It is *strongly encouraged* to create a new branch for any new additions, via `git checkout -b my-new-branch-name`, as this will avoid [many issues](https://stackoverflow.com/questions/64369860/github-no-file-changes-but-many-commits-when-comparing-branches). Open a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) once you are finished making your changes and have pushed them to GitHub.
+It is _strongly encouraged_ to create a new branch for any new additions, via `git checkout -b my-new-branch-name`, as this will avoid [many issues](https://stackoverflow.com/questions/64369860/github-no-file-changes-but-many-commits-when-comparing-branches). Open a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) once you are finished making your changes and have pushed them to GitHub.
 
 ### Important contributing information
 
@@ -171,6 +184,8 @@ Due to the nature of our development setup, there are lots of hidden surprises t
     - This is because the correct syntax is `{% include component.html param="value" %}`, with the include html path **not surrounded by quotes** (i.e. not `"component.html"`)
 - My site variables are not being updated!
     - Reload the development server, open a new terminal if necessary, as Jekyll's development server does not seem to reload config files
+- I am getting some variation of the error `"<command> not found"` or `"<command> is not recognized as a file, script, or operable command"`
+	- Try opening a new terminal window and navigating to the natron website folder again. This reloads the shell and allows it to find any newly-installed developer tools and components
 
 ## FAQ
 
