@@ -26,7 +26,7 @@ where git; if %errorlevel% neq 0 echo git is not installed.
 
 Now, head to correct instructions for your operating system:
 
-- [GNU/Linux](#gnu/linux-instructions)
+- [GNU/Linux](#gnulinux-instructions)
 - [Windows](#windows-instructions)
 - [macOS](#macos-instructions)
 
@@ -72,7 +72,7 @@ If you would like to troubleshoot Jekyll, run `bundle exec jekyll doctor` which 
 Finally, you can run bundler which automatically installs Jekyll as well as starts a development server:
 
 ```bash
-DISABLE_WHITELIST=true # allows plugings to run
+DISABLE_WHITELIST=true # allows plugins to run
 bundle install && bundle exec jekyll serve
 ```
 
@@ -168,7 +168,7 @@ Follow the same steps as in the GNU/Linux guide, with the one difference being t
 
 Our development workflow uses Git, which tracks development changes so that we can easily synchronize work by multiple developers, locate any change in history, and not worry about losing work. Git relies on the concept of _branches_ and _commits_. A commit is any change: it can be anything from editing an existing file, creating a new file, to deleting a file. Commits happen on _branches_, which are like paths for commits. A quick reference to Git's many, many commands, as well as links to resources for beginners, can be found [here](https://learnxinyminutes.com/docs/git/). We host our Git repository and collaborate on [GitHub](https://github.com/), and a starting guide for GitHub can be found [here](https://docs.github.com/en/get-started/start-your-journey).
 
-It is *strongly encouraged* to create a new branch for any new additions, via `git checkout -b my-new-branch-name`, as this will avoid [many issues](https://stackoverflow.com/questions/64369860/github-no-file-changes-but-many-commits-when-comparing-branches). Open a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) once you are finished making your changes and have pushed them to GitHub.
+It is _strongly encouraged_ to create a new branch for any new additions, via `git checkout -b my-new-branch-name`, as this will avoid [many issues](https://stackoverflow.com/questions/64369860/github-no-file-changes-but-many-commits-when-comparing-branches). Open a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) once you are finished making your changes and have pushed them to GitHub.
 
 ### Important contributing information
 
