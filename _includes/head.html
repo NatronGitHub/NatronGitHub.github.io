@@ -18,20 +18,24 @@
   <meta property="og:image" content="{{ "/img/social-preview.jpg" | prepend: site.url }}" />
   <meta name="twitter:image" content="{{ "/img/social-preview.jpg" | prepend: site.url }}" />
   {% endif %}
-  <meta name="og:description" content="{% if page.description %}
-      {{ page.description | strip_html | strip_newlines | truncate: 160 }}
-    {% else %}
-      {{ site.description }}
-    {% endif %}">
+
+  <!-- html_description is a Jekyll variable,
+  	   the "-" dashes tell Jekyll to ignore whitespace -->
+  {%- capture html_description -%}
+  {%- if page.description -%}
+  	{{- page.description | strip_html | strip_newlines | truncate: 160 -}}
+  {%- else -%}
+  	{{- site.description -}}
+  {%- endif -%}
+  {%- endcapture %}
+  <meta name="og:description" content="{{ html_description }}">
+  <!-- temp separator -->
   <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:domain" content="natrongithub.github.io">
   <meta name="twitter:title" content="{{page.title}}">
-  <meta name="twitter:description" content="{% if page.description %}
-      {{ page.description | strip_html | strip_newlines | truncate: 160 }}
-    {% else %}
-      {{ site.description }}
-    {% endif %}">
+  <meta name="twitter:description" content="{{ html_description }}">
+  <meta name="description" content="{{ html_description }}">
   <!-- RSS Feed -->
   <link rel="alternate" type="application/rss+xml" href="{% base %}feed.atom">
 
