@@ -6,19 +6,24 @@
   <meta name="theme-color" content="#1e1830">
   <meta name="keywords" content="node-based, compositor, compositing, computer graphics, cgi, open source, vfx, software">
   <title>{{ page.title }}</title>
-  <!-- OpenGraph Card -->
+  <!-- OpenGraph & Twitter Card Tags -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{page.title}}">
-  <meta property="og:image" content="">
   <meta property="og:image:width" content="1920">
   <meta property="og:image:height" content="1080">
+  {% if page.postimg %}
+  <meta property="og:image" content="{{ site.url | append: "/" }}{{ page.postimg }}" />
+  <meta name="twitter:image" content="{{ site.url | append: "/"}}{{ page.postimg }}" />
+  {% else %}
+  <meta property="og:image" content="{{ "/img/social-preview.jpg" | prepend: site.url }}" />
+  <meta name="twitter:image" content="{{ "/img/social-preview.jpg" | prepend: site.url }}" />
+  {% endif %}
   <meta name="og:description" content="{% if page.description %}
       {{ page.description | strip_html | strip_newlines | truncate: 160 }}
     {% else %}
       {{ site.description }}
     {% endif %}">
   <meta property="og:locale" content="en_US" />
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:domain" content="natrongithub.github.io">
   <meta name="twitter:title" content="{{page.title}}">
@@ -29,14 +34,6 @@
     {% endif %}">
   <!-- RSS Feed -->
   <link rel="alternate" type="application/rss+xml" href="{% base %}feed.atom">
-
-  {% if page.postimg %}
-    <meta property="og:image" content="{{ site.url | append: "/" }}{{ page.postimg }}" />
-    <meta name="twitter:image" content="{{ site.url | append: "/"}}{{ page.postimg }}" />
-  {% else %}
-    <meta property="og:image" content="{{ "/img/social-preview.jpg" | prepend: site.url }}" />
-    <meta name="twitter:image" content="{{ "/img/social-preview.jpg" | prepend: site.url }}" />
-  {% endif %}
 
   <!-- Stylesheets & Fonts -->
   <link rel="stylesheet" href="{% base %}css/main.css">
