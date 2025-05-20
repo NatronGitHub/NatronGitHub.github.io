@@ -1,6 +1,6 @@
 # Natron's Website
 
-![Repo Size](https://img.shields.io/github/repo-size/shrinks99/NatronGitHub.github.io)![GPL 2 License](https://img.shields.io/badge/license-GPL%202-green) ![W3C Validation](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fwilkinson.graphics%2FNatronGitHub.github.io%2F)![Website Live](https://img.shields.io/website?url=https%3A%2F%2Fimg.shields.io%2Fw3c-validation%2Fhtml%3FtargetUrl%3Dhttps%253A%252F%252Fwilkinson.graphics%252FNatronGitHub.github.io%252F)![Last Commit Date](https://img.shields.io/github/last-commit/shrinks99/NatronGitHub.github.io)
+![Repo Size](https://img.shields.io/github/repo-size/natrongithub/NatronGitHub.github.io)![GPL 2 License](https://img.shields.io/badge/license-GPL%202-green) ![W3C Validation](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2FNatronGitHub.github.io)![Website Live](https://img.shields.io/website?url=https%3A%2F%2Fimg.shields.io%2Fw3c-validation%2Fhtml%3FtargetUrl%3Dhttps%3A%2F%2FNatronGitHub.github.io)![Last Commit Date](https://img.shields.io/github/last-commit/natrongithub/NatronGitHub.github.io)
 
 ## Development
 
@@ -29,7 +29,7 @@ Make sure you have `git` already installed. This website also requires Jekyll, a
 Navigate to your directory of choice with `cd /path/of/choice`, then run this command to download the repo:
 
 ```bash
-git clone https://github.com/Shrinks99/NatronGitHub.github.io && cd NatronGitHub.github.io
+git clone https://github.com/NatronGitHub/NatronGitHub.github.io && cd NatronGitHub.github.io
 ```
 
 Build with Jekyll in three steps:
