@@ -89,6 +89,15 @@
   width: 100%;
   max-width: 530px;
   flex-shrink: 1;
+
+  a {
+    @extend .intext-link;
+    @extend .intext-link-glow;
+  }
+
+  p {
+    @extend .p-body;
+  }
 }
 
 .features-reversedsection {

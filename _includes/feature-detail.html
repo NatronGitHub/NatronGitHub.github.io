@@ -1,0 +1,15 @@
+{% if include.justify | downcase == "right" %}
+<section class="features-reversedsection">
+{% else %}
+<section>
+{% endif %}
+  <div class="features-featurecontainer">
+    <div class="features-imagecontainer">
+      <img src="{{ include.img }}" alt="{{ include.img_alt }}" class="features-featureimage"/>
+    </div>
+    <div class="features-textcontainer">
+      <h3 class="h3">{{ include.title }}</h3>
+      {{ include.detail | strip | markdownify }}
+    </div>
+  </div>
+</section>
