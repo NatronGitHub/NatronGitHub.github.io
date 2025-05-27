@@ -4,33 +4,23 @@ title: CG Compositing
 excerpt: text
 collection: features
 ---
-<section>
-  <div class="features-featurecontainer">
-    <div class="features-imagecontainer">
-      <img src="https://picsum.photos/1280/720" alt="" class="features-featureimage"/>
-    </div>
-    <div class="features-textcontainer">
-      <h3 class="h3">Multi-Channel EXR Support</h3>
-      <p class="p-body">
-        Take advantage of nearly every pass that comes out of your renderer of choice! Tweak certian chanels from your renders to match plates, or use them to create unique stylized looks as part of your CG compositing process.
-      </p>
-      <p class="p-body">
-        Natron does not currently support deep image compositing.
-      </p>
-    </div>
-  </div>
-</section>
 
-<section class="features-reversedsection">
-  <div class="features-featurecontainer">
-    <div class="features-imagecontainer">
-      <img src="https://picsum.photos/1280/720" alt="" class="features-featureimage"/>
-    </div>
-    <div class="features-textcontainer">
-      <h3 class="h3">Stereo compositing</h3>
-      <p class="p-body">
-        Make eye-popping visual effects with Natron's built-in stereoscopic tools. You get all of Natron's 200+ typical nodes in a stereoscopic project, plus a variety of tools for working with multiple views and previewing stereo live in Natron.
-      </p>
-    </div>
-  </div>
-</section>
+{% include feature-detail.html
+   title="Multi-Channel EXR Support"
+   img="https://picsum.photos/1280/720"
+   img_alt=""
+   detail="
+    Take advantage of nearly every pass that comes out of your renderer of choice! Tweak certian chanels from your renders to match plates, or use them to create unique stylized looks as part of your CG compositing process.
+    <br />
+    <br />
+    Natron does not currently support deep image compositing."
+%}
+
+{% include feature-detail.html
+   title="Stereo compositing"
+   img="https://picsum.photos/1280/720"
+   img_alt=""
+   justify="right"
+   detail="
+    Make eye-popping visual effects with Natron's built-in stereoscopic tools. You get all of Natron's 200+ typical nodes in a stereoscopic project, plus a variety of tools for working with multiple views and previewing stereo live in Natron."
+%}
