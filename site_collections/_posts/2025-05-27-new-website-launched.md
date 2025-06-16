@@ -20,8 +20,6 @@ Six months into this discussion, Jacky posted mock-ups of a redesign of the Natr
 
 ## Mock-up, Prototype, Test!
 
-As efforts on the UI side were winding down, the interest for the website grew. Soon, Figma was chosen as the design collaboration platform for the project, and things started picking up pace. This paved the way for a lot of experimentation and prototypes, which slowly started taking shape.
-
 Our goal was to create a website for Natron that was modern and professional. Henry worked hard on establishing the core look and feel of the website as well as the bespoke iconography seen on our landing page.
 
 {% include news-img.html 
@@ -58,11 +56,11 @@ As soon as the design stage shifted towards web development, emphasis was put on
 
 This also meant that a unified repository of reusable UI components were readily accessible for quick mock-ups and prototypes for future additions to the website. Standardization and a component-based workflow were central towards making the design process as efficient as possible.
 
-## Jekyll (mis)Adventures
+## Jekyll Adventures
 
-Now having the design system in place, the team could now move to actual development. The decision was made early on to make the website a static site powered by [Jekyll](https://jekyllrb.com/). Jekyll takes HTML snippets and markdown files, and compiles them into pages for a static website. It is natively supported on [GitHub pages](https://pages.github.com/) (where Natron's then-current website was hosted), so it was a natural decision for the team. Unfortunately, a Jekyll-centered environment proved to be quite the challenge for the team to work with. It took tedious amounts of troubleshooting to get it set up and running. Documentation for compiling and installing the website on Github Pages was also another hurdle.
+Now having the design system in place, the team could now move to actual development. The decision was made early on to make the website a static site powered by [Jekyll](https://jekyllrb.com/). Jekyll takes HTML snippets and markdown files, and compiles them into pages for a static website. It is natively supported on [GitHub pages](https://pages.github.com/) (where Natron's then-current website was hosted), so it was a natural decision for the team.
 
-But eventually, the team had it all figured out and a minimum viable product was ready. Some nifty additional features such as an Atom Feed developed by Henry and a [Natron Brand Assets page](https://natrongithub.github.io/brand) were added. The decision to use Jekyll had paid off, despite initial hiccups. Page layouts could be made in Markdown or basic HTML, and could be compiled by Jekyll using the design system templates. This meant that future additions, tweaks and changes would not take much time or effort.
+Within time, a minimum viable product was ready. Some nifty additional features such as an Atom Feed developed by Henry and a [Natron Brand Assets page](https://natrongithub.github.io/brand) were added. The decision to use Jekyll had paid off, despite initial hiccups. Page layouts could be made in Markdown or basic HTML, and could be compiled by Jekyll using the design system templates. This meant that future additions, tweaks and changes would not take much time or effort.
 
 ## We did it!
 
