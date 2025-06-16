@@ -17,6 +17,8 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    # Run only on push to the `main` branch
+    if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
