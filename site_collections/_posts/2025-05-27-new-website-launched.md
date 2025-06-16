@@ -1,7 +1,7 @@
 ---
 title: New website launched!
 author: Jacky Song, Henry Wilkinson, TheFckinUnicorn
-description: Our community effort has launched a new, modern website! Here's more about how we got here.
+description: Our community effort has launched a new, modern website! Here's how we got here.
 categories:
   - news
 date: 2025-06-15
@@ -10,26 +10,26 @@ postimg: img/news/website-launch/cover.png
 postimgalttext: ""
 ---
 
-After years of work, we're excited to announce the arrival of a new website for Natron! This community effort, which started life as a personal project, has been developed from the ground up to bring a new and modern face to Natron, while simultaneously being flexible, scalable and maintainable. Along with the website, we have also introduced new branding that gives Natron a modernised face without sacrificing everything good about the old designs. This effort has gone through its fair share of ups and downs over the years; now having been officially published, we would like to take this opportunity to share our story.
+After years of work, we're excited to announce the arrival of a new website for Natron! This community effort has been developed from the ground up to bring a new and modern face to Natron, while simultaneously being flexible, scalable and maintainable. Along with the website, we have also introduced refreshed branding that updates Natron's icon and logotype without sacrificing everything good about the old designs. This effort has gone through its fair share of ups and downs over the years; now having been officially published, we would like to take this opportunity to share our story!
 
 ## How it all started
 
 The project was initially conceived in 2020 as an ambitious concept shared by [Jacky Song](https://jackysci.com) [on the Natron forum](https://discuss.pixls.us/t/natron-ui-re-design-proposal/18313) for a total GUI redesign for Natron. This was the first time that the people who would eventually spend years working together building the new website got to know each other and discussed their shared interest in Natron's design. Although the GUI redesign concept would not last long, it kicked off a long discussion about design in the community.
 
-Six months into this discussion, Jacky posted mock-ups of a redesign of the Natron website, which was soon followed by a website concept by [Henry](https://wilkinson.graphics/). These posts marked the true beginning of our quest. What was initially a few design concepts and a back-and-forth discussion between Jacky and Henry on the forum soon turned into a centralised project with a collaborative workflow, with further discussions continuing in the Natron Discord server. Even though the website started taking shape within the course of a year, progress was slow: Jacky and Henry were only able to work on it in their spare time, and work on the GUI redesign project was still happening simultaneously, of which some improvements were eventually implemented inside Natron.
+Six months into this discussion, Jacky posted mock-ups of a redesign of the Natron website, which was soon followed by a website concept by [Henry](https://wilkinson.graphics/). These posts marked the true beginning of our quest. What was initially a few design concepts and a back-and-forth discussion between Jacky and Henry on the forum soon turned into a centralised project with a collaborative workflow, with further discussions continuing in the Natron Discord server. Even though the website started taking shape within the course of a year, progress was slow: Jacky and Henry were only able to work on it in their spare time.
 
 ## Mock-up, Prototype, Test!
 
 As efforts on the UI side were winding down, the interest for the website grew. Soon, Figma was chosen as the design collaboration platform for the project, and things started picking up pace. This paved the way for a lot of experimentation and prototypes, which slowly started taking shape.
 
-The goal was to create a website that was modern and professional, which put Natron at center stage. Henry worked hard on establishing the core look and feel of the website as well as the bespoke iconography.
+Our goal was to create a website for Natron that was modern and professional. Henry worked hard on establishing the core look and feel of the website as well as the bespoke iconography seen on our landing page.
 
 {% include news-img.html 
    img="website-launch/website-artboards-1.png"
    alt=""
 %}
 
-[Tailwind Typography](https://github.com/tailwindlabs/tailwindcss-typography) and the [ElementaryOS blog](https://blog.elementary.io/) proved to be excellent sources of inspiration for typography. The team designed the website around the philosophy of content-first design, choosing [Inter](https://rsms.me/inter/), a professional and versatile font with an extensive set of glyphs and support for advanced typographical features. To give the website a distinctive look-and-feel, elements like glow links, high-contrast colors, and vibrant gradients were incorporated, which became an integral part of our core design formula. A dark theme was chosen, inspired by Natron's purpose-designed UI dark theme, which is common for color-critical VFX work. Meanwhile, inspiration also came from what worked in the old website, such as a grid layout for the homepage features list.
+Tailwind's [Typography plugin](https://github.com/tailwindlabs/tailwindcss-typography) and the [ElementaryOS blog](https://blog.elementary.io/) proved to be valuable sources for typography inspiration. We ultimately chose [Inter](https://rsms.me/inter/), a professional and versatile typeface with an extensive set of glyphs and support for advanced Opentype features. To give the website a distinctive look-and-feel, we incorporated glowing links, high-contrast colors, and vibrant gradients, which became integral to our core design language. A dark theme was chosen, inspired by Natron's purpose-designed UI dark theme, which is common for VFX work usually accomplished in dark rooms. Content was, inspired from what worked in the old website, such as a grid layout for the homepage features list.
 
 {% include news-img.html 
    img="website-launch/website-artboards-2.png"
@@ -68,7 +68,7 @@ But eventually, the team had it all figured out and a minimum viable product was
 
 When the team announced that the MVP was ready to be published, Natron developers and GitHub administrators [Frédéric](https://github.com/devernay) and [Aaron](https://github.com/acolwell) helped with archiving the old website and publishing the new one. After nearly 5 years of work, our project is a success, and the new website is now live!
 
-It would be an understatement to say that this project was a _lot of work_! We couldn't have done it without all the contributions from the Natron community. Henry contributed a lot of his design expertise, made many artboards, mock-ups and prototypes, and developed the visual look of the website. Jacky contributed immensly to Henry's design and development efforts. [TheFckinUnicorn](https://thefckinunicorn.com/) contributed many hours of feedback and content, lending the website a professional aspect, and also helped coordinate the communication and collaboration efforts on Discord. Aaron helped tremendously by coordinating the logistics of the website repository, and also streamlining the handover and publishing processes. Last but not least, Frédéric  and [Ole-André](https://github.com/rodlie) were instrumental in reviewing our work from the start, and giving the rest of the team the final go-ahead for the launch.
+It would be an understatement to say that this project was a _lot of work_! We couldn't have done it without all the contributions from the Natron community. Henry contributed a lot of his design expertise, made many artboards, mock-ups and prototypes, and developed the visual look of the website. Jacky contributed immensly to Henry's design and development efforts. [TheFckinUnicorn](https://thefckinunicorn.com/) contributed many hours of feedback and content, lending the website a professional aspect, and also helped coordinate the communication and collaboration efforts on Discord. Aaron helped tremendously by coordinating the logistics of the website repository, and also streamlining the handover and publishing processes. Last but not least, Frédéric and [Ole-André](https://github.com/rodlie) were instrumental in reviewing our work from the start, and giving the rest of the team the final go-ahead for the launch.
 
 For the team, this project was an amazing learning experience, and each one of us is exhilarated to have been a part of this project. We certainly hope that this new website helps Natron (and by extension all other free and open-source software) to embrace high-quality design standards. It's been a long journey for us, and we hope this website will serve Natron well for years to come!
 
