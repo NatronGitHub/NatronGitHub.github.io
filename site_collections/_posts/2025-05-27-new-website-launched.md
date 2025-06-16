@@ -24,14 +24,14 @@ Our goal was to create a website for Natron that was modern and professional. He
 
 {% include news-img.html 
    img="website-launch/website-artboards-1.png"
-   alt=""
+   alt="A showcase of artboards used during the design process for the new website"
 %}
 
 Tailwind's [Typography plugin](https://github.com/tailwindlabs/tailwindcss-typography) and the [ElementaryOS blog](https://blog.elementary.io/) proved to be valuable sources for typography inspiration. We ultimately chose [Inter](https://rsms.me/inter/), a professional and versatile typeface with an extensive set of glyphs and support for advanced OpenType features. To give the website a distinctive look-and-feel, we incorporated glowing links, high-contrast colors, and vibrant gradients, which became integral to our core design language. A dark theme was chosen, inspired by Natron's purpose-designed UI dark theme, which is common for VFX work usually accomplished in dark rooms. Content was, inspired from what worked in the old website, such as a grid layout for the homepage features list.
 
 {% include news-img.html 
    img="website-launch/website-artboards-2.png"
-   alt=""
+   alt="A showcase of design artboards side-by-side with references from Tailwind and ElementaryOS"
 %}
 
 As is with most design projects, the scope narrowed over time from complex mock-ups loaded with visual elements down to increasingly streamlined designs. Focus was eventually set upon delivering content in a simple and elegant manner.
@@ -46,12 +46,12 @@ As soon as the design stage shifted towards web development, emphasis was put on
 
 {% include news-img.html 
    img="website-launch/design-system-1.png"
-   alt=""
+   alt="Visual showcase of the design system (part 1)"
 %}
 
 {% include news-img.html 
    img="website-launch/design-system-2.png"
-   alt=""
+   alt="Visual showcase of the design system (part 2)"
 %}
 
 This also meant that a unified repository of reusable UI components were readily accessible for quick mock-ups and prototypes for future additions to the website. Standardization and a component-based workflow were central towards making the design process as efficient as possible.
