@@ -10,7 +10,11 @@
         <div class="newspost-header">
           <img src="{% base %}{{ page.postimg }}" alt="{{ page.postimgalttext }}"/>
           <h1>{{ page.title }}</h1>
-          <time class="text-uppercase" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%B %d, %Y" }}</time>
+          <div>
+            <time class="text-uppercase" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%B %d, %Y" }}</time>
+            <span>&middot;</span>
+            <span rel="author">{{ page.author }}</span>
+          </div>
           <p>{{ page.description }}</p>
           <div class="horizontal-rule"></div>
         </div>
