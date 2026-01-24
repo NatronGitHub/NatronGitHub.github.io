@@ -47,7 +47,7 @@ downloads:
       v11:
         title: "macOS 11+"
         url: ""
-        suffix: "-macOS11-x86_64.dmg"
+        suffix: "-macOS12-x86_64.dmg"
       v1015:
         title: "macOS 10.15"
         url: ""
@@ -59,7 +59,7 @@ downloads:
       v106:
         title: "OS X 10.6+"
         url: ""
-        suffix: "-OSX-Universal.dmg"
+        suffix: "-MacOSX106-Universal-i386-x86_64.dmg"
   other:
     silicon-prerelease: https://github.com/NatronGitHub/Natron/releases/tag/v2.6.0-alpha1
     freshports: https://www.freshports.org/graphics/natron/
